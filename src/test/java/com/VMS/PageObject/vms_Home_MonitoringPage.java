@@ -20,13 +20,13 @@ public class vms_Home_MonitoringPage {
 
 	// Identify webElements
 	@FindBy(linkText = "Configuration") 
-	WebElement ConfigurationTab;
+	public WebElement ConfigurationTab;
 	
 	@FindBy(name = "Search") 
-	WebElement SearchTab;
+	public WebElement SearchTab;
 	
 	@FindBy(id = "Alarms") 
-	WebElement AlarmsTab;
+	public WebElement AlarmsTab;
 	
 
 	public void openConfigurationPage()

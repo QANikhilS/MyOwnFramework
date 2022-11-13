@@ -24,79 +24,79 @@ public class vms_IntegrationPartnerPage {
 	}
 
 	@FindBy(xpath = "//div[@class='ip-btn-container']/button[1]")
-	WebElement AddPartnerbtn;
+	public WebElement AddPartnerbtn;
 	
 	@FindBy(xpath =  "//div[@class='ip-btn-container']/button[2]")
-	WebElement DeletePartnerbtn;	
+	public WebElement DeletePartnerbtn;	
 	
 	@FindBy(css = "input[type='search']")
-	WebElement SearchBox;	
+	public WebElement SearchBox;	
 
 	@FindBy(xpath = "//div[contains(@class,'container-body')]/div[2]/div/div")
-	List<WebElement> AvailableIntegrationPartners;
+	public List<WebElement> AvailableIntegrationPartners;
 	
 	@FindBy(xpath = "//ul[contains(@class,'children')]//span[3]")
-	List<WebElement> AvailableDoors;
+	public List<WebElement> AvailableDoors;
 	
 	@FindBy(id = "partnerTypeFormat")  
-	WebElement PartnertypeDropdown;
+	public WebElement PartnertypeDropdown;
 	
 	@FindBy(id = "partnerNameFormat")  
-	WebElement PartnerNameDropdown;
+	public WebElement PartnerNameDropdown;
 	
 	@FindBy(xpath = "//input[@ng-model='model.accessControlNameValue']")
-	WebElement AddIntegrationPartnerNameTextBox;
+	public WebElement AddIntegrationPartnerNameTextBox;
 	
 	@FindBy(xpath = "//input[@ng-model='model.accessControlIPValue']")
-	WebElement AddIntegrationPartnerIPaddressTextBox;
+	public WebElement AddIntegrationPartnerIPaddressTextBox;
 	
 	@FindBy(xpath = "//input[@ng-model='model.accessControlUsernameValue']")
-	WebElement AddIntegrationPartnerUsernameTextBox;
+	public WebElement AddIntegrationPartnerUsernameTextBox;
 	
 	@FindBy(xpath = "//input[@ng-model='model.accessControlPwdValue']")
-	WebElement AddIntegrationPartnerPasswordTextBox;
+	public WebElement AddIntegrationPartnerPasswordTextBox;
 	
 	@FindBy(xpath = "//button[text()='Next']")
-	WebElement AddIntegrationPartnerNextBtn;
+	public WebElement AddIntegrationPartnerNextBtn;
 	
 	@FindBy(xpath = "(//button[text()='Cancel'])[1]")
-	WebElement AddIntegrationPartnerCancelBtn;
+	public WebElement AddIntegrationPartnerCancelBtn;
 	
 	@FindBy(xpath = "(//button[text()='Save'])[1]")
-	WebElement AddIntegrationPartnerSaveBtn;
+	public WebElement AddIntegrationPartnerSaveBtn;
 	
 	@FindBy(xpath = "//button[contains(text(),'Yes')]")
-	WebElement YesBtn;
+	public WebElement YesBtn;
 	
 	@FindBy(xpath = "//button[contains(text(),'No')]")
-	WebElement NoBtn;
+	public WebElement NoBtn;
 	
 	@FindBy(xpath = "//button[contains(text(),'OK')]")
-	WebElement OKBtn;
+	public WebElement OKBtn;
 	
 	@FindBy(xpath = "//span[contains(text(),'Deleted')]")
-	WebElement DeletedConfirmationMessage;
+	public WebElement DeletedConfirmationMessage;
 
 	@FindBy(xpath = "//input[@id='access-ip']")
-	WebElement ipAddressOfVAXInProperties;
+	public WebElement ipAddressOfVAXInProperties;
 	
 	@FindBy(css =  "label[class='ng-binding']")
-	WebElement IntPartnerRemovedSuccessMessage;
+	public WebElement IntPartnerRemovedSuccessMessage;
 	
 	@FindBy(xpath = "//div[@class='vms-modal-popup-header']/div[2]/span")
-	WebElement ClosebuttonOnDeleteDeviceProcess;	
+	public WebElement ClosebuttonOnDeleteDeviceProcess;	
 	
 	@FindBy(xpath = "//span[text()='Refresh User Info.']")
-	WebElement RefreshUserInfoBtm;
+	public WebElement RefreshUserInfoBtm;
 	
 	@FindBy(xpath = "//div[contains(text(),'User Information Refreshed Successfully')]")
-	WebElement RefreshUserInfoConfirmationMessage;
+	public WebElement RefreshUserInfoConfirmationMessage;
 	
 	@FindBy(xpath = "//*[@class='vax-props ng-scope'] //*[@id='access-ip']")
-	WebElement ipNameInRHSprop;
+	public WebElement ipNameInRHSprop;
 	
 	@FindBy(xpath = "//span[contains(text(),'VAX-54')]")
-	WebElement addedVAX;
+	public WebElement addedVAX;
 	
 	
 

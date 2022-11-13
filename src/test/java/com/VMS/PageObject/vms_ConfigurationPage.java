@@ -19,115 +19,115 @@ public class vms_ConfigurationPage {
 
 	// Identify webElements
 	@FindBy(xpath = "//div[contains(@class,'NVRs')]") 
-	WebElement NVRs;
+	public WebElement NVRs;
 	
 	@FindBy(xpath = "//div[contains(@class,'Recording Failover')]") 
-	WebElement RNVRs;
+	public WebElement RNVRs;
 	
 	@FindBy(xpath = "//div[contains(@class,'Cameras and Devices')]") 
-	WebElement CamerasAndDevices;
+	public WebElement CamerasAndDevices;
 
 	@FindBy(xpath = "//div[contains(@class,'ViconNet Gateway')]") 
-	WebElement ViconNetGateway;
+	public WebElement ViconNetGateway;
 	
 	@FindBy(xpath = "//div[contains(@class,'Integration Partner')]") 
-	WebElement IntegrationPartner;
+	public WebElement IntegrationPartner;
 	
 	@FindBy(xpath = "//div[contains(@class,'Analytics Server')]") 
-	WebElement AnalyticsServer;	
+	public WebElement AnalyticsServer;	
 	
 	@FindBy(xpath = "//div[text()='Home Page']") 
-	WebElement HomePage;	
+	public WebElement HomePage;	
 	
 	@FindBy(xpath = "//div[text()='Alarms']") 
-	WebElement AlarmsPage;
+	public WebElement AlarmsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Video Channels')]") 
-	WebElement VideoChannelsPage;
+	public WebElement VideoChannelsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Audio Channels')]") 
-	WebElement AudioChannelsPage;
+	public WebElement AudioChannelsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Digital Input')]") 
-	WebElement DigitalInputPage;
+	public WebElement DigitalInputPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Relay Output')]") 
-	WebElement RelayOutputPage;
+	public WebElement RelayOutputPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Web Pages')]") 
-	WebElement WebPagesPage;
+	public WebElement WebPagesPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Procedures')]") 
-	WebElement ProceduresPage;
+	public WebElement ProceduresPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Views')]") 
-	WebElement ViewsPage;
+	public WebElement ViewsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Tours')]") 
-	WebElement ToursPage;
+	public WebElement ToursPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Schedules')]") 
-	WebElement SchedulesPage;
+	public WebElement SchedulesPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Maps')]") 
-	WebElement MapsPage;
+	public WebElement MapsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Numeric ID')]") 
-	WebElement NumericISsPage;
+	public WebElement NumericISsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Monitors')]") 
-	WebElement MonitorsPage;
+	public WebElement MonitorsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Doors')]") 
-	WebElement DoorsPage;
+	public WebElement DoorsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Rule')]") 
-	WebElement RulesPage;
+	public WebElement RulesPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'External Events')]") 
-	WebElement ExternalEventsPage;
+	public WebElement ExternalEventsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Groups Hierarchy')]") 
-	WebElement GroupsHierarchyPage;
+	public WebElement GroupsHierarchyPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Authentication')]") 
-	WebElement AuthenticationPage;
+	public WebElement AuthenticationPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Authorization Roles')]") 
-	WebElement AuthorizationRolesPage;
+	public WebElement AuthorizationRolesPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Users')]") 
-	WebElement UsersPage;
+	public WebElement UsersPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Internet Gateway')]") 
-	WebElement InternetGatewayPage;
+	public WebElement InternetGatewayPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Licensing')]") 
-	WebElement LicensingPage;
+	public WebElement LicensingPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'App Server Redundancy')]") 
-	WebElement AppServerRedundancyPage;
+	public WebElement AppServerRedundancyPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Events Database Settings')]") 
-	WebElement EventDatabaseSettingsPage;
+	public WebElement EventDatabaseSettingsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Access List')]") 
-	WebElement AccessListPage;		
+	public WebElement AccessListPage;		
 	
 	@FindBy(xpath = "//div[contains(@class,'Auto Archive')]") 
-	WebElement AutoArchivesPage;
+	public WebElement AutoArchivesPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Upgrade')]") 
-	WebElement SoftwareUpgradePage;
+	public WebElement SoftwareUpgradePage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Backup')]") 
-	WebElement BackupPage;
+	public WebElement BackupPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Restore')]") 
-	WebElement RestorePage;
+	public WebElement RestorePage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Log Collection')]") 
-	WebElement LogCollectionPage;
+	public WebElement LogCollectionPage;
 	
 	
 	public void openNVRsPage()

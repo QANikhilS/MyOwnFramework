@@ -20,25 +20,25 @@ public class vms_WebPagesPage {
 	}
 	
 	@FindBy(xpath = "//button[text()='New']")
-	WebElement addNewWebPagebtn;
+	public WebElement addNewWebPagebtn;
 
 	@FindBy(xpath = "//input[contains(@ng-model,'name')]")
-	WebElement webPageNametxtbox;
+	public WebElement webPageNametxtbox;
 	
 	@FindBy(xpath = "(//md-switch[@role='checkbox'])[1]")
-	WebElement visibleCheckBoxStatus;
+	public WebElement visibleCheckBoxStatus;
 	
 	@FindBy(xpath = "(//md-switch[@role='checkbox']/div/div)[1]")
-	WebElement visibleCheckBox;
+	public WebElement visibleCheckBox;
 	
 	@FindBy(xpath = "(//md-switch[@role='checkbox'])[2]")
-	WebElement refreshTimeCheckBox;
+	public WebElement refreshTimeCheckBox;
 	
 	@FindBy(xpath = "//input[contains(@ng-model,'url')]")
-	WebElement urlTextBox;
+	public WebElement urlTextBox;
 	
 	@FindBy(xpath = "//button[ contains(@ng-click,'webSitesController') and text()='Save']")
-	WebElement saveBtn;
+	public WebElement saveBtn;
 	
 	
 	public void clickOnNewWebpageBtn()

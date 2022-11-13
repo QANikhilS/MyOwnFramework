@@ -19,40 +19,40 @@ public class vms_CamerasAndDevicesPage {
 	
 	// Identify webElements
 	@FindBy(xpath = "//span[text()='Add Discovered Devices']") 
-	WebElement addDiscoveredDevicesBtn;
+	public WebElement addDiscoveredDevicesBtn;
 	
 	@FindBy(xpath = "//span[text()='Add Device Manually']") 
-	WebElement addDeviceManuallyBtn;
+	public WebElement addDeviceManuallyBtn;
 	
 	@FindBy(xpath = "//span[text()='Remove Devices']") 
-	WebElement removeDevicesBtn;
+	public WebElement removeDevicesBtn;
 	
 	@FindBy(css = "input[type='search']") 
-	WebElement searchCameraTxtbox;
+	public WebElement searchCameraTxtbox;
 	
 	@FindBy(css = "input[type='search']") 
-	WebElement searchCameraTxtboxOnDiscoveredDevicesWindow;
+	public WebElement searchCameraTxtboxOnDiscoveredDevicesWindow;
 	
 	@FindBy(xpath = "//span[@class='ng-binding ng-scope' and @ng-if='!row.groupHeader']") 
-	List<WebElement> listOfAddedCamerasInVMS;
+	public List<WebElement> listOfAddedCamerasInVMS;
 	
 	@FindBy(xpath = "//span[@class='ng-binding ng-scope' and @ng-if='!row.groupHeader']") 
-	WebElement filteredCameraOnCamerasAndDevicesPage;
+	public WebElement filteredCameraOnCamerasAndDevicesPage;
 	
 	@FindBy(xpath = "//span[@ng-if='!row.groupHeader' and @class='ng-scope']") 
-	List<WebElement> listOfAvailableCamerasInDiscoveredDevicesList;
+	public List<WebElement> listOfAvailableCamerasInDiscoveredDevicesList;
 	
 	@FindBy(xpath = "//span[@ng-if='!row.groupHeader' and @class='ng-scope']")
-	WebElement filteredCameraOnDiscoveredDevicesPage;
+	public WebElement filteredCameraOnDiscoveredDevicesPage;
 	
 	@FindBy(xpath = "//button[text()='Add to NVR and close']")
-	WebElement addToNVRandCloseBtn;	
+	public WebElement addToNVRandCloseBtn;	
 	
 	@FindBy(xpath = "//span[text()='Successfully added']")
-	WebElement successMessageAfterAddingCamera;	
+	public WebElement successMessageAfterAddingCamera;	
 	
 	@FindBy(xpath = "//span[contains(@ng-click,'cancel()')]")
-	WebElement closeSuccessWindowBtn;	
+	public WebElement closeSuccessWindowBtn;	
 	
 	
 	

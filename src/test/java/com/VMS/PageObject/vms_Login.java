@@ -24,25 +24,25 @@ public class vms_Login extends BaseClass {
 	public WebElement loginTextbox;
 	
 	@FindBy(name = "password") 
-	WebElement passwordTextBox;
+	public WebElement passwordTextBox;
 	
 	@FindBy(id = "submitBtn") 
-	WebElement signInbtn;
+	public WebElement signInbtn;
 	
 	@FindBy(xpath = "//md-switch[@role='checkbox']")
-	WebElement returnToMyLastDisplay;
+	public WebElement returnToMyLastDisplay;
 
 	@FindBy(css = "span[class*='top-menu-user-name']")
-	WebElement usernameOption;
+	public WebElement usernameOption;
 
 	@FindBy(xpath = "//div[text()='About']")
-	WebElement about;
+	public WebElement about;
 	
 	@FindBy(xpath = "//div[text()='User Settings']")
-	WebElement userSettings;
+	public WebElement userSettings;
 	
 	@FindBy(xpath = "//div[text()='Logout']")
-	WebElement logOutBtn;
+	public WebElement logOutBtn;
 	
 	public void enterUsername(String username)
 	{
