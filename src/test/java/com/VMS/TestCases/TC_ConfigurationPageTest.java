@@ -11,7 +11,7 @@ public class TC_ConfigurationPageTest extends BaseClass
 	@Test
 	public void OpenNVRsPage()
 	{
-
+   
 	}
 	
 	
