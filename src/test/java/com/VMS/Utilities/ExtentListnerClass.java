@@ -25,7 +25,7 @@ public class ExtentListnerClass implements ITestListener {
 	
 	public void configureReport()
 	{
-		String timestamp = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
+		String timestamp = new SimpleDateFormat("dd.MM.yyyy "+"-"+" hh.mm.ss").format(new Date());
 		String reportName = "zOwnProject -" + timestamp + ".html";
 		htmlReporter = new ExtentSparkReporter(".\\Reports\\"+reportName);
 		reports = new ExtentReports();

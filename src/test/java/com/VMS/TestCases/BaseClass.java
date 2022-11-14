@@ -35,6 +35,7 @@ public class BaseClass
 	public static String BrowserName = readConfigData.getBrowser();
 	public static WebDriver driver;
 	public static Logger log ;
+	public static String currentIP;
 	
 	
 	@BeforeClass
@@ -45,11 +46,13 @@ public class BaseClass
 		   case "chrome" :
 			   WebDriverManager.chromedriver().setup();
 			   driver = new ChromeDriver();
+				driver.manage().window().maximize();
 			break;
 
 		   case "edge" :
 			   WebDriverManager.edgedriver().setup();
 			   driver = new EdgeDriver();
+				driver.manage().window().maximize();
 			break;
 			
 		   case "ie" :
@@ -126,7 +129,6 @@ public class BaseClass
 	
 	public static String getcurrentMachineIP() throws Exception
 	  {
-		String currentIP ;
 		try(final DatagramSocket socket = new DatagramSocket())
 		{
 			  socket.connect(InetAddress.getByName("8.8.4.4"), 80);

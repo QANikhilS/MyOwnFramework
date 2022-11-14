@@ -6,19 +6,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest">
+      <class name="com.VMS.TestCases.TC_WebPagesTest">
         <methods>
-          <include name="AddIntrgrationPartner"/>
-          <include name="RefreshUserInformationfeature"/>
+          <include name="deleteWebPages"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_IntrgrationPartnerPageTest -->
-      <class name="com.VMS.TestCases.TC_loginPageTest">
-        <methods>
-          <include name="verifyLogOut"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.VMS.TestCases.TC_loginPageTest -->
+      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

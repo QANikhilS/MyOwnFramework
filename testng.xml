@@ -6,8 +6,9 @@
 </listeners>
   <test name="Test">
     <classes>
-     <class name="com.VMS.TestCases.TC_loginPageTest"/>
-     <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>   <!--  THIS IS TO COMMENT ANY LINE -->     
+     <class name="com.VMS.TestCases.TC_loginPageTest"/>   
+     <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>  
+     <class name="com.VMS.TestCases.TC_WebPagesTest"/>   <!--  THIS IS TO COMMENT ANY LINE -->     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

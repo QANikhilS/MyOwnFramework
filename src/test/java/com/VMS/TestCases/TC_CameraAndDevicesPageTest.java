@@ -11,7 +11,7 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 
 	
 	@Test
-	public void AddCamera() throws Exception
+	public void AddSimulatorCamera() throws Exception
 	{
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		hm.openConfigurationPage();
@@ -21,10 +21,10 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 		log.info("Cameras and Devices page is opened");
 	
 		vms_CamerasAndDevicesPage cd = new vms_CamerasAndDevicesPage(driver);
-		cd.enterSimulatorIpInSearchTextBoxOfCamerasAndDevicesPage(getcurrentMachineIP());
-		cd.verifyAndAddSimulatorCameraIsAdded(getcurrentMachineIP());
+		cd.addSimulatorCamera(getcurrentMachineIP());
 		
-		String ExpectedSuccessMsg = "Successfully added";
+		
+	/*	String ExpectedSuccessMsg = "Successfully added";
 		
 		if (cd.successMessageOnAddingCamera().equalsIgnoreCase(ExpectedSuccessMsg))
 		{
@@ -37,27 +37,13 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 			log.info("AddCamera  -  Failed. ");
 			capctureScreenshot(driver, "AddCamera");
 			Assert.assertTrue(false);
-			cd.clickOnCloseSuccessWindow();
-		}
+			cd.clickOnCloseSuccessWindow();   
+		}*/
 		
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	
 	

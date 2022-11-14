@@ -47,10 +47,12 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	public void RefreshUserInformationfeature() throws Exception
 	{
 		
-		  vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		  hm.openConfigurationPage(); vms_ConfigurationPage cp = new
-		  vms_ConfigurationPage(driver); cp.openIntegrationPartnerPage();
-		  log.info("Integration Partner page has been opened");
+		/*
+		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
+		 * hm.openConfigurationPage(); vms_ConfigurationPage cp = new
+		 * vms_ConfigurationPage(driver); cp.openIntegrationPartnerPage();
+		 * log.info("Integration Partner page has been opened");
+		 */
 		
 		Thread.sleep(2000);
 		vms_IntegrationPartnerPage ip = new vms_IntegrationPartnerPage(driver);
@@ -90,11 +92,12 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	@Test(priority = 3, enabled = true)
 	public void DeleteIntrgrationPartner() throws Exception
 	{
-		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		hm.openConfigurationPage();
-		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
-		cp.openIntegrationPartnerPage();
-		log.info("Integration Partner page has been opened");      
+		/*
+		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
+		 * hm.openConfigurationPage(); vms_ConfigurationPage cp = new
+		 * vms_ConfigurationPage(driver); cp.openIntegrationPartnerPage();
+		 * log.info("Integration Partner page has been opened");
+		 */  
 		
 		Thread.sleep(2000);
 		vms_IntegrationPartnerPage ip = new vms_IntegrationPartnerPage(driver);

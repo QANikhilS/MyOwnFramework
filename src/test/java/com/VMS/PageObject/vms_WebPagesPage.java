@@ -1,5 +1,7 @@
 package com.VMS.PageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +42,18 @@ public class vms_WebPagesPage {
 	@FindBy(xpath = "//button[ contains(@ng-click,'webSitesController') and text()='Save']")
 	public WebElement saveBtn;
 	
+	@FindBy(xpath = "//button[text()='Delete']")
+	public WebElement deleteWebPageBtn;
+	
+	@FindBy(css = "div[class*='ui-grid-selection-row-header-buttons']")
+	public List<WebElement> listOfAvailableWebPages;
+	
+	@FindBy(xpath = "//button[contains(text(),'Yes')]")
+	public WebElement yesBtn;
+	
+	@FindBy(xpath = "//button[contains(text(),'No')]")
+	public WebElement noBtn;
+		
 	
 	public void clickOnNewWebpageBtn()
 	{
@@ -108,7 +122,17 @@ public class vms_WebPagesPage {
 	}
 	
 	
-	
+	public void deleteAllWebPages() throws Exception
+	{
+		Thread.sleep(1500);
+		for (int i = 0; i<listOfAvailableWebPages.size()-1; i++)
+		{
+			listOfAvailableWebPages.get(i).click();
+		}
+		Thread.sleep(1000);
+		deleteWebPageBtn.click();
+		yesBtn.click();		
+	}
 	
 	
 }
