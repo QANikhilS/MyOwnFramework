@@ -15,7 +15,7 @@ import com.VMS.TestCases.BaseClass;
 public class vms_CamerasAndDevicesPage {
 	
 	WebDriver ldriver;
-	WebDriverWait wait = new WebDriverWait (ldriver,Duration.ofSeconds(15));;
+	WebDriverWait wait = new WebDriverWait (ldriver,Duration.ofSeconds(15));
 	
 	public vms_CamerasAndDevicesPage(WebDriver rdriver)
 	{

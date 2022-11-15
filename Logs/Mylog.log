@@ -1,50 +1,63 @@
-[INFO ] 2022-34-14 20:34:10:423 {main} zOwnProject -  URL Opened
-[INFO ] 2022-34-14 20:34:10:513 {main} zOwnProject -  Entered username 
-[INFO ] 2022-34-14 20:34:10:569 {main} zOwnProject -  Entered password 
-[INFO ] 2022-34-14 20:34:10:687 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-34-14 20:34:15:024 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-34-14 20:34:15:045 {main} zOwnProject - DoLogin  -  Passed. 
-[INFO ] 2022-34-14 20:34:15:048 {main} zOwnProject - User has logged in to VMS successfully.
-[INFO ] 2022-34-14 20:34:15:111 {main} zOwnProject - Clicked on ADMIN button from the Right top corner.
-[INFO ] 2022-34-14 20:34:15:155 {main} zOwnProject - Clicked on Log out button.
-[INFO ] 2022-34-14 20:34:16:524 {main} zOwnProject - verifyLogOut  -  Passed. 
-[INFO ] 2022-34-14 20:34:16:524 {main} zOwnProject - User has logged Out from VMS successfully.
-[INFO ] 2022-34-14 20:34:19:515 {main} zOwnProject -  URL Opened
-[INFO ] 2022-34-14 20:34:19:630 {main} zOwnProject -  Entered username 
-[INFO ] 2022-34-14 20:34:19:689 {main} zOwnProject -  Entered password 
-[INFO ] 2022-34-14 20:34:19:795 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-34-14 20:34:24:076 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-34-14 20:34:24:375 {main} zOwnProject - Integration Partner page has been opened
-[INFO ] 2022-34-14 20:34:24:641 {main} zOwnProject - Add new Integration Partner form has been opened
-[INFO ] 2022-34-14 20:34:24:964 {main} zOwnProject - Selected access control type
-[INFO ] 2022-34-14 20:34:25:078 {main} zOwnProject - Selected partner name 
-[INFO ] 2022-34-14 20:34:25:212 {main} zOwnProject - Entered VAX name
-[INFO ] 2022-34-14 20:34:25:323 {main} zOwnProject - Entered VAX IP
-[INFO ] 2022-34-14 20:34:25:462 {main} zOwnProject - Entered VAX Username
-[INFO ] 2022-34-14 20:34:25:573 {main} zOwnProject - Entered VAX password
-[INFO ] 2022-34-14 20:34:26:362 {main} zOwnProject - Selected all Doors
-[INFO ] 2022-34-14 20:34:26:481 {main} zOwnProject - Integration Partner has been added
-[INFO ] 2022-34-14 20:34:42:242 {main} zOwnProject - Integration Partner page has been opened
-[INFO ] 2022-34-14 20:34:46:323 {main} zOwnProject - Clicked on RefreshUserInfo button.
-[INFO ] 2022-34-14 20:34:46:712 {main} zOwnProject - RefreshUserInformationfeature  -  Passed. 
-[INFO ] 2022-34-14 20:34:46:822 {main} zOwnProject - User's Information has been refreshed successfully.
-[INFO ] 2022-35-14 20:35:02:473 {main} zOwnProject - Integration Partner page has been opened
-[INFO ] 2022-35-14 20:35:08:742 {main} zOwnProject - Deleted
-[INFO ] 2022-35-14 20:35:08:789 {main} zOwnProject - Delete Device Progress window closed
-[INFO ] 2022-35-14 20:35:11:752 {main} zOwnProject -  URL Opened
-[INFO ] 2022-35-14 20:35:11:871 {main} zOwnProject -  Entered username 
-[INFO ] 2022-35-14 20:35:11:927 {main} zOwnProject -  Entered password 
-[INFO ] 2022-35-14 20:35:12:028 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-35-14 20:35:16:473 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-35-14 20:35:16:584 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-35-14 20:35:16:826 {main} zOwnProject - Webpages page is opened
-[INFO ] 2022-35-14 20:35:16:941 {main} zOwnProject - clicked on NEW button.
-[INFO ] 2022-35-14 20:35:19:550 {main} zOwnProject - Alibaba webpage added.
-[INFO ] 2022-35-14 20:35:22:136 {main} zOwnProject - NDTV webpage added.
-[INFO ] 2022-35-14 20:35:24:788 {main} zOwnProject - Vicon webpage added.
-[INFO ] 2022-35-14 20:35:27:375 {main} zOwnProject - ZeeNews webpage added.
-[INFO ] 2022-35-14 20:35:29:966 {main} zOwnProject - Selenium webpage added.
-[INFO ] 2022-35-14 20:35:32:615 {main} zOwnProject - TestNG webpage added.
-[INFO ] 2022-35-14 20:35:35:367 {main} zOwnProject - CemtrexLabs webpage added.
-[INFO ] 2022-35-14 20:35:54:459 {main} zOwnProject - deleteWebPages  -  Passed. 
-[INFO ] 2022-35-14 20:35:54:459 {main} zOwnProject - All webpages are deleted.
+[INFO ] 2022-39-15 18:39:33:381 {main} zOwnProject -  URL Opened
+[INFO ] 2022-39-15 18:39:33:849 {main} zOwnProject -  Entered username 
+[INFO ] 2022-39-15 18:39:34:175 {main} zOwnProject -  Entered password 
+[INFO ] 2022-39-15 18:39:37:774 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-39-15 18:39:42:298 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-39-15 18:39:43:360 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-40-15 18:40:16:048 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-40-15 18:40:58:737 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-41-15 18:41:00:098 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-41-15 18:41:01:501 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-41-15 18:41:07:275 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-41-15 18:41:07:839 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-41-15 18:41:10:288 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-41-15 18:41:11:086 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-41-15 18:41:14:585 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-41-15 18:41:15:879 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-41-15 18:41:17:184 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-18-15 19:18:59:552 {main} zOwnProject -  URL Opened
+[INFO ] 2022-19-15 19:19:00:004 {main} zOwnProject -  Entered username 
+[INFO ] 2022-19-15 19:19:00:317 {main} zOwnProject -  Entered password 
+[INFO ] 2022-19-15 19:19:05:220 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-19-15 19:19:08:526 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-19-15 19:19:09:599 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-19-15 19:19:45:781 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-20-15 19:20:30:446 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-20-15 19:20:31:668 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-20-15 19:20:33:108 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-20-15 19:20:38:816 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-20-15 19:20:39:379 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-20-15 19:20:41:850 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-20-15 19:20:42:644 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-23-15 19:23:30:907 {main} zOwnProject -  URL Opened
+[INFO ] 2022-23-15 19:23:31:370 {main} zOwnProject -  Entered username 
+[INFO ] 2022-23-15 19:23:31:696 {main} zOwnProject -  Entered password 
+[INFO ] 2022-23-15 19:23:36:512 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-23-15 19:23:39:909 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-23-15 19:23:40:958 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-23-15 19:23:41:358 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-24-15 19:24:22:348 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-24-15 19:24:58:002 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-25-15 19:25:02:290 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-25-15 19:25:07:982 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-25-15 19:25:08:548 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-25-15 19:25:10:953 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-25-15 19:25:11:750 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-25-15 19:25:15:567 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-25-15 19:25:16:849 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-27-15 19:27:59:277 {main} zOwnProject -  URL Opened
+[INFO ] 2022-27-15 19:27:59:734 {main} zOwnProject -  Entered username 
+[INFO ] 2022-28-15 19:28:00:047 {main} zOwnProject -  Entered password 
+[INFO ] 2022-28-15 19:28:02:861 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-28-15 19:28:06:668 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-28-15 19:28:07:810 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-28-15 19:28:08:261 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-29-15 19:29:02:186 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-29-15 19:29:23:942 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-29-15 19:29:25:306 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-29-15 19:29:30:982 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-29-15 19:29:31:528 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-29-15 19:29:33:943 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-29-15 19:29:35:523 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-29-15 19:29:38:710 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-29-15 19:29:40:077 {main} zOwnProject - Query name has been entered

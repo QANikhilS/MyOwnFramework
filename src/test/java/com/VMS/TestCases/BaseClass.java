@@ -10,6 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -39,7 +40,7 @@ public class BaseClass
 	
 	
 	@BeforeClass
-	public void setup()
+	public static void setup()
 	{
 		switch (BrowserName.toLowerCase())
 		{
@@ -135,6 +136,12 @@ public class BaseClass
 			  currentIP = socket.getLocalAddress().getHostAddress();
 	    }
 		return currentIP;
+	  }
+	
+	
+	public static void jsClick(WebElement Element) throws Exception
+	  {JavascriptExecutor executor = (JavascriptExecutor)driver;
+	  executor.executeScript("arguments[0].click();", Element);
 	  }
 	
 	

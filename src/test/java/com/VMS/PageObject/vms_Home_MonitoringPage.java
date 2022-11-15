@@ -22,10 +22,10 @@ public class vms_Home_MonitoringPage {
 	@FindBy(linkText = "Configuration") 
 	public WebElement ConfigurationTab;
 	
-	@FindBy(name = "Search") 
+	@FindBy(xpath = "//a[text()='Search']") 
 	public WebElement SearchTab;
 	
-	@FindBy(id = "Alarms") 
+	@FindBy(css = "span[class*='Alarm']") 
 	public WebElement AlarmsTab;
 	
 
