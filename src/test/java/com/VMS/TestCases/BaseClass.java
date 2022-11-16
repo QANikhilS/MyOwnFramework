@@ -20,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_Login;
@@ -145,7 +146,7 @@ public class BaseClass
 	  }
 	
 	
-	//@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.close();

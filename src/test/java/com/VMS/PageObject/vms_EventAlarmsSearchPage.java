@@ -134,7 +134,7 @@ public class vms_EventAlarmsSearchPage {
     	searchFromAlarmDropdown.sendKeys(alarmName);
     	
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(300);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

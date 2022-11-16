@@ -61,3 +61,63 @@
 [INFO ] 2022-29-15 19:29:35:523 {main} zOwnProject - clicked on Save Query button.
 [INFO ] 2022-29-15 19:29:38:710 {main} zOwnProject - New Query form has been opened
 [INFO ] 2022-29-15 19:29:40:077 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-03-16 12:03:24:309 {main} zOwnProject -  URL Opened
+[INFO ] 2022-03-16 12:03:24:809 {main} zOwnProject -  Entered username 
+[INFO ] 2022-03-16 12:03:25:121 {main} zOwnProject -  Entered password 
+[INFO ] 2022-03-16 12:03:26:496 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-03-16 12:03:30:910 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-03-16 12:03:32:569 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-03-16 12:03:33:656 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-04-16 12:04:03:145 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-04-16 12:04:30:021 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-05-16 12:05:02:487 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-05-16 12:05:08:224 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-05-16 12:05:08:791 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-05-16 12:05:11:263 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-05-16 12:05:12:708 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-05-16 12:05:15:658 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-05-16 12:05:16:952 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-05-16 12:05:18:304 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-05-16 12:05:24:043 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-05-16 12:05:24:590 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-05-16 12:05:27:063 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-05-16 12:05:28:576 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-05-16 12:05:29:172 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-05-16 12:05:29:716 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-05-16 12:05:31:321 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-05-16 12:05:32:581 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-05-16 12:05:33:998 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-05-16 12:05:39:722 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-05-16 12:05:40:272 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-05-16 12:05:42:812 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-05-16 12:05:44:388 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-26-16 13:26:46:493 {main} zOwnProject -  URL Opened
+[INFO ] 2022-26-16 13:26:46:962 {main} zOwnProject -  Entered username 
+[INFO ] 2022-26-16 13:26:47:273 {main} zOwnProject -  Entered password 
+[INFO ] 2022-26-16 13:26:51:033 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-26-16 13:26:55:422 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-26-16 13:26:56:125 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-26-16 13:26:57:429 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-27-16 13:27:47:710 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-28-16 13:28:24:229 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-28-16 13:28:25:658 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-28-16 13:28:31:426 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-28-16 13:28:31:975 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-28-16 13:28:34:453 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-28-16 13:28:36:024 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-28-16 13:28:36:604 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-28-16 13:28:37:179 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-28-16 13:28:38:690 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-28-16 13:28:39:889 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-28-16 13:28:41:241 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-28-16 13:28:47:013 {main} zOwnProject - Intrusion' alarms is selected.
+[INFO ] 2022-28-16 13:28:47:780 {main} zOwnProject - Include Open Alarms is selected.
+[INFO ] 2022-28-16 13:28:50:238 {main} zOwnProject - Days as last 7 days  is selected.
+[INFO ] 2022-28-16 13:28:51:739 {main} zOwnProject - clicked on Save Query button.
+[INFO ] 2022-28-16 13:28:52:288 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-28-16 13:28:52:820 {main} zOwnProject - Event/Alarm Search page has been opened
+[INFO ] 2022-28-16 13:28:54:315 {main} zOwnProject - New Query form has been opened
+[INFO ] 2022-28-16 13:28:55:594 {main} zOwnProject - Query name has been entered
+[INFO ] 2022-28-16 13:28:56:867 {main} zOwnProject - Search for 'Alarm' toggle button is selected.
+[INFO ] 2022-28-16 13:28:57:653 {main} zOwnProject - Search page has been opened
+[INFO ] 2022-28-16 13:28:58:165 {main} zOwnProject - Event/Alarm Search page has been opened

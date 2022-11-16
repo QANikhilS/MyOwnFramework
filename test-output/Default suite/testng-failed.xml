@@ -5,7 +5,9 @@
     <classes>
       <class name="com.VMS.TestCases.TC_EventAlarmSearchPageTest">
         <methods>
-          <include name="addEventAlarmSearch"/>
+          <include name="addEventAlarmSearch3"/>
+          <include name="tearDown"/>
+          <include name="addEventAlarmSearch4"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.VMS.TestCases.TC_EventAlarmSearchPageTest -->
