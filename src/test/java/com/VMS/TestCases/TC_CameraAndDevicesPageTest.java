@@ -21,7 +21,7 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 		log.info("Cameras and Devices page is opened");
 	
 		vms_CamerasAndDevicesPage cd = new vms_CamerasAndDevicesPage(driver);
-		cd.addSimulatorCamera(getcurrentMachineIP());
+		cd.verifyAndAddSimulatorCamerainVMS("172.20.10.10");
 		
 		
 	/*	String ExpectedSuccessMsg = "Successfully added";
@@ -43,11 +43,33 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 	}
 	
 	
-		
+	//@Test
+	public void verifyCameraIsAdded() throws Exception
+	{
+		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
+		hm.openConfigurationPage();
+		log.info("Configuration page is opened");
+		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
+		cp.openCamerasAndDevicesPage();
+		log.info("Cameras and Devices page is opened");
 	
-	
-	
-	
+		vms_CamerasAndDevicesPage cd = new vms_CamerasAndDevicesPage(driver);
+		cd.isSimulatorCameraPresentinVMS();
+			
+		if (cd.isSimulatorCameraPresentinVMS()==true)
+		{
+			log.info("verifyCameraIsAdded  -  Passed. ");
+			Assert.assertTrue(true);
+			log.info(" Expected cameras is present of Cameras and Devices page.");
+		}
+		else 
+		{
+			log.info("verifyCameraIsAdded  -  Failed. ");
+			capctureScreenshot(driver, "verifyCameraIsAdded");
+			log.info(" Expected camera is not added in VMS.");
+			Assert.assertTrue(false);
+		}   
+	}
 	
 	
 }

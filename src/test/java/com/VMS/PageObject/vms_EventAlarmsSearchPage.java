@@ -194,7 +194,7 @@ public class vms_EventAlarmsSearchPage {
 		BaseClass.log.info("Days as last 7 days  is selected.");
 		
 		clickOnSaveQueryBtn();
-		wait.until(ExpectedConditions.visibilityOf(searchBtn));
+		wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
 		BaseClass.log.info("clicked on Save Query button.");
      }
     

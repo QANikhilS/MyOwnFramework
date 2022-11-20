@@ -20,7 +20,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_Login;
@@ -41,7 +40,7 @@ public class BaseClass
 	
 	
 	@BeforeClass
-	public static void setup()
+	public void setup()
 	{
 		switch (BrowserName.toLowerCase())
 		{
@@ -73,8 +72,10 @@ public class BaseClass
 		// for Logging.
 		log =  LogManager.getLogger("zOwnProject");
 		
-		vms_Login login = new vms_Login(driver);
-		login.DoLogin();		
+		
+		  vms_Login login = new vms_Login(driver); 
+		  login.DoLogin();
+		 	
 	}
 		
 	public void handlePlayerWidnow() throws Exception
@@ -146,7 +147,7 @@ public class BaseClass
 	  }
 	
 	
-	@AfterClass
+	//@AfterClass
 	public void tearDown()
 	{
 		driver.close();

@@ -157,7 +157,7 @@ public class vms_ConfigurationPage {
 		
 	public void openCamerasAndDevicesPage()
 	{
-		try  {  CamerasAndDevices.click(); }
+    	try  {  CamerasAndDevices.click(); }
 		catch (Exception e)
 		{
 			 e.printStackTrace();
@@ -165,6 +165,8 @@ public class vms_ConfigurationPage {
 			 CamerasAndDevices.click();
 		}
 	}
+	
+	
 	
 	public void openViconNetGatewayPage()
 	{

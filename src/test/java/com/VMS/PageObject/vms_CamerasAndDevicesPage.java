@@ -15,7 +15,7 @@ import com.VMS.TestCases.BaseClass;
 public class vms_CamerasAndDevicesPage {
 	
 	WebDriver ldriver;
-	WebDriverWait wait = new WebDriverWait (ldriver,Duration.ofSeconds(15));
+	WebDriverWait wait;
 	
 	public vms_CamerasAndDevicesPage(WebDriver rdriver)
 	{
@@ -60,9 +60,11 @@ public class vms_CamerasAndDevicesPage {
 	@FindBy(xpath = "//span[contains(@ng-click,'cancel()')]")
 	public WebElement closeSuccessWindowBtn;	
 	
+	@FindBy(css = "span[ng-show='configuration.unassociatedDeviceList.length']")
+	public WebElement countOfDiscoveredDevices;	
 	
 	
-	
+
 	
 	public String successMessageOnAddingCamera()
 	{
@@ -77,7 +79,7 @@ public class vms_CamerasAndDevicesPage {
 	
 	public void clickOnAddDiscoveredDevicesBtn()
 	{
-		
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(searchCameraTxtboxOnDiscoveredDevicesWindow));
 		addDiscoveredDevicesBtn.click();
 	}
@@ -110,17 +112,20 @@ public class vms_CamerasAndDevicesPage {
 
 	public boolean isSimulatorCameraPresentinVMS() throws Exception
 	{
-		wait.until(ExpectedConditions.visibilityOf(searchCameraTxtbox));
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(countOfDiscoveredDevices));
+		searchCameraTxtbox.click();
+		searchCameraTxtbox.clear();
 		searchCameraTxtbox.sendKeys(BaseClass.getcurrentMachineIP());
 		wait.until(ExpectedConditions.visibilityOf(filteredCameraOnCamerasAndDevicesPage));
 		filteredCameraOnCamerasAndDevicesPage.isDisplayed();
 		return true;
 	}
 	
-	
 	public void addSimulatorCamera(String IPofCamera) throws Exception
 	{
 		clickOnAddDiscoveredDevicesBtn();
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(searchCameraTxtboxOnDiscoveredDevicesWindow));
 		enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(IPofCamera);
 		wait.until(ExpectedConditions.visibilityOf(filteredCameraOnDiscoveredDevicesPage));
@@ -141,8 +146,6 @@ public class vms_CamerasAndDevicesPage {
 		}		
 	 }
 
-	
-	
 	public void verifyAndAddSimulatorCamerainVMS(String IPofCamera) throws Exception
 	{
 		if(isSimulatorCameraPresentinVMS() == true)

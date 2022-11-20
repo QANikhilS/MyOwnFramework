@@ -53,7 +53,12 @@ public class vms_WebPagesPage {
 	
 	@FindBy(xpath = "//button[contains(text(),'No')]")
 	public WebElement noBtn;
-		
+
+	@FindBy(xpath = "//div[@class='ui-grid-cell-contents']/div")
+	public List<WebElement> singleWebpageCheckbox;
+	
+
+
 	
 	public void clickOnNewWebpageBtn()
 	{
@@ -121,15 +126,23 @@ public class vms_WebPagesPage {
 		Thread.sleep(1500);
 	}
 	
+	public void selectWebPage()
+	{
+		for (int i = 0 ; i < singleWebpageCheckbox.size(); i++)
+		{
+			String checkboxAttibute = singleWebpageCheckbox.get(i).getAttribute("Class");
+			if (checkboxAttibute.contains("selected"))   {}
+			else 
+			 {
+			singleWebpageCheckbox.get(i).click();
+			 }
+		}
+	}
 	
 	public void deleteAllWebPages() throws Exception
 	{
 		Thread.sleep(1500);
-		for (int i = 0; i<listOfAvailableWebPages.size()-1; i++)
-		{
-			listOfAvailableWebPages.get(i).click();
-		}
-		Thread.sleep(1000);
+		selectWebPage();
 		deleteWebPageBtn.click();
 		yesBtn.click();		
 	}
