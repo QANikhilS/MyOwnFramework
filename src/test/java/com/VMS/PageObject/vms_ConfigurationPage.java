@@ -39,7 +39,7 @@ public class vms_ConfigurationPage {
 	@FindBy(xpath = "//div[text()='Home Page']") 
 	public WebElement HomePage;	
 	
-	@FindBy(xpath = "//div[text()='Alarms']") 
+	@FindBy(xpath = "//div[contains(@class,'Alarms')]") 
 	public WebElement AlarmsPage;
 	
 	@FindBy(xpath = "//div[contains(@class,'Video Channels')]") 

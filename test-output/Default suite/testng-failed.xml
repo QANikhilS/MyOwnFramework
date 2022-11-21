@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_WebPagesTest">
+      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
         <methods>
-          <include name="deleteWebPages"/>
+          <include name="addVAXAlarms"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
+      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

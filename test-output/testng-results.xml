@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-20T19:51:17 IST" name="Default suite" finished-at="2022-11-20T19:51:47 IST" duration-ms="30221">
+  <suite started-at="2022-11-21T17:40:57 IST" name="Default suite" finished-at="2022-11-21T17:41:37 IST" duration-ms="39849">
     <groups>
     </groups>
-    <test started-at="2022-11-20T19:51:17 IST" name="Default test" finished-at="2022-11-20T19:51:47 IST" duration-ms="30221">
-      <class name="com.VMS.TestCases.TC_CameraAndDevicesPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_CameraAndDevicesPageTest@51e69659]" started-at="2022-11-20T19:51:17 IST" name="setup" finished-at="2022-11-20T19:51:30 IST" duration-ms="13148" status="PASS">
+    <test started-at="2022-11-21T17:40:57 IST" name="Default test" finished-at="2022-11-21T17:41:37 IST" duration-ms="39849">
+      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_AlarmsPageTest@659499f1]" started-at="2022-11-21T17:40:57 IST" name="setup" finished-at="2022-11-21T17:41:08 IST" duration-ms="11634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddSimulatorCamera()[pri:0, instance:com.VMS.TestCases.TC_CameraAndDevicesPageTest@51e69659]" started-at="2022-11-20T19:51:30 IST" name="AddSimulatorCamera" finished-at="2022-11-20T19:51:47 IST" duration-ms="17044" status="PASS">
+        <test-method signature="addVAXAlarms()[pri:0, instance:com.VMS.TestCases.TC_AlarmsPageTest@659499f1]" started-at="2022-11-21T17:41:08 IST" name="addVAXAlarms" finished-at="2022-11-21T17:41:37 IST" duration-ms="28184" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddSimulatorCamera -->
-      </class> <!-- com.VMS.TestCases.TC_CameraAndDevicesPageTest -->
+        </test-method> <!-- addVAXAlarms -->
+      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
