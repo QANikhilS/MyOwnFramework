@@ -3,6 +3,7 @@ package com.VMS.PageObject;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -76,7 +77,7 @@ public class vms_AlarmsPage {
 	@FindBy(xpath =  "//a[contains(@custom-tooltip,'Not Equal')]") 
 	public WebElement notEqualsOperator;
 	
-	@FindBy(css = "multiselect[header='Select a Value'] div[class='dropdown']") 
+	@FindBy(xpath = "//multiselect[@id='vaxdummy']//span[@class='vicon-font v-arrow-down ng-scope']") 
 	public WebElement parameterValueDropdowninAccessControlConfiguration;
 	
 	@FindBy(xpath = "//multiselect[@id='parameter']//ul/li/a")
@@ -84,8 +85,6 @@ public class vms_AlarmsPage {
 	
 	@FindBy(xpath = "//multiselect[@id='operator']//ul/li/a")
 	public List<WebElement> listOfOperatorTypes;
-	
-	//multiselect[@id="operator"]/div[@class="dropdown open"]/ul/li/a
 	
 	@FindBy(xpath = "//multiselect[@id='subEventType']//ul/li/a")
 	public List<WebElement> listOfEventTypes;
@@ -150,8 +149,22 @@ public class vms_AlarmsPage {
 	
 	public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(parameterValueDropdowninAccessControlConfiguration));
-		parameterValueDropdowninAccessControlConfiguration.click();
+		wait.until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
+	   try 
+	     {
+		   parameterValueDropdowninAccessControlConfiguration.click();
+	     }
+	   catch (Exception e) 
+	     {
+		// TODO: handle exception
+			JavascriptExecutor executor = (JavascriptExecutor)ldriver;
+	        executor.executeScript("arguments[0].click();", parameterValueDropdowninAccessControlConfiguration);
+	      }
+	   finally  
+	      {
+		       Actions act = new Actions(ldriver);
+		       act.moveToElement(parameterValueDropdowninAccessControlConfiguration).click().build().perform();
+	      }
 		Thread.sleep(500);
 		for (int i = 0; i<listOfEventTypes.size() ; i++)
 		{
