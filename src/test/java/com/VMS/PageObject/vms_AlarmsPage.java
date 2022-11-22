@@ -1,6 +1,7 @@
 package com.VMS.PageObject;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,15 +52,43 @@ public class vms_AlarmsPage {
 	@FindBy(xpath =  "//multiselect[contains(@ng-show,'access')]/div/ul/li[3]/a") 
 	public WebElement selectAccessControlNameAsVAX;
 	
+	@FindBy(css = "button[class='config-action-btn access-config-btn']") 
+	public WebElement accesControlConfiguration;
 	
+	@FindBy(css = "multiselect[id='parameter'] div[class='dropdown']") 
+	public WebElement parameterDropDownInConfiguration;
 	
+	@FindBy(xpath  = "//a[@custom-tooltip='Event']") 
+	public WebElement parameterAsEvent;
 	
+	@FindBy(xpath  = "//a[@custom-tooltip='Message']") 
+	public WebElement parameterAsMessage;	
 	
+	@FindBy(xpath = "//a[@custom-tooltip='Card Holders']") 
+	public WebElement parameterAsCardHolders;	
 	
+	@FindBy(css = "multiselect[id='operator'] div[class='dropdown']") 
+	public WebElement operatorDropDownInConfiguration;
 	
-	@FindBy(xpath =  "//div[@ng-show='selectedAlarm.isPartnerAlarm']/dropdown-submenu[contains(@ng-show,'PartnerAlarm')]//i") 
-	public WebElement selectIntegrationPartnerDropdownArrow;
+	@FindBy(css = "a[custom-tooltip='Equals (=)']") 
+	public WebElement equalsOperator;
 	
+	@FindBy(xpath =  "//a[contains(@custom-tooltip,'Not Equal')]") 
+	public WebElement notEqualsOperator;
+	
+	@FindBy(css = "multiselect[header='Select a Value'] div[class='dropdown']") 
+	public WebElement parameterValueDropdowninAccessControlConfiguration;
+	
+	@FindBy(xpath = "//multiselect[@id='parameter']//ul/li/a")
+	public List<WebElement> listOfParameterTypes;
+	
+	@FindBy(xpath = "//multiselect[@id='operator']//ul/li/a")
+	public List<WebElement> listOfOperatorTypes;
+	
+	//multiselect[@id="operator"]/div[@class="dropdown open"]/ul/li/a
+	
+	@FindBy(xpath = "//multiselect[@id='subEventType']//ul/li/a")
+	public List<WebElement> listOfEventTypes;
 	
 	
 	public void addNewAlarm()
@@ -67,7 +96,6 @@ public class vms_AlarmsPage {
 		wait.until(ExpectedConditions.elementToBeClickable(NewBtn));
 		NewBtn.click();
 	}
-	
 	
 	public void enterAlarmName(String alarmName)
 	{
@@ -89,13 +117,64 @@ public class vms_AlarmsPage {
 		Thread.sleep(1000);
 		act.moveToElement(selectIntegrationPartnerAsAccessControl).click().build().perform();
 	}
-	
+
 	public void selectAccessControlPartnerasVAX() throws Exception
 	{
 		selectAccessControlNameAsDropdown.click();
 		selectAccessControlNameAsVAX.click();
 	}
+
 	
+	public void selectParameterInConfigureAccessControl(String parameterNAme) throws Exception
+	{
+		parameterDropDownInConfiguration.click();
+		Thread.sleep(500);
+		for (int i = 0; i<listOfParameterTypes.size() ; i++)
+		{
+			listOfParameterTypes.get(i).getText().equalsIgnoreCase(parameterNAme);
+			listOfParameterTypes.get(i).click();
+		}
+	}
+	
+	public void selectOperatorInConfigureAccessControl(String operatorNAme) throws Exception
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(operatorDropDownInConfiguration));
+		operatorDropDownInConfiguration.click();
+		Thread.sleep(500);
+		for (int i = 0; i<listOfOperatorTypes.size() ; i++)
+		{
+			listOfOperatorTypes.get(i).getText().contains(operatorNAme);
+			listOfOperatorTypes.get(i).click();
+		}
+	}
+	
+	public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(parameterValueDropdowninAccessControlConfiguration));
+		parameterValueDropdowninAccessControlConfiguration.click();
+		Thread.sleep(500);
+		for (int i = 0; i<listOfEventTypes.size() ; i++)
+		{
+			listOfEventTypes.get(i).getText().equalsIgnoreCase(eventValue);
+			listOfEventTypes.get(i).click();
+		}
+	}
+		
+	public void configureAccessControlEvent(String parameterType, String operatorType, String subEventType) throws Exception
+	{
+		
+		accesControlConfiguration.click();
+		Thread.sleep(500);
+		selectParameterInConfigureAccessControl(parameterType);
+		Thread.sleep(500);
+/*		selectOperatorInConfigureAccessControl(operatorType);
+		Thread.sleep(500);     */
+		selectSubEventInConfigureAccessControl(subEventType);	
+	}
+	
+
+	
+
 	
 	public void addVAXAlarm(String AlarmName) throws Exception
 	{
@@ -104,7 +183,7 @@ public class vms_AlarmsPage {
 		selectEventTypeAsIntegrationPartner();
 		selectIntegrationPartnerAsAccessControl();
 		selectAccessControlPartnerasVAX();
-		
+		configureAccessControlEvent("Events", "Equals", "Door Open");
 	}
 	
 }

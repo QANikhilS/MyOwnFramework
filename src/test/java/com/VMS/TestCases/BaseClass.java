@@ -60,6 +60,7 @@ public class BaseClass
 				System.setProperty("webdriver.ie.driver", ".\\Drivers\\IEDriverServer.exe");
 				driver = new InternetExplorerDriver();
 				driver.manage().window().maximize();
+				driver.manage().deleteAllCookies();
 			break;
 						
 		default:
@@ -68,7 +69,7 @@ public class BaseClass
 		}
 		
 		// Implicit wait of 30 seconds on all web Element
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		// for Logging.
 		log =  LogManager.getLogger("zOwnProject");
 		
