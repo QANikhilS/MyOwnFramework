@@ -3,38 +3,50 @@
 	<groupId>zOwnProject</groupId>
 	<artifactId>zOwnProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-<properties>
-<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-</properties>
+	<name>zOwnProject</name>
+	<url>http://maven.apache.org</url>
 
-<build>
-<pluginManagement>
-<plugins>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.10.1</version>
-    <configuration></configuration>
-    </plugin>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-<plugin>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M5</version>
-      <configuration>
-         <suiteXmlFiles>
-           <suiteXmlFile>testng.xml</suiteXmlFile>
-         </suiteXmlFiles>
-      </configuration>
-</plugin>
-</plugins>
-</pluginManagement>
-</build>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.10.1</version>
+					<configuration></configuration>
+				</plugin>
+
+				<plugin>
+					<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M6</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager :-   TO MAINTAIN ALL BROWSERS AT ONE PLACE-->
 		<dependency>
@@ -58,7 +70,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi    :- JARS TO REAL EXCEL FILES-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -74,7 +85,6 @@
 			<version>5.2.2</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core    :-  JARS TO WRITE LOGS ON CONSOLE AND TEXT FILE-->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -89,12 +99,23 @@
 			<version>2.17.1</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.25</version>
 		</dependency>
 
 

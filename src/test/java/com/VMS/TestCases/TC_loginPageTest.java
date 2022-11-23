@@ -35,7 +35,7 @@ public class TC_loginPageTest extends BaseClass
 		}
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2, dependsOnMethods = {"verifyADMINLogin"})
 	public void verifyLogOut()
 	{
 		vms_Login lg = new vms_Login(driver);

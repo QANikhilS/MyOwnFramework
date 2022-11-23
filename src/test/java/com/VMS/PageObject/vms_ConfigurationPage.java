@@ -14,7 +14,6 @@ public class vms_ConfigurationPage {
 
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
-
 	}
 
 	// Identify webElements
@@ -153,6 +152,7 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 RNVRs.click();
 		}
+		
 	}
 		
 	public void openCamerasAndDevicesPage()
@@ -287,6 +287,17 @@ public class vms_ConfigurationPage {
 			 e.printStackTrace();
 			 HomePage.click();
 			 ToursPage.click();
+		}
+	}
+	
+	public void openNumericIDsPage()
+	{
+		try  {  NumericISsPage.click(); }
+		catch (Exception e)
+		{
+			 e.printStackTrace();
+			 HomePage.click();
+			 NumericISsPage.click();
 		}
 	}
 	
