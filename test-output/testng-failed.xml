@@ -8,7 +8,6 @@
     <classes>
       <class name="com.VMS.TestCases.TC_ConfigurationPageTest">
         <methods>
-          <include name="OpenRNVRsPage"/>
           <include name="OpenAudioChannelsPage"/>
           <include name="tearDown"/>
           <include name="setup"/>

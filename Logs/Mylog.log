@@ -429,3 +429,103 @@
 [INFO ] 2022-01-23 20:01:09:234 {main} zOwnProject -  URL Opened
 [INFO ] 2022-01-23 20:01:12:004 {main} zOwnProject -  URL Opened
 [INFO ] 2022-01-23 20:01:14:936 {main} zOwnProject -  URL Opened
+[INFO ] 2022-52-23 20:52:39:448 {main} zOwnProject -  URL Opened
+[INFO ] 2022-52-23 20:52:42:362 {main} zOwnProject -  URL Opened
+[INFO ] 2022-52-23 20:52:45:211 {main} zOwnProject -  URL Opened
+[INFO ] 2022-56-23 20:56:24:218 {main} zOwnProject -  URL Opened
+[INFO ] 2022-56-23 20:56:27:224 {main} zOwnProject -  URL Opened
+[INFO ] 2022-56-23 20:56:30:218 {main} zOwnProject -  URL Opened
+[INFO ] 2022-33-24 11:33:45:546 {main} zOwnProject -  URL Opened
+[INFO ] 2022-33-24 11:33:46:099 {main} zOwnProject -  Entered username 
+[INFO ] 2022-33-24 11:33:46:473 {main} zOwnProject -  Entered password 
+[INFO ] 2022-33-24 11:33:47:934 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-33-24 11:33:52:642 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-33-24 11:33:52:986 {main} zOwnProject - DoLogin  -  Passed. 
+[INFO ] 2022-33-24 11:33:52:989 {main} zOwnProject - User has logged in to VMS successfully.
+[INFO ] 2022-33-24 11:33:54:641 {main} zOwnProject - Clicked on ADMIN button from the Right top corner.
+[INFO ] 2022-33-24 11:33:55:591 {main} zOwnProject - Clicked on Log out button.
+[INFO ] 2022-33-24 11:33:57:984 {main} zOwnProject - verifyLogOut  -  Passed. 
+[INFO ] 2022-33-24 11:33:57:985 {main} zOwnProject - User has logged Out from VMS successfully.
+[INFO ] 2022-33-24 11:33:59:935 {main} zOwnProject -  URL Opened
+[INFO ] 2022-34-24 11:34:00:472 {main} zOwnProject -  Entered username 
+[INFO ] 2022-34-24 11:34:00:819 {main} zOwnProject -  Entered password 
+[INFO ] 2022-34-24 11:34:05:885 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-34-24 11:34:09:277 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-34-24 11:34:10:741 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-34-24 11:34:16:420 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-34-24 11:34:18:108 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2022-34-24 11:34:24:146 {main} zOwnProject - Alibaba webpage added.
+[INFO ] 2022-34-24 11:34:29:224 {main} zOwnProject - NDTV webpage added.
+[INFO ] 2022-34-24 11:34:34:234 {main} zOwnProject - Vicon webpage added.
+[INFO ] 2022-34-24 11:34:39:319 {main} zOwnProject - ZeeNews webpage added.
+[INFO ] 2022-34-24 11:34:44:480 {main} zOwnProject - Selenium webpage added.
+[INFO ] 2022-34-24 11:34:49:532 {main} zOwnProject - TestNG webpage added.
+[INFO ] 2022-34-24 11:34:54:776 {main} zOwnProject - CemtrexLabs webpage added.
+[INFO ] 2022-34-24 11:34:57:265 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-35-24 11:35:23:128 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-36-24 11:36:08:821 {main} zOwnProject - deleteWebPages  -  Passed. 
+[INFO ] 2022-36-24 11:36:08:822 {main} zOwnProject - All webpages are deleted.
+[INFO ] 2022-36-24 11:36:10:785 {main} zOwnProject -  URL Opened
+[INFO ] 2022-36-24 11:36:11:301 {main} zOwnProject -  Entered username 
+[INFO ] 2022-36-24 11:36:11:658 {main} zOwnProject -  Entered password 
+[INFO ] 2022-36-24 11:36:13:098 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-36-24 11:36:17:994 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-36-24 11:36:19:678 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-36-24 11:36:22:936 {main} zOwnProject - NVR page is opened successfully.
+[INFO ] 2022-36-24 11:36:46:409 {main} zOwnProject - RNVR page is opened successfully.
+[INFO ] 2022-37-24 11:37:10:217 {main} zOwnProject - Analytics servers page is opened successfully.
+[INFO ] 2022-37-24 11:37:36:311 {main} zOwnProject - Video channels page is opened successfully.
+[INFO ] 2022-08-24 12:08:16:797 {main} zOwnProject -  URL Opened
+[INFO ] 2022-08-24 12:08:17:331 {main} zOwnProject -  Entered username 
+[INFO ] 2022-08-24 12:08:17:673 {main} zOwnProject -  Entered password 
+[INFO ] 2022-08-24 12:08:19:096 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-08-24 12:08:23:600 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-09-24 12:09:47:399 {main} zOwnProject -  URL Opened
+[INFO ] 2022-09-24 12:09:47:876 {main} zOwnProject -  Entered username 
+[INFO ] 2022-09-24 12:09:48:214 {main} zOwnProject -  Entered password 
+[INFO ] 2022-09-24 12:09:52:571 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-09-24 12:09:56:713 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-09-24 12:09:56:747 {main} zOwnProject - DoLogin  -  Passed. 
+[INFO ] 2022-09-24 12:09:56:748 {main} zOwnProject - User has logged in to VMS successfully.
+[INFO ] 2022-09-24 12:09:57:400 {main} zOwnProject - Clicked on ADMIN button from the Right top corner.
+[INFO ] 2022-09-24 12:09:58:111 {main} zOwnProject - Clicked on Log out button.
+[INFO ] 2022-10-24 12:10:00:789 {main} zOwnProject - verifyLogOut  -  Passed. 
+[INFO ] 2022-10-24 12:10:00:789 {main} zOwnProject - User has logged Out from VMS successfully.
+[INFO ] 2022-10-24 12:10:02:823 {main} zOwnProject -  URL Opened
+[INFO ] 2022-10-24 12:10:03:303 {main} zOwnProject -  Entered username 
+[INFO ] 2022-10-24 12:10:03:645 {main} zOwnProject -  Entered password 
+[INFO ] 2022-10-24 12:10:08:070 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-10-24 12:10:11:885 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-10-24 12:10:13:279 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-10-24 12:10:15:475 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-10-24 12:10:15:837 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2022-10-24 12:10:21:661 {main} zOwnProject - Alibaba webpage added.
+[INFO ] 2022-10-24 12:10:26:921 {main} zOwnProject - NDTV webpage added.
+[INFO ] 2022-10-24 12:10:31:819 {main} zOwnProject - Vicon webpage added.
+[INFO ] 2022-10-24 12:10:36:509 {main} zOwnProject - ZeeNews webpage added.
+[INFO ] 2022-10-24 12:10:41:662 {main} zOwnProject - Selenium webpage added.
+[INFO ] 2022-10-24 12:10:46:529 {main} zOwnProject - TestNG webpage added.
+[INFO ] 2022-10-24 12:10:51:607 {main} zOwnProject - CemtrexLabs webpage added.
+[INFO ] 2022-10-24 12:10:53:241 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-11-24 12:11:17:585 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-11-24 12:11:50:723 {main} zOwnProject - deleteWebPages  -  Passed. 
+[INFO ] 2022-11-24 12:11:50:723 {main} zOwnProject - All webpages are deleted.
+[INFO ] 2022-11-24 12:11:52:666 {main} zOwnProject -  URL Opened
+[INFO ] 2022-11-24 12:11:53:173 {main} zOwnProject -  Entered username 
+[INFO ] 2022-11-24 12:11:53:499 {main} zOwnProject -  Entered password 
+[INFO ] 2022-11-24 12:11:58:518 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-12-24 12:12:01:798 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-12-24 12:12:03:321 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-12-24 12:12:06:308 {main} zOwnProject - NVR page is opened successfully.
+[INFO ] 2022-12-24 12:12:29:634 {main} zOwnProject - RNVR page is opened successfully.
+[INFO ] 2022-12-24 12:12:53:334 {main} zOwnProject - Analytics servers page is opened successfully.
+[INFO ] 2022-13-24 12:13:19:071 {main} zOwnProject - Video channels page is opened successfully.
+[INFO ] 2022-14-24 12:14:52:980 {main} zOwnProject -  URL Opened
+[INFO ] 2022-14-24 12:14:55:808 {main} zOwnProject -  URL Opened
+[INFO ] 2022-14-24 12:14:58:510 {main} zOwnProject -  URL Opened
+[INFO ] 2022-59-24 12:59:03:624 {main} zOwnProject -  URL Opened
+[INFO ] 2022-59-24 12:59:06:335 {main} zOwnProject -  URL Opened
+[INFO ] 2022-59-24 12:59:09:153 {main} zOwnProject -  URL Opened
+[INFO ] 2022-00-24 13:00:15:455 {main} zOwnProject -  URL Opened
+[INFO ] 2022-00-24 13:00:18:286 {main} zOwnProject -  URL Opened
+[INFO ] 2022-00-24 13:00:20:965 {main} zOwnProject -  URL Opened
