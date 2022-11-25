@@ -118,6 +118,19 @@
 			<version>1.7.25</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin  - TO SUPPORT JENKINS FOR MIGRATING FROM JAVA 8 TO JAVA 11 OR 17-->
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.5</version>
+		</dependency>
+
+		<dependency>
+			<!--  TO SUPPORT JENKINS FOR MIGRATING FROM JAVA 8 TO JAVA 11 OR 17-->
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+		</dependency>
 
 	</dependencies>
 </project>

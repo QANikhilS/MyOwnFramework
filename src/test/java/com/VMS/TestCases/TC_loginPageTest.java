@@ -13,6 +13,7 @@ public class TC_loginPageTest extends BaseClass
 	@Test(priority = 1)
 	public void verifyADMINLogin()
 	{
+	  log.info("************  Test Case - verifyADMINLogin is started ************");	
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "http://localhost/#/monitoring";
 		
@@ -33,11 +34,13 @@ public class TC_loginPageTest extends BaseClass
 			}
 			Assert.assertTrue(false);
 		}
+		log.info("************  Test Case - verifyADMINLogin is finished ************");	
 	}
 	
 	@Test(priority = 2, dependsOnMethods = {"verifyADMINLogin"})
 	public void verifyLogOut()
 	{
+		log.info("************  Test Case - verifyLogOut is started ************");	
 		vms_Login lg = new vms_Login(driver);
 		lg.clickOnUserNamefromTopCorner();
 		log.info("Clicked on ADMIN button from the Right top corner.");
@@ -60,6 +63,7 @@ public class TC_loginPageTest extends BaseClass
 			}
 			Assert.assertTrue(false);
 		}
+		log.info("************  Test Case - verifyLogOut is finished ************");	
 		
 	}
 

@@ -1,5 +1,7 @@
 package com.VMS.TestCases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,8 +12,9 @@ public class TC_ConfigurationPageTest extends BaseClass
 {
 	
 	@Test(priority = 1)
-	public void OpenNVRsPage()
+	public void OpenNVRsPage() throws Exception
 	{
+		log.info("************  Test Case - OpenNVRsPage is started ************");	
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		hm.openConfigurationPage();
 		log.info("Configuration page is opened");
@@ -21,15 +24,27 @@ public class TC_ConfigurationPageTest extends BaseClass
 		String expectedURL = "http://localhost/#/configuration/devices/nvrs";
 		String actualURL  = driver.getCurrentUrl();
 		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("NVR page is opened successfully.");
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenNVRsPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenNVRsPage");
+			log.info("OpenNVRsPage  -  Failed.");	
+			Assert.assertTrue(false);
+		}
+	    
+		log.info("************  Test Case - OpenNVRsPage is finished ************");	
 	}
 	
 	
 	
 	@Test(priority = 2)
-	public void OpenRNVRsPage()
+	public void OpenRNVRsPage() throws Exception
 	{
+		log.info("************  Test Case - OpenRNVRsPage is started ************");	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openRNVRsPage();
 		
@@ -37,63 +52,119 @@ public class TC_ConfigurationPageTest extends BaseClass
 		String expectedURL = "http://localhost/#/configuration/devices/nvr_redundancy";
 		String actualURL  = driver.getCurrentUrl();
 		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("RNVR page is opened successfully.");
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenRNVRsPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenRNVRsPage");
+			log.info("OpenRNVRsPage  -  Failed.");		
+			Assert.assertTrue(false);
+		}
+		log.info("************  Test Case - OpenRNVRsPage is finished ************");
 	}
 	
 	
 	@Test(priority = 3)
-	public void OpenAnalyticsServersPage()
+	public void OpenAnalyticsServersPage() throws Exception
 	{
+		log.info("************  Test Case - OpenAnalyticsServersPage is started ************");	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openAnalyticsServerPage();
 		
 		String expectedURL = "http://localhost/#/configuration/devices/analytics_server";
 		String actualURL  = driver.getCurrentUrl();
+
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenAnalyticsServersPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenAnalyticsServersPage");
+			log.info("OpenAnalyticsServersPage  -  Failed.");	
+			Assert.assertTrue(false);
+		}
 		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("Analytics servers page is opened successfully.");
+		log.info("************  Test Case - OpenAnalyticsServersPage is finished ************");	
 	}
 	
 	
 	@Test(priority = 4)
-	public void OpenVideoChannelsPage()
+	public void OpenVideoChannelsPage() throws Exception
 	{
+		log.info("************  Test Case - OpenVideoChannelsPage is started ************");	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openVideoChannelsPage();
 		
 		String expectedURL = "http://localhost/#/configuration/network_entities/video_channels";
 		String actualURL  = driver.getCurrentUrl();
-		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("Video channels page is opened successfully.");
+
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenVideoChannelsPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenVideoChannelsPage");
+			log.info("OpenVideoChannelsPage  -  Failed.");	
+			Assert.assertTrue(false);
+		}
+		log.info("************  Test Case - OpenVideoChannelsPage is finished ************");	
 	}
 	
 
 	@Test(priority = 5)
-	public void OpenAudioChannelsPage()
+	public void OpenAudioChannelsPage() throws Exception
 	{
+		log.info("************  Test Case - OpenAudioChannelsPage is started ************");	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openAudioChannelsPage();
 		
 		String expectedURL = "http://localhost/#/configuration/network_entities/audioIn_channels";
 		String actualURL  = driver.getCurrentUrl();
 		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("Audio channels page is opened successfully.");
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenAudioChannelsPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenAudioChannelsPage");
+			log.info("OpenAudioChannelsPage  -  Failed.");	
+			Assert.assertTrue(false);
+		}
+		
+		log.info("************  Test Case - OpenAudioChannelsPage is finished ************");	
 	}
 	
-	//@Test(priority = 6)
-	public void OpenNumericIDPage()
+	@Test(priority = 6)
+	public void OpenNumericIDPage() throws Exception
 	{
+		log.info("************  Test Case - OpenNumericIDPage is started ************");
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openNumericIDsPage();
 		
 		String expectedURL = "http://localhost/#/configuration/network_entities/shortCutNm";
 		String actualURL  = driver.getCurrentUrl();
 		
-		Assert.assertEquals(actualURL, expectedURL);
-		log.info("Numeric IDs page is opened successfully.");
+		if(expectedURL.equalsIgnoreCase(actualURL))
+		{
+			Assert.assertTrue(true);
+			log.info("OpenNumericIDPage  -  Passed.");
+		}
+		else
+		{
+			capctureScreenshot(driver, "OpenNumericIDPage");
+			log.info("OpenNumericIDPage  -  Failed.");	
+			Assert.assertTrue(false);
+		}
+		log.info("************  Test Case - OpenNumericIDPage is finished ************");
 	}
 	
 	

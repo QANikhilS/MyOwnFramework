@@ -28,7 +28,7 @@ public class ExtentListnerClass implements ITestListener {
 		readConfig rc = new readConfig();
 		String timestamp = new SimpleDateFormat("dd.MM.yyyy "+"-"+" hh.mm.ss").format(new Date());
 		String reportName = "zOwnProject -" + timestamp + ".html";
-		htmlReporter = new ExtentSparkReporter(".\\Reports\\"+reportName);
+		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Reports\\"+reportName);
 		reports = new ExtentReports();
 		reports.attachReporter(htmlReporter);		
 		
@@ -74,7 +74,7 @@ public class ExtentListnerClass implements ITestListener {
 			test.fail("Captcured screenshot of failed test case is below : " + test.addScreenCaptureFromPath(ScreenShotPath));
 		}
 		
-		// test.addScreenCaptureFromPath(null)
+		 test.addScreenCaptureFromPath(null);
 	}
 	
 	

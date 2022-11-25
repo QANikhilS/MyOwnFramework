@@ -12,7 +12,9 @@ public class TC_WebPagesTest extends BaseClass
 {
 
 	@Test(priority = 1)
-	public void AddWebPages() throws Exception {
+	public void AddWebPages() throws Exception 
+	{
+		log.info("************  Test Case - AddWebPages is started ************");	
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		hm.openConfigurationPage();
 		log.info("Configuration page is opened");
@@ -35,13 +37,15 @@ public class TC_WebPagesTest extends BaseClass
 		  log.info("TestNG webpage added."); wb.addWebPage("7. CemtrexLabs",
 		  "https://cemtrex.com/"); Thread.sleep(500);
 		  log.info("CemtrexLabs webpage added.");
+		  
+			log.info("************  Test Case - AddWebPages is finished ************");	 
 		 
 	}
 
 	@Test(priority = 2)
-	public void deleteWebPages() throws Exception {
-
-		
+	public void deleteWebPages() throws Exception
+	{
+		log.info("************  Test Case - deleteWebPages is started ************");	
 		  vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		  hm.openConfigurationPage(); log.info("Configuration page is opened");
 		  vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
@@ -62,7 +66,7 @@ public class TC_WebPagesTest extends BaseClass
 			log.info(" Something went wrong. All webpages are not deleted.");
 			Assert.assertTrue(false);
 		}
-
+		log.info("************  Test Case - deleteWebPages is finished ************");	
 	}
 
 }
