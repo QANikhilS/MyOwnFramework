@@ -34,7 +34,7 @@ public class TC_loginPageTest extends BaseClass
 			}
 			Assert.assertTrue(false);
 		}
-		log.info("************  Test Case - verifyADMINLogin is finished ************");	
+		  log.info("************  Test Case - verifyADMINLogin is finish ************");		
 	}
 	
 	@Test(priority = 2, dependsOnMethods = {"verifyADMINLogin"})

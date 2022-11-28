@@ -28,7 +28,7 @@ public class ExtentListnerClass implements ITestListener {
 		readConfig rc = new readConfig();
 		String timestamp = new SimpleDateFormat("dd.MM.yyyy "+"-"+" hh.mm.ss").format(new Date());
 		String reportName = "zOwnProject -" + timestamp + ".html";
-		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Reports\\"+reportName);
+		htmlReporter = new ExtentSparkReporter("C:\\Users\\nikhils\\Music\\OwnFramework\\Reports\\"+reportName);
 		reports = new ExtentReports();
 		reports.attachReporter(htmlReporter);		
 		
@@ -36,6 +36,7 @@ public class ExtentListnerClass implements ITestListener {
 		reports.setSystemInfo("Machine", "NikhilShivarkarPC");
 		reports.setSystemInfo("OS", "Windows 11");
 		reports.setSystemInfo("Browser", rc.getBrowser());
+		reports.setSystemInfo("VMS Version", rc.getAppServerVersion());
 		reports.setSystemInfo("Username", "Nikhil");
 		
 		// Configuration to change feel and look of report.
@@ -45,6 +46,7 @@ public class ExtentListnerClass implements ITestListener {
 	}
 	
 	// This method is called when first test execution Starts
+	
 	public void onStart(ITestContext Result)
 	{
 		configureReport();

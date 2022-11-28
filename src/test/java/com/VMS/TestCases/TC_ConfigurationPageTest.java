@@ -1,7 +1,5 @@
 package com.VMS.TestCases;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +12,6 @@ public class TC_ConfigurationPageTest extends BaseClass
 	@Test(priority = 1)
 	public void OpenNVRsPage() throws Exception
 	{
-		log.info("************  Test Case - OpenNVRsPage is started ************");	
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		hm.openConfigurationPage();
 		log.info("Configuration page is opened");
@@ -34,17 +31,14 @@ public class TC_ConfigurationPageTest extends BaseClass
 			capctureScreenshot(driver, "OpenNVRsPage");
 			log.info("OpenNVRsPage  -  Failed.");	
 			Assert.assertTrue(false);
-		}
-	    
-		log.info("************  Test Case - OpenNVRsPage is finished ************");	
+		}	
 	}
 	
 	
 	
 	@Test(priority = 2)
 	public void OpenRNVRsPage() throws Exception
-	{
-		log.info("************  Test Case - OpenRNVRsPage is started ************");	
+	{	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openRNVRsPage();
 		
@@ -63,14 +57,12 @@ public class TC_ConfigurationPageTest extends BaseClass
 			log.info("OpenRNVRsPage  -  Failed.");		
 			Assert.assertTrue(false);
 		}
-		log.info("************  Test Case - OpenRNVRsPage is finished ************");
 	}
 	
 	
 	@Test(priority = 3)
 	public void OpenAnalyticsServersPage() throws Exception
-	{
-		log.info("************  Test Case - OpenAnalyticsServersPage is started ************");	
+	{	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openAnalyticsServerPage();
 		
@@ -87,16 +79,13 @@ public class TC_ConfigurationPageTest extends BaseClass
 			capctureScreenshot(driver, "OpenAnalyticsServersPage");
 			log.info("OpenAnalyticsServersPage  -  Failed.");	
 			Assert.assertTrue(false);
-		}
-		
-		log.info("************  Test Case - OpenAnalyticsServersPage is finished ************");	
+		}	
 	}
 	
 	
 	@Test(priority = 4)
 	public void OpenVideoChannelsPage() throws Exception
-	{
-		log.info("************  Test Case - OpenVideoChannelsPage is started ************");	
+	{	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openVideoChannelsPage();
 		
@@ -114,14 +103,12 @@ public class TC_ConfigurationPageTest extends BaseClass
 			log.info("OpenVideoChannelsPage  -  Failed.");	
 			Assert.assertTrue(false);
 		}
-		log.info("************  Test Case - OpenVideoChannelsPage is finished ************");	
 	}
 	
 
 	@Test(priority = 5)
 	public void OpenAudioChannelsPage() throws Exception
-	{
-		log.info("************  Test Case - OpenAudioChannelsPage is started ************");	
+	{	
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openAudioChannelsPage();
 		
@@ -138,15 +125,12 @@ public class TC_ConfigurationPageTest extends BaseClass
 			capctureScreenshot(driver, "OpenAudioChannelsPage");
 			log.info("OpenAudioChannelsPage  -  Failed.");	
 			Assert.assertTrue(false);
-		}
-		
-		log.info("************  Test Case - OpenAudioChannelsPage is finished ************");	
+		}	
 	}
 	
 	@Test(priority = 6)
 	public void OpenNumericIDPage() throws Exception
 	{
-		log.info("************  Test Case - OpenNumericIDPage is started ************");
 		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
 		cp.openNumericIDsPage();
 		
@@ -164,7 +148,6 @@ public class TC_ConfigurationPageTest extends BaseClass
 			log.info("OpenNumericIDPage  -  Failed.");	
 			Assert.assertTrue(false);
 		}
-		log.info("************  Test Case - OpenNumericIDPage is finished ************");
 	}
 	
 	

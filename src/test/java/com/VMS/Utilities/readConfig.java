@@ -43,8 +43,19 @@ public class readConfig {
 		if (browserValue != null)
 			return browserValue;
 		else
-			throw new RuntimeException("URL is not specified in config file");
+			throw new RuntimeException("Browser is not specified in config file");
  
-	} 
+	}
+	
+	public String getAppServerVersion()
+	{
+		String appServerVersion = prop.getProperty("appserverVersion");
+		
+		if (appServerVersion != null)
+			return appServerVersion;
+		else
+			throw new RuntimeException("Application Server is not specified in config file");
+ 
+	}
 
 }

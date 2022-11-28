@@ -42,7 +42,7 @@ public class TC_WebPagesTest extends BaseClass
 		 
 	}
 
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	public void deleteWebPages() throws Exception
 	{
 		log.info("************  Test Case - deleteWebPages is started ************");	

@@ -20,7 +20,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_Login;
@@ -125,7 +124,7 @@ public class BaseClass
 		
 		//Step 2 : Call getScreenshotAs method to create image file.
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
-		File dest = new File(System.getProperty("user.dir") + "\\Screenshots\\" + testName + ".png");  
+		File dest = new File(System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png");  
 		
 		// Step 3 : Copy image file to destination.
 		FileUtils.copyFile(src, dest);
@@ -149,7 +148,7 @@ public class BaseClass
 	  }
 	
 	
-	@AfterClass
+	//@AfterClass
 	public void tearDown()
 	{
 		driver.close();

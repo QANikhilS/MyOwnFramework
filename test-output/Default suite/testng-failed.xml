@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_loginPageTest">
+      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
         <methods>
-          <include name="verifyADMINLogin"/>
-          <include name="tearDown"/>
-          <include name="verifyLogOut"/>
+          <include name="addVAXAlarmsDoorOpen"/>
+          <include name="addVAXAlarmsDoorUnlocked"/>
+          <include name="addVAXAlarmsDoorClose"/>
+          <include name="addVAXAlarmsDoorLocked"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_loginPageTest -->
+      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

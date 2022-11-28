@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,7 +23,7 @@ public class vms_AlarmsPage {
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
-		wait = new WebDriverWait(ldriver, Duration.ofSeconds(15));
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 	}
 	
 	// Identify webElements
@@ -59,13 +60,13 @@ public class vms_AlarmsPage {
 	@FindBy(css = "multiselect[id='parameter'] div[class='dropdown']") 
 	public WebElement parameterDropDownInConfiguration;
 	
-	@FindBy(xpath  = "//a[@custom-tooltip='Event']") 
+	@FindBy(xpath  = "//*[@id='parameter']/div/ul/li[2]") 
 	public WebElement parameterAsEvent;
 	
-	@FindBy(xpath  = "//a[@custom-tooltip='Message']") 
+	@FindBy(xpath  = "//*[@id='parameter']/div/ul/li[3]") 
 	public WebElement parameterAsMessage;	
 	
-	@FindBy(xpath = "//a[@custom-tooltip='Card Holders']") 
+	@FindBy(xpath = "//*[@id='parameter']/div/ul/li[4]") 
 	public WebElement parameterAsCardHolders;	
 	
 	@FindBy(css = "multiselect[id='operator'] div[class='dropdown']") 
@@ -77,10 +78,10 @@ public class vms_AlarmsPage {
 	@FindBy(xpath =  "//a[contains(@custom-tooltip,'Not Equal')]") 
 	public WebElement notEqualsOperator;
 	
-	@FindBy(xpath = "//multiselect[@id='vaxdummy']//span[@class='vicon-font v-arrow-down ng-scope']") 
+	@FindBy(xpath = "//multiselect[@id='subEventType']/div/button") 
 	public WebElement parameterValueDropdowninAccessControlConfiguration;
 	
-	@FindBy(xpath = "//multiselect[@id='parameter']//ul/li/a")
+	@FindBy(xpath = "//multiselect[@id='parameter']//ul/li/a/i")
 	public List<WebElement> listOfParameterTypes;
 	
 	@FindBy(xpath = "//multiselect[@id='operator']//ul/li/a")
@@ -88,6 +89,56 @@ public class vms_AlarmsPage {
 	
 	@FindBy(xpath = "//multiselect[@id='subEventType']//ul/li/a")
 	public List<WebElement> listOfEventTypes;
+	
+	@FindBy(xpath = "//multiselect[@id='subEventType']//li[1]/input")
+	public WebElement eventTypesSearchBox;
+	
+	@FindBy(xpath = "//multiselect[@id='subEventType']//li[2]")
+	public WebElement filteredEventType;	
+	
+	@FindBy(xpath = "//div[@class='lpr-footer']/button[2]")
+	public WebElement saveButton;	
+
+	@FindBy(xpath = "//div[@class='lpr-footer']/button[1]")
+	public WebElement cancelButton;	
+	
+	@FindBy(xpath = "//div[@class='resources-options']//label[2]/span")
+	public WebElement selectAllResourceRadioButton;	
+
+	@FindBy(xpath = "//multiselect[@header='Select related resources']//span[2]")
+	public WebElement relatedResourceDropdown;	
+	
+	@FindBy(xpath = "//multiselect[@header='Select related resources']//input")
+	public WebElement relatedResourceDropdownSearchbox;	
+		
+	@FindBy(xpath = "//multiselect[@header='Select related resources']//li[2]/a/i")
+	public WebElement filteredRelatedResource;	
+
+	@FindBy(xpath = "//multiselect[@header='Select Procedure']//span[2]")
+	public WebElement procedureDropDown;
+	
+	@FindBy(xpath = "//multiselect[@header='Select Procedure']//input")
+	public WebElement procedureDropDownSearchBox;	
+	
+	@FindBy(xpath = "//multiselect[@header='Select Procedure']//li[2]")
+	public WebElement filteredProcedure;	
+	
+	@FindBy(xpath = "//multiselect[@header='Select roles']//button")
+	public WebElement usersDropdown;	
+	
+	@FindBy(xpath = "//multiselect[@header='Select roles']/div/ul/li")
+	public List<WebElement> listOfUsers;
+
+	@FindBy(xpath = "//button[text()='Never']")
+	public WebElement expirationTimeNever;
+	
+	@FindBy(xpath = "//div[@class='vms-big-btn-footer']//button[@ng-click='submitForm()']")
+	public WebElement saveButtonOfAlarmsForm;
+	
+	
+	
+	
+	
 	
 	
 	public void addNewAlarm()
@@ -124,70 +175,136 @@ public class vms_AlarmsPage {
 	}
 
 	
-	public void selectParameterInConfigureAccessControl(String parameterNAme) throws Exception
+	public void selectParameterASEVENTInConfigureAccessControl() throws Exception
 	{
 		parameterDropDownInConfiguration.click();
 		Thread.sleep(500);
-		for (int i = 0; i<listOfParameterTypes.size() ; i++)
-		{
-			listOfParameterTypes.get(i).getText().equalsIgnoreCase(parameterNAme);
-			listOfParameterTypes.get(i).click();
-		}
+		parameterAsEvent.click();
 	}
 	
-	public void selectOperatorInConfigureAccessControl(String operatorNAme) throws Exception
+	public void selectParameterASMESSAGEInConfigureAccessControl() throws Exception
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(operatorDropDownInConfiguration));
-		operatorDropDownInConfiguration.click();
+		parameterDropDownInConfiguration.click();
 		Thread.sleep(500);
-		for (int i = 0; i<listOfOperatorTypes.size() ; i++)
-		{
-			listOfOperatorTypes.get(i).getText().contains(operatorNAme);
-			listOfOperatorTypes.get(i).click();
-		}
+		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
+		executor.executeScript("arguments[0].click();", parameterAsMessage);
 	}
 	
+	public void selectParameterAsCARDHOLDERInConfigureAccessControl() throws Exception
+	{
+		parameterDropDownInConfiguration.click();
+		Thread.sleep(500);
+		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
+		executor.executeScript("arguments[0].click();", parameterAsCardHolders);
+	}
+	
+	public void openAccessControlConfigurationWindow() throws Exception
+	{
+		accesControlConfiguration.click();	
+	}
+		
 	public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
 	{
 		wait.until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
-	   try 
-	     {
-		   parameterValueDropdowninAccessControlConfiguration.click();
-	     }
-	   catch (Exception e) 
-	     {
-		// TODO: handle exception
-			JavascriptExecutor executor = (JavascriptExecutor)ldriver;
-	        executor.executeScript("arguments[0].click();", parameterValueDropdowninAccessControlConfiguration);
-	      }
-	   finally  
-	      {
-		       Actions act = new Actions(ldriver);
-		       act.moveToElement(parameterValueDropdowninAccessControlConfiguration).click().build().perform();
-	      }
-		Thread.sleep(500);
-		for (int i = 0; i<listOfEventTypes.size() ; i++)
-		{
-			listOfEventTypes.get(i).getText().equalsIgnoreCase(eventValue);
-			listOfEventTypes.get(i).click();
-		}
+	    parameterValueDropdowninAccessControlConfiguration.click();
+	 	Thread.sleep(300);
+	 	eventTypesSearchBox.sendKeys(eventValue);
+	 	wait.until(ExpectedConditions.elementToBeClickable(filteredEventType));
+	 	filteredEventType.click();
 	}
-		
-	public void configureAccessControlEvent(String parameterType, String operatorType, String subEventType) throws Exception
+	
+	public void clickSAVEConfigureAccessControl() throws Exception
 	{
+         wait.until(ExpectedConditions.elementToBeClickable(saveButton));
+         saveButton.click();
+	}
 		
-		accesControlConfiguration.click();
-		Thread.sleep(500);
-		selectParameterInConfigureAccessControl(parameterType);
-		Thread.sleep(500);
-/*		selectOperatorInConfigureAccessControl(operatorType);
-		Thread.sleep(500);     */
-		selectSubEventInConfigureAccessControl(subEventType);	
+	public void selectAllResources()
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(selectAllResourceRadioButton));
+		selectAllResourceRadioButton.click();
 	}
 	
-
+	public void selectRelatedResources(String CameraName, String WebPage, String Map) throws Exception
+	{
+		Actions act = new Actions (ldriver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(relatedResourceDropdown));
+        Thread.sleep(500);
+        relatedResourceDropdown.click();
+		Thread.sleep(300);
+		relatedResourceDropdownSearchbox.click();
+		relatedResourceDropdownSearchbox.sendKeys(CameraName);
+		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
+		Thread.sleep(500);
+		try {
+			filteredRelatedResource.click();
+		} catch (Exception e) {
+			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
+			executor.executeScript("arguments[0].click();", filteredRelatedResource);
+		}
+		Thread.sleep(200);
+		relatedResourceDropdownSearchbox.click();
+		relatedResourceDropdownSearchbox.clear();
+		relatedResourceDropdownSearchbox.sendKeys(WebPage);
+		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
+		Thread.sleep(500);
+		try {
+			filteredRelatedResource.click();
+		} catch (Exception e) {
+			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
+			executor.executeScript("arguments[0].click();", filteredRelatedResource);
+		}
+		Thread.sleep(200);
+		relatedResourceDropdownSearchbox.click();
+		relatedResourceDropdownSearchbox.clear();
+		relatedResourceDropdownSearchbox.sendKeys(Map);
+		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
+		Thread.sleep(500);
+		try {
+			filteredRelatedResource.click();
+		} catch (Exception e) {
+			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
+			executor.executeScript("arguments[0].click();", filteredRelatedResource);
+		}
+		Thread.sleep(200);
+		relatedResourceDropdown.click();
+	}
 	
-
+	public void selectProcedure(String procedureNo) throws Exception
+	{
+		procedureDropDown.click();
+		procedureDropDownSearchBox.click();
+		procedureDropDownSearchBox.sendKeys(procedureNo);
+		wait.until(ExpectedConditions.elementToBeClickable(filteredProcedure));
+		filteredProcedure.click();
+		Thread.sleep(300);
+		}
+	
+	public void selectAllUsers() throws Exception
+	{
+		usersDropdown.click();
+		Thread.sleep(300);
+		for (int i =0; i < listOfUsers.size(); i++)
+		{
+			Thread.sleep(200);
+			listOfUsers.get(i).click();
+		}
+		Thread.sleep(200);
+	}
+	
+	public void setAlarmExipryAsNever() throws Exception
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(expirationTimeNever));
+		expirationTimeNever.click();
+	}
+	
+	public void clickOnSaveButtonOfAlarmsPage() throws Exception
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(saveButtonOfAlarmsForm));
+		saveButtonOfAlarmsForm.click();
+		  Thread.sleep(1500);
+	}
 	
 	public void addVAXAlarm(String AlarmName) throws Exception
 	{
@@ -196,7 +313,19 @@ public class vms_AlarmsPage {
 		selectEventTypeAsIntegrationPartner();
 		selectIntegrationPartnerAsAccessControl();
 		selectAccessControlPartnerasVAX();
-		configureAccessControlEvent("Events", "Equals", "Door Open");
+		openAccessControlConfigurationWindow();
+		selectParameterASEVENTInConfigureAccessControl();
+		selectSubEventInConfigureAccessControl("Security");
+		clickSAVEConfigureAccessControl();
+		selectAllResources();
+        Thread.sleep(200);
+        selectRelatedResources("Camera_.3", "NDTV", "Map");
+        Thread.sleep(200);
+        selectProcedure("1. Procedure-User must acknowledge");
+        Thread.sleep(200);
+        selectAllUsers();
+        setAlarmExipryAsNever();
+        clickOnSaveButtonOfAlarmsPage();
 	}
 	
 }

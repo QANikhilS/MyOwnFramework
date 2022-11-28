@@ -1,6 +1,134 @@
-[INFO ] 2022-16-25 14:16:52:379 {main} zOwnProject -  URL Opened
-[INFO ] 2022-16-25 14:16:55:059 {main} zOwnProject -  URL Opened
-[INFO ] 2022-16-25 14:16:57:703 {main} zOwnProject -  URL Opened
-[INFO ] 2022-39-25 14:39:41:965 {main} zOwnProject -  URL Opened
-[INFO ] 2022-39-25 14:39:44:774 {main} zOwnProject -  URL Opened
-[INFO ] 2022-39-25 14:39:47:442 {main} zOwnProject -  URL Opened
+[INFO ] 2022-34-28 11:34:35:348 {main} zOwnProject -  URL Opened
+[INFO ] 2022-34-28 11:34:35:796 {main} zOwnProject -  Entered username 
+[INFO ] 2022-34-28 11:34:36:122 {main} zOwnProject -  Entered password 
+[INFO ] 2022-34-28 11:34:41:434 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-34-28 11:34:45:486 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-34-28 11:34:47:028 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-36-28 11:36:55:562 {main} zOwnProject -  URL Opened
+[INFO ] 2022-36-28 11:36:56:031 {main} zOwnProject -  Entered username 
+[INFO ] 2022-36-28 11:36:56:354 {main} zOwnProject -  Entered password 
+[INFO ] 2022-36-28 11:36:57:751 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-37-28 11:37:02:743 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-37-28 11:37:04:467 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-39-28 11:39:02:246 {main} zOwnProject -  URL Opened
+[INFO ] 2022-39-28 11:39:02:737 {main} zOwnProject -  Entered username 
+[INFO ] 2022-39-28 11:39:03:061 {main} zOwnProject -  Entered password 
+[INFO ] 2022-39-28 11:39:04:440 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-39-28 11:39:09:743 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-39-28 11:39:09:760 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
+[INFO ] 2022-39-28 11:39:11:531 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-39-28 11:39:13:780 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-39-28 11:39:14:156 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2022-39-28 11:39:20:238 {main} zOwnProject - Alibaba webpage added.
+[INFO ] 2022-39-28 11:39:25:115 {main} zOwnProject - NDTV webpage added.
+[INFO ] 2022-39-28 11:39:30:092 {main} zOwnProject - Vicon webpage added.
+[INFO ] 2022-39-28 11:39:34:942 {main} zOwnProject - ZeeNews webpage added.
+[INFO ] 2022-39-28 11:39:39:801 {main} zOwnProject - Selenium webpage added.
+[INFO ] 2022-39-28 11:39:44:834 {main} zOwnProject - TestNG webpage added.
+[INFO ] 2022-39-28 11:39:49:979 {main} zOwnProject - CemtrexLabs webpage added.
+[INFO ] 2022-39-28 11:39:49:979 {main} zOwnProject - ************  Test Case - AddWebPages is finished ************
+[INFO ] 2022-40-28 11:40:31:479 {main} zOwnProject -  URL Opened
+[INFO ] 2022-40-28 11:40:31:983 {main} zOwnProject -  Entered username 
+[INFO ] 2022-40-28 11:40:32:311 {main} zOwnProject -  Entered password 
+[INFO ] 2022-40-28 11:40:37:773 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-40-28 11:40:41:818 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-40-28 11:40:43:261 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-41-28 11:41:39:486 {main} zOwnProject -  URL Opened
+[INFO ] 2022-41-28 11:41:39:963 {main} zOwnProject -  Entered username 
+[INFO ] 2022-41-28 11:41:40:285 {main} zOwnProject -  Entered password 
+[INFO ] 2022-41-28 11:41:41:712 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-41-28 11:41:47:153 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-41-28 11:41:48:864 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-44-28 11:44:22:086 {main} zOwnProject -  URL Opened
+[INFO ] 2022-44-28 11:44:22:552 {main} zOwnProject -  Entered username 
+[INFO ] 2022-44-28 11:44:22:875 {main} zOwnProject -  Entered password 
+[INFO ] 2022-44-28 11:44:28:318 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-44-28 11:44:32:321 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-44-28 11:44:33:876 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-47-28 11:47:06:364 {main} zOwnProject -  URL Opened
+[INFO ] 2022-47-28 11:47:06:842 {main} zOwnProject -  Entered username 
+[INFO ] 2022-47-28 11:47:07:151 {main} zOwnProject -  Entered password 
+[INFO ] 2022-47-28 11:47:08:534 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-47-28 11:47:13:864 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-47-28 11:47:15:560 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-50-28 11:50:54:002 {main} zOwnProject -  URL Opened
+[INFO ] 2022-50-28 11:50:54:465 {main} zOwnProject -  Entered username 
+[INFO ] 2022-50-28 11:50:54:790 {main} zOwnProject -  Entered password 
+[INFO ] 2022-51-28 11:51:00:218 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-51-28 11:51:04:236 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-51-28 11:51:05:750 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-54-28 13:54:18:404 {main} zOwnProject -  URL Opened
+[INFO ] 2022-54-28 13:54:18:921 {main} zOwnProject -  Entered username 
+[INFO ] 2022-54-28 13:54:19:260 {main} zOwnProject -  Entered password 
+[INFO ] 2022-54-28 13:54:20:681 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-54-28 13:54:25:666 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-54-28 13:54:27:443 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-56-28 13:56:14:602 {main} zOwnProject -  URL Opened
+[INFO ] 2022-56-28 13:56:15:053 {main} zOwnProject -  Entered username 
+[INFO ] 2022-56-28 13:56:15:377 {main} zOwnProject -  Entered password 
+[INFO ] 2022-56-28 13:56:20:832 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-56-28 13:56:24:794 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-56-28 13:56:26:382 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-57-28 13:57:47:177 {main} zOwnProject -  URL Opened
+[INFO ] 2022-57-28 13:57:47:711 {main} zOwnProject -  Entered username 
+[INFO ] 2022-57-28 13:57:48:070 {main} zOwnProject -  Entered password 
+[INFO ] 2022-57-28 13:57:49:506 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-57-28 13:57:55:044 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-57-28 13:57:56:843 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-03-28 14:03:23:722 {main} zOwnProject -  URL Opened
+[INFO ] 2022-03-28 14:03:24:212 {main} zOwnProject -  Entered username 
+[INFO ] 2022-03-28 14:03:24:554 {main} zOwnProject -  Entered password 
+[INFO ] 2022-03-28 14:03:25:969 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-03-28 14:03:30:926 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-03-28 14:03:32:658 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-04-28 14:04:12:647 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-04-28 14:04:54:998 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-05-28 14:05:16:200 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-17-28 14:17:16:814 {main} zOwnProject -  URL Opened
+[INFO ] 2022-17-28 14:17:17:322 {main} zOwnProject -  Entered username 
+[INFO ] 2022-17-28 14:17:17:646 {main} zOwnProject -  Entered password 
+[INFO ] 2022-17-28 14:17:19:057 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-17-28 14:17:24:407 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-17-28 14:17:26:104 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-20-28 14:20:06:162 {main} zOwnProject -  URL Opened
+[INFO ] 2022-20-28 14:20:06:619 {main} zOwnProject -  Entered username 
+[INFO ] 2022-20-28 14:20:06:941 {main} zOwnProject -  Entered password 
+[INFO ] 2022-20-28 14:20:12:364 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-20-28 14:20:16:342 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-20-28 14:20:17:881 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-23-28 14:23:34:654 {main} zOwnProject -  URL Opened
+[INFO ] 2022-23-28 14:23:35:144 {main} zOwnProject -  Entered username 
+[INFO ] 2022-23-28 14:23:35:468 {main} zOwnProject -  Entered password 
+[INFO ] 2022-23-28 14:23:40:677 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-23-28 14:23:44:056 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-23-28 14:23:45:566 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-26-28 14:26:09:386 {main} zOwnProject -  URL Opened
+[INFO ] 2022-26-28 14:26:09:880 {main} zOwnProject -  Entered username 
+[INFO ] 2022-26-28 14:26:10:203 {main} zOwnProject -  Entered password 
+[INFO ] 2022-26-28 14:26:11:703 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-26-28 14:26:17:462 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-26-28 14:26:19:254 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-24-28 18:24:13:917 {main} zOwnProject -  URL Opened
+[INFO ] 2022-24-28 18:24:14:431 {main} zOwnProject -  Entered username 
+[INFO ] 2022-24-28 18:24:14:847 {main} zOwnProject -  Entered password 
+[INFO ] 2022-24-28 18:24:16:374 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-24-28 18:24:21:957 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-24-28 18:24:23:793 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-30-28 18:30:42:794 {main} zOwnProject -  URL Opened
+[INFO ] 2022-30-28 18:30:43:374 {main} zOwnProject -  Entered username 
+[INFO ] 2022-30-28 18:30:43:768 {main} zOwnProject -  Entered password 
+[INFO ] 2022-30-28 18:30:45:363 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-30-28 18:30:50:403 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-30-28 18:30:53:481 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-40-28 18:40:37:681 {main} zOwnProject -  URL Opened
+[INFO ] 2022-40-28 18:40:38:183 {main} zOwnProject -  Entered username 
+[INFO ] 2022-40-28 18:40:38:526 {main} zOwnProject -  Entered password 
+[INFO ] 2022-40-28 18:40:39:933 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-40-28 18:40:45:000 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-40-28 18:40:46:820 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-43-28 19:43:30:539 {main} zOwnProject -  URL Opened
+[INFO ] 2022-43-28 19:43:31:056 {main} zOwnProject -  Entered username 
+[INFO ] 2022-43-28 19:43:31:411 {main} zOwnProject -  Entered password 
+[INFO ] 2022-43-28 19:43:36:947 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-43-28 19:43:40:304 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-43-28 19:43:41:971 {main} zOwnProject - Configuration page is opened
