@@ -8,22 +8,24 @@ import com.VMS.PageObject.vms_Home_MonitoringPage;
 import com.VMS.PageObject.vms_WebPagesPage;
 
 public class TC_WebPagesTest extends BaseClass
-
 {
+
+	@Test(priority = 0)
+	public void openWebPage()
+	{	
+	   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
+	   hm.openConfigurationPage();
+	   log.info("Configuration page is opened");
+	   vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
+	   cp.openWebPagePage();
+	   log.info("Webpages page is opened");
+	}
 
 	@Test(priority = 1)
 	public void AddWebPages() throws Exception 
 	{
-		log.info("************  Test Case - AddWebPages is started ************");	
-		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		hm.openConfigurationPage();
-		log.info("Configuration page is opened");
-		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
-		cp.openWebPagePage();
-		log.info("Webpages page is opened");
-		vms_WebPagesPage wb = new vms_WebPagesPage(driver);
-
-	      wb.clickOnNewWebpageBtn(); log.info("clicked on NEW button.");
+		  vms_WebPagesPage wb = new vms_WebPagesPage(driver);
+          wb.clickOnNewWebpageBtn(); log.info("clicked on NEW button.");
 		  wb.addWebPage("1. Alibaba", "http://www.alibaba.com"); Thread.sleep(300);
 		  log.info("Alibaba webpage added."); wb.addWebPage("2. NDTV",
 		  "http://www.ndtv.com"); Thread.sleep(300); log.info("NDTV webpage added.");
@@ -37,12 +39,10 @@ public class TC_WebPagesTest extends BaseClass
 		  log.info("TestNG webpage added."); wb.addWebPage("7. CemtrexLabs",
 		  "https://cemtrex.com/"); Thread.sleep(500);
 		  log.info("CemtrexLabs webpage added.");
-		  
-			log.info("************  Test Case - AddWebPages is finished ************");	 
-		 
+		  		 
 	}
 
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	public void deleteWebPages() throws Exception
 	{
 		log.info("************  Test Case - deleteWebPages is started ************");	
@@ -69,4 +69,27 @@ public class TC_WebPagesTest extends BaseClass
 		log.info("************  Test Case - deleteWebPages is finished ************");	
 	}
 
+	
+	@Test(priority = 4)
+	public void AddWebPages2() throws Exception 
+	{
+		  vms_WebPagesPage wb = new vms_WebPagesPage(driver);
+          wb.clickOnNewWebpageBtn(); log.info("clicked on NEW button.");
+		  wb.addWebPage("1. Alibaba", "http://www.alibaba.com"); Thread.sleep(300);
+		  log.info("Alibaba webpage added."); wb.addWebPage("2. NDTV",
+		  "http://www.ndtv.com"); Thread.sleep(300); log.info("NDTV webpage added.");
+		  wb.addWebPage("3. Vicon", "https://www.vicon.com/"); Thread.sleep(300);
+		  log.info("Vicon webpage added."); wb.addWebPage("4. ZeeNews",
+		  "http://www.zeenews.com"); Thread.sleep(300);
+		  log.info("ZeeNews webpage added."); wb.addWebPage("5. Selenium Dev",
+		  "https://www.selenium.dev/"); Thread.sleep(300);
+		  log.info("Selenium webpage added."); wb.addWebPage("6. TestNG",
+		  "https://testng.org/doc/"); Thread.sleep(300);
+		  log.info("TestNG webpage added."); wb.addWebPage("7. CemtrexLabs",
+		  "https://cemtrex.com/"); Thread.sleep(500);
+		  log.info("CemtrexLabs webpage added.");
+		  		 
+	}
+	
+	
 }

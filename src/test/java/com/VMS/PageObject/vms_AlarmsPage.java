@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -227,8 +226,6 @@ public class vms_AlarmsPage {
 	
 	public void selectRelatedResources(String CameraName, String WebPage, String Map) throws Exception
 	{
-		Actions act = new Actions (ldriver);
-        act.sendKeys(Keys.PAGE_DOWN).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(relatedResourceDropdown));
         Thread.sleep(500);
         relatedResourceDropdown.click();

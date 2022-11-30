@@ -11,7 +11,8 @@
       <class name="com.VMS.TestCases.TC_loginPageTest"/>
       <class name="com.VMS.TestCases.TC_WebPagesTest"/>
       <class name="com.VMS.TestCases.TC_ConfigurationPageTest"/>
-      <class name="com.VMS.TestCases.TC_AlarmsPageTest"/>
+     <!-- <class name="com.VMS.TestCases.TC_AlarmsPageTest"/>  -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

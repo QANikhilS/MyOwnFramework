@@ -1,5 +1,7 @@
 package com.VMS.TestCases;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.VMS.PageObject.vms_AlarmsPage;
@@ -41,6 +43,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
 		Thread.sleep(200);
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		ap.selectRelatedResources("Camera_.1", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
 		Thread.sleep(200);
@@ -82,7 +86,9 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
-		Thread.sleep(200);
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(200);		
 		ap.selectRelatedResources("Camera_.2", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
 		Thread.sleep(200);
@@ -124,6 +130,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.3", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -166,6 +174,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.4", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -208,6 +218,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.5", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -250,6 +262,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.6", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -292,6 +306,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.7", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -332,6 +348,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected event type as -"+desiredEventName);
 		ap.clickSAVEConfigureAccessControl();
 		log.info("Access Control event is configured");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
 		Thread.sleep(200);
@@ -349,7 +367,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-	
 	
 	@Test(priority = 9)
 	public void addVAXAlarmsDoorOverrideAutoResume() throws Exception
@@ -377,6 +394,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_.9", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -392,7 +411,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-
 
 	@Test(priority = 10)
 	public void addVAXAlarmsAccessGrantedCard() throws Exception
@@ -420,6 +438,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -435,7 +455,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-	
 	
 	@Test(priority = 11)
 	public void addVAXAlarmsAccessGrantedMaster() throws Exception
@@ -463,6 +482,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -478,7 +499,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-	
 	
 	@Test(priority = 12)
 	public void addVAXAlarmsAccessDeniedWrongTimeZone() throws Exception
@@ -506,6 +526,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -548,6 +570,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -563,7 +587,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-	
 	
 	@Test(priority = 14)
 	public void addVAXAlarmsAccessDeniedInvalidStartDate() throws Exception
@@ -591,6 +614,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -633,6 +658,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -648,7 +675,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-
 
 	@Test(priority = 16)
 	public void addVAXAlarmsAccessDeniedNoPrivilege() throws Exception
@@ -676,6 +702,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -718,6 +746,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -733,7 +763,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-
 
 	@Test(priority = 18)
 	public void addVAXAlarmsAccessDeniedUnknownCardFormat() throws Exception
@@ -761,6 +790,8 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Access Control event is configured");
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
+		Actions act = new Actions (driver);
+        act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
 		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
 		log.info("Expected related  resources are selected.");
@@ -776,7 +807,6 @@ public class TC_AlarmsPageTest extends BaseClass {
         log.info("Clicked on SAVE button to create '"+ AlarmName +"' Alarm");
         Thread.sleep(1500);
 	}
-	
 	
 	
 }	
