@@ -20,15 +20,14 @@ public class TC_ProcedurePageTest extends BaseClass{
 	
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1, groups = "Setup")
 	public void addProcedureToAcknowledge() throws Exception 
 	{
 		vms_ProcedurePage pp = new vms_ProcedurePage(driver);
-		pp.clickOnNEWbtn();
-		pp.enterProcedureName("1. Procedure-User must acknowledge");
-		pp.selectUserMustAcknowledgeChkBx();
-		pp.clickOnSaveBtn();
-	}
+		  pp.clickOnNEWbtn();
+		  pp.enterProcedureName("1. Procedure-User must acknowledge");
+		  pp.selectUserMustAcknowledgeChkBx(); pp.clickOnSaveBtn();
+		 	}
 
 	@Test(priority = 2)
 	public void addProcedureUserMustCommentToAcknowledge() throws Exception 

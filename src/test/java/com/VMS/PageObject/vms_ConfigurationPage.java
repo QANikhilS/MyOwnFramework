@@ -101,6 +101,9 @@ public class vms_ConfigurationPage {
 	@FindBy(xpath = "//div[contains(@class,'Internet Gateway')]") 
 	public WebElement InternetGatewayPage;
 	
+	@FindBy(xpath = "//div[contains(@class,'Networking')]") 
+	public WebElement NetworkingPage;
+	
 	@FindBy(xpath = "//div[contains(@class,'Licensing')]") 
 	public WebElement LicensingPage;
 	
@@ -398,6 +401,17 @@ public class vms_ConfigurationPage {
 			 e.printStackTrace();
 			 HomePage.click();
 			 InternetGatewayPage.click();
+		}
+	}
+	
+	public void openNetworkingPage()
+	{
+		try  {  NetworkingPage.click(); }
+		catch (Exception e)
+		{
+			 e.printStackTrace();
+			 HomePage.click();
+			 NetworkingPage.click();
 		}
 	}
 	

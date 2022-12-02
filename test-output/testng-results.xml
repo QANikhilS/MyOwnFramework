@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-30T19:32:11 IST" name="Default suite" finished-at="2022-11-30T19:32:48 IST" duration-ms="37026">
+  <suite started-at="2022-12-02T15:37:27 IST" name="Suite" finished-at="2022-12-02T15:40:00 IST" duration-ms="153184">
     <groups>
+      <group name="Setup">
+        <method signature="TC_ProcedurePageTest.addProcedureToAcknowledge()[pri:1, instance:com.VMS.TestCases.TC_ProcedurePageTest@69ee81fc]" name="addProcedureToAcknowledge" class="com.VMS.TestCases.TC_ProcedurePageTest"/>
+        <method signature="TC_WebPagesTest.AddWebPages()[pri:1, instance:com.VMS.TestCases.TC_WebPagesTest@7486b455]" name="AddWebPages" class="com.VMS.TestCases.TC_WebPagesTest"/>
+      </group> <!-- Setup -->
     </groups>
-    <test started-at="2022-11-30T19:32:11 IST" name="Default test" finished-at="2022-11-30T19:32:48 IST" duration-ms="37026">
-      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_ProcedurePageTest@5a7fe64f]" started-at="2022-11-30T19:32:11 IST" name="setup" finished-at="2022-11-30T19:32:21 IST" duration-ms="10360" status="PASS">
+    <test started-at="2022-12-02T15:37:27 IST" name="Test" finished-at="2022-12-02T15:40:00 IST" duration-ms="153184">
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_NetworkingPageTest@6e2aa843]" started-at="2022-12-02T15:39:37 IST" name="setup" finished-at="2022-12-02T15:39:50 IST" duration-ms="12294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="openProcedurePage()[pri:0, instance:com.VMS.TestCases.TC_ProcedurePageTest@5a7fe64f]" started-at="2022-11-30T19:32:21 IST" name="openProcedurePage" finished-at="2022-11-30T19:32:33 IST" duration-ms="11537" status="PASS">
+        <test-method signature="enableVAXTab()[pri:0, instance:com.VMS.TestCases.TC_NetworkingPageTest@6e2aa843]" started-at="2022-12-02T15:39:50 IST" name="enableVAXTab" finished-at="2022-12-02T15:39:56 IST" duration-ms="6277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enableVAXTab -->
+        <test-method signature="verifyIntegratedVAX()[pri:1, instance:com.VMS.TestCases.TC_NetworkingPageTest@6e2aa843]" started-at="2022-12-02T15:39:56 IST" name="verifyIntegratedVAX" finished-at="2022-12-02T15:40:00 IST" duration-ms="4058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIntegratedVAX -->
+      </class> <!-- com.VMS.TestCases.TC_NetworkingPageTest -->
+      <class name="com.VMS.TestCases.TC_WebPagesTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_WebPagesTest@7486b455]" started-at="2022-12-02T15:37:27 IST" name="setup" finished-at="2022-12-02T15:37:41 IST" duration-ms="13922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="openWebPage()[pri:0, instance:com.VMS.TestCases.TC_WebPagesTest@7486b455]" started-at="2022-12-02T15:37:41 IST" name="openWebPage" finished-at="2022-12-02T15:37:49 IST" duration-ms="8089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openWebPage -->
+        <test-method signature="AddWebPages()[pri:1, instance:com.VMS.TestCases.TC_WebPagesTest@7486b455]" started-at="2022-12-02T15:37:49 IST" name="AddWebPages" finished-at="2022-12-02T15:38:33 IST" duration-ms="44405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddWebPages -->
+        <test-method signature="deleteWebPages()[pri:2, instance:com.VMS.TestCases.TC_WebPagesTest@7486b455]" started-at="2022-12-02T15:38:33 IST" name="deleteWebPages" finished-at="2022-12-02T15:39:16 IST" duration-ms="42762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteWebPages -->
+      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.VMS.TestCases.TC_ProcedurePageTest@69ee81fc]" started-at="2022-12-02T15:39:16 IST" name="setup" finished-at="2022-12-02T15:39:26 IST" duration-ms="9944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="openProcedurePage()[pri:0, instance:com.VMS.TestCases.TC_ProcedurePageTest@69ee81fc]" started-at="2022-12-02T15:39:26 IST" name="openProcedurePage" finished-at="2022-12-02T15:39:31 IST" duration-ms="4966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openProcedurePage -->
-        <test-method signature="addProcedureToAttachFileForReference()[pri:4, instance:com.VMS.TestCases.TC_ProcedurePageTest@5a7fe64f]" started-at="2022-11-30T19:32:33 IST" name="addProcedureToAttachFileForReference" finished-at="2022-11-30T19:32:48 IST" duration-ms="15078" status="PASS">
+        <test-method signature="addProcedureToAcknowledge()[pri:1, instance:com.VMS.TestCases.TC_ProcedurePageTest@69ee81fc]" started-at="2022-12-02T15:39:31 IST" name="addProcedureToAcknowledge" finished-at="2022-12-02T15:39:37 IST" duration-ms="6095" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProcedureToAttachFileForReference -->
+        </test-method> <!-- addProcedureToAcknowledge -->
       </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

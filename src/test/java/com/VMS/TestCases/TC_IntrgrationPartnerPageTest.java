@@ -9,7 +9,6 @@ import com.VMS.PageObject.vms_IntegrationPartnerPage;
 
 public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	
-	
 	@Test(priority = 1)
 	public void AddIntrgrationPartner()
 	{

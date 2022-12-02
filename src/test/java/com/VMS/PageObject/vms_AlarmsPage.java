@@ -135,11 +135,7 @@ public class vms_AlarmsPage {
 	public WebElement saveButtonOfAlarmsForm;
 	
 	
-	
-	
-	
-	
-	
+
 	public void addNewAlarm()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(NewBtn));

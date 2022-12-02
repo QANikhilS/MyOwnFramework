@@ -28,6 +28,9 @@ public class vms_Home_MonitoringPage {
 	@FindBy(css = "span[class*='Alarm']") 
 	public WebElement AlarmsTab;
 	
+	@FindBy(css = "span[class*='vax']") 
+	public WebElement VaxTab;
+	
 
 	public void openConfigurationPage()
 	{

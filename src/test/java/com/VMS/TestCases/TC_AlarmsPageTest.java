@@ -45,11 +45,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		Thread.sleep(200);
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		ap.selectRelatedResources("Camera_.1", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * ap.selectRelatedResources("Camera_.1", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -89,12 +90,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);		
-		ap.selectRelatedResources("Camera_.2", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
-        Thread.sleep(200);
+		/*
+		 * ap.selectRelatedResources("Camera_.2", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected."); Thread.sleep(200);
+		 */
         ap.selectAllUsers();
         log.info("selected all users.");
         ap.setAlarmExipryAsNever();
@@ -133,11 +134,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.3", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * ap.selectRelatedResources("Camera_.3", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -177,12 +179,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.4", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
-        Thread.sleep(200);
+		/*
+		 * ap.selectRelatedResources("Camera_.4", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected."); Thread.sleep(200);
+		 */
         ap.selectAllUsers();
         log.info("selected all users.");
         ap.setAlarmExipryAsNever();
@@ -221,12 +223,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.5", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
-        Thread.sleep(200);
+		/*
+		 * ap.selectRelatedResources("Camera_.5", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected."); Thread.sleep(200);
+		 */
         ap.selectAllUsers();
         log.info("selected all users.");
         ap.setAlarmExipryAsNever();
@@ -264,12 +266,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.6", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_.6", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -308,12 +310,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.7", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_.7", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -353,12 +355,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		ap.selectAllResources();
 		log.info("Selected all available resources.");
 		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.8", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
-        Thread.sleep(200);
+		/*
+		 * ap.selectRelatedResources("Camera_.8", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected."); Thread.sleep(200);
+		 */
         ap.selectAllUsers();
         log.info("selected all users.");
         ap.setAlarmExipryAsNever();
@@ -396,12 +398,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_.9", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_.9", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -440,12 +442,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -484,12 +486,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -528,12 +530,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -572,12 +574,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -616,12 +618,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -660,12 +662,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -704,12 +706,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -748,12 +750,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");
@@ -792,12 +794,12 @@ public class TC_AlarmsPageTest extends BaseClass {
 		log.info("Selected all available resources.");
 		Actions act = new Actions (driver);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
-		ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
-		log.info("Expected related  resources are selected.");
-		Thread.sleep(200);
-        ap.selectProcedure("3. Procedure-Next Action");
-        log.info("Expected procedure is selected.");
+		/*
+		 * Thread.sleep(200); ap.selectRelatedResources("Camera_10", "NDTV", "Map1");
+		 * log.info("Expected related  resources are selected."); Thread.sleep(200);
+		 * ap.selectProcedure("3. Procedure-Next Action");
+		 * log.info("Expected procedure is selected.");
+		 */
         Thread.sleep(200);
         ap.selectAllUsers();
         log.info("selected all users.");

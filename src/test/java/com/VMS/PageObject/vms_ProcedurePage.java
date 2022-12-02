@@ -25,6 +25,12 @@ public class vms_ProcedurePage {
 	@FindBy(xpath = "//button[text()='New']")
 	public WebElement newProcedureBtn;
 	
+	@FindBy(xpath = "//button[text()='Delete']")
+	public WebElement deleteProcedureBtn;
+	
+	@FindBy(xpath = "//h3[text()='Procedure Properties']")
+	public WebElement procedurePropertiesLabel;
+	
 	@FindBy(css = "input[ng-model*='Procedure.Name']")
 	public WebElement procedureNameTxtbx;
 	

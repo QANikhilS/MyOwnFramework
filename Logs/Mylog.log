@@ -1,316 +1,437 @@
-[INFO ] 2022-34-28 11:34:35:348 {main} zOwnProject -  URL Opened
-[INFO ] 2022-34-28 11:34:35:796 {main} zOwnProject -  Entered username 
-[INFO ] 2022-34-28 11:34:36:122 {main} zOwnProject -  Entered password 
-[INFO ] 2022-34-28 11:34:41:434 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-34-28 11:34:45:486 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-34-28 11:34:47:028 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-36-28 11:36:55:562 {main} zOwnProject -  URL Opened
-[INFO ] 2022-36-28 11:36:56:031 {main} zOwnProject -  Entered username 
-[INFO ] 2022-36-28 11:36:56:354 {main} zOwnProject -  Entered password 
-[INFO ] 2022-36-28 11:36:57:751 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-37-28 11:37:02:743 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-37-28 11:37:04:467 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-39-28 11:39:02:246 {main} zOwnProject -  URL Opened
-[INFO ] 2022-39-28 11:39:02:737 {main} zOwnProject -  Entered username 
-[INFO ] 2022-39-28 11:39:03:061 {main} zOwnProject -  Entered password 
-[INFO ] 2022-39-28 11:39:04:440 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-39-28 11:39:09:743 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-39-28 11:39:09:760 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
-[INFO ] 2022-39-28 11:39:11:531 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-39-28 11:39:13:780 {main} zOwnProject - Webpages page is opened
-[INFO ] 2022-39-28 11:39:14:156 {main} zOwnProject - clicked on NEW button.
-[INFO ] 2022-39-28 11:39:20:238 {main} zOwnProject - Alibaba webpage added.
-[INFO ] 2022-39-28 11:39:25:115 {main} zOwnProject - NDTV webpage added.
-[INFO ] 2022-39-28 11:39:30:092 {main} zOwnProject - Vicon webpage added.
-[INFO ] 2022-39-28 11:39:34:942 {main} zOwnProject - ZeeNews webpage added.
-[INFO ] 2022-39-28 11:39:39:801 {main} zOwnProject - Selenium webpage added.
-[INFO ] 2022-39-28 11:39:44:834 {main} zOwnProject - TestNG webpage added.
-[INFO ] 2022-39-28 11:39:49:979 {main} zOwnProject - CemtrexLabs webpage added.
-[INFO ] 2022-39-28 11:39:49:979 {main} zOwnProject - ************  Test Case - AddWebPages is finished ************
-[INFO ] 2022-40-28 11:40:31:479 {main} zOwnProject -  URL Opened
-[INFO ] 2022-40-28 11:40:31:983 {main} zOwnProject -  Entered username 
-[INFO ] 2022-40-28 11:40:32:311 {main} zOwnProject -  Entered password 
-[INFO ] 2022-40-28 11:40:37:773 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-40-28 11:40:41:818 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-40-28 11:40:43:261 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-41-28 11:41:39:486 {main} zOwnProject -  URL Opened
-[INFO ] 2022-41-28 11:41:39:963 {main} zOwnProject -  Entered username 
-[INFO ] 2022-41-28 11:41:40:285 {main} zOwnProject -  Entered password 
-[INFO ] 2022-41-28 11:41:41:712 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-41-28 11:41:47:153 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-41-28 11:41:48:864 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-44-28 11:44:22:086 {main} zOwnProject -  URL Opened
-[INFO ] 2022-44-28 11:44:22:552 {main} zOwnProject -  Entered username 
-[INFO ] 2022-44-28 11:44:22:875 {main} zOwnProject -  Entered password 
-[INFO ] 2022-44-28 11:44:28:318 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-44-28 11:44:32:321 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-44-28 11:44:33:876 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-47-28 11:47:06:364 {main} zOwnProject -  URL Opened
-[INFO ] 2022-47-28 11:47:06:842 {main} zOwnProject -  Entered username 
-[INFO ] 2022-47-28 11:47:07:151 {main} zOwnProject -  Entered password 
-[INFO ] 2022-47-28 11:47:08:534 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-47-28 11:47:13:864 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-47-28 11:47:15:560 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-50-28 11:50:54:002 {main} zOwnProject -  URL Opened
-[INFO ] 2022-50-28 11:50:54:465 {main} zOwnProject -  Entered username 
-[INFO ] 2022-50-28 11:50:54:790 {main} zOwnProject -  Entered password 
-[INFO ] 2022-51-28 11:51:00:218 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-51-28 11:51:04:236 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-51-28 11:51:05:750 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-54-28 13:54:18:404 {main} zOwnProject -  URL Opened
-[INFO ] 2022-54-28 13:54:18:921 {main} zOwnProject -  Entered username 
-[INFO ] 2022-54-28 13:54:19:260 {main} zOwnProject -  Entered password 
-[INFO ] 2022-54-28 13:54:20:681 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-54-28 13:54:25:666 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-54-28 13:54:27:443 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-56-28 13:56:14:602 {main} zOwnProject -  URL Opened
-[INFO ] 2022-56-28 13:56:15:053 {main} zOwnProject -  Entered username 
-[INFO ] 2022-56-28 13:56:15:377 {main} zOwnProject -  Entered password 
-[INFO ] 2022-56-28 13:56:20:832 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-56-28 13:56:24:794 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-56-28 13:56:26:382 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-57-28 13:57:47:177 {main} zOwnProject -  URL Opened
-[INFO ] 2022-57-28 13:57:47:711 {main} zOwnProject -  Entered username 
-[INFO ] 2022-57-28 13:57:48:070 {main} zOwnProject -  Entered password 
-[INFO ] 2022-57-28 13:57:49:506 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-57-28 13:57:55:044 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-57-28 13:57:56:843 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-03-28 14:03:23:722 {main} zOwnProject -  URL Opened
-[INFO ] 2022-03-28 14:03:24:212 {main} zOwnProject -  Entered username 
-[INFO ] 2022-03-28 14:03:24:554 {main} zOwnProject -  Entered password 
-[INFO ] 2022-03-28 14:03:25:969 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-03-28 14:03:30:926 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-03-28 14:03:32:658 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-04-28 14:04:12:647 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-04-28 14:04:54:998 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-05-28 14:05:16:200 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-17-28 14:17:16:814 {main} zOwnProject -  URL Opened
-[INFO ] 2022-17-28 14:17:17:322 {main} zOwnProject -  Entered username 
-[INFO ] 2022-17-28 14:17:17:646 {main} zOwnProject -  Entered password 
-[INFO ] 2022-17-28 14:17:19:057 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-17-28 14:17:24:407 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-17-28 14:17:26:104 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-20-28 14:20:06:162 {main} zOwnProject -  URL Opened
-[INFO ] 2022-20-28 14:20:06:619 {main} zOwnProject -  Entered username 
-[INFO ] 2022-20-28 14:20:06:941 {main} zOwnProject -  Entered password 
-[INFO ] 2022-20-28 14:20:12:364 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-20-28 14:20:16:342 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-20-28 14:20:17:881 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-23-28 14:23:34:654 {main} zOwnProject -  URL Opened
-[INFO ] 2022-23-28 14:23:35:144 {main} zOwnProject -  Entered username 
-[INFO ] 2022-23-28 14:23:35:468 {main} zOwnProject -  Entered password 
-[INFO ] 2022-23-28 14:23:40:677 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-23-28 14:23:44:056 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-23-28 14:23:45:566 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-26-28 14:26:09:386 {main} zOwnProject -  URL Opened
-[INFO ] 2022-26-28 14:26:09:880 {main} zOwnProject -  Entered username 
-[INFO ] 2022-26-28 14:26:10:203 {main} zOwnProject -  Entered password 
-[INFO ] 2022-26-28 14:26:11:703 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-26-28 14:26:17:462 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-26-28 14:26:19:254 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-24-28 18:24:13:917 {main} zOwnProject -  URL Opened
-[INFO ] 2022-24-28 18:24:14:431 {main} zOwnProject -  Entered username 
-[INFO ] 2022-24-28 18:24:14:847 {main} zOwnProject -  Entered password 
-[INFO ] 2022-24-28 18:24:16:374 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-24-28 18:24:21:957 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-24-28 18:24:23:793 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-30-28 18:30:42:794 {main} zOwnProject -  URL Opened
-[INFO ] 2022-30-28 18:30:43:374 {main} zOwnProject -  Entered username 
-[INFO ] 2022-30-28 18:30:43:768 {main} zOwnProject -  Entered password 
-[INFO ] 2022-30-28 18:30:45:363 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-30-28 18:30:50:403 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-30-28 18:30:53:481 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-40-28 18:40:37:681 {main} zOwnProject -  URL Opened
-[INFO ] 2022-40-28 18:40:38:183 {main} zOwnProject -  Entered username 
-[INFO ] 2022-40-28 18:40:38:526 {main} zOwnProject -  Entered password 
-[INFO ] 2022-40-28 18:40:39:933 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-40-28 18:40:45:000 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-40-28 18:40:46:820 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-43-28 19:43:30:539 {main} zOwnProject -  URL Opened
-[INFO ] 2022-43-28 19:43:31:056 {main} zOwnProject -  Entered username 
-[INFO ] 2022-43-28 19:43:31:411 {main} zOwnProject -  Entered password 
-[INFO ] 2022-43-28 19:43:36:947 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-43-28 19:43:40:304 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-43-28 19:43:41:971 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-30-28 20:30:14:016 {main} zOwnProject -  URL Opened
-[INFO ] 2022-30-28 20:30:14:855 {main} zOwnProject -  Entered username 
-[INFO ] 2022-30-28 20:30:15:195 {main} zOwnProject -  Entered password 
-[INFO ] 2022-30-28 20:30:16:579 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-30-28 20:30:22:700 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-30-28 20:30:22:714 {main} zOwnProject - ************  Test Case - verifyADMINLogin is started ************
-[INFO ] 2022-30-28 20:30:22:985 {main} zOwnProject - DoLogin  -  Failed.
-[INFO ] 2022-35-28 20:35:10:634 {main} zOwnProject -  URL Opened
-[INFO ] 2022-35-28 20:35:11:112 {main} zOwnProject -  Entered username 
-[INFO ] 2022-35-28 20:35:11:423 {main} zOwnProject -  Entered password 
-[INFO ] 2022-35-28 20:35:15:491 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-35-28 20:35:20:025 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-35-28 20:35:20:037 {main} zOwnProject - ************  Test Case - verifyADMINLogin is started ************
-[INFO ] 2022-35-28 20:35:20:058 {main} zOwnProject - DoLogin  -  Failed.
-[INFO ] 2022-37-28 20:37:39:430 {main} zOwnProject -  URL Opened
-[INFO ] 2022-37-28 20:37:39:905 {main} zOwnProject -  Entered username 
-[INFO ] 2022-37-28 20:37:40:233 {main} zOwnProject -  Entered password 
-[INFO ] 2022-37-28 20:37:45:394 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-37-28 20:37:48:824 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-37-28 20:37:48:837 {main} zOwnProject - ************  Test Case - verifyADMINLogin is started ************
-[INFO ] 2022-37-28 20:37:48:868 {main} zOwnProject - DoLogin  -  Failed.
-[INFO ] 2022-51-30 16:51:28:509 {main} zOwnProject -  URL Opened
-[INFO ] 2022-51-30 16:51:29:080 {main} zOwnProject -  Entered username 
-[INFO ] 2022-51-30 16:51:29:527 {main} zOwnProject -  Entered password 
-[INFO ] 2022-51-30 16:51:33:052 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-51-30 16:51:36:997 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-51-30 16:51:38:828 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-51-30 16:51:56:185 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-51-30 16:51:59:656 {main} zOwnProject - Alarm name -1. Door Locked is entered in Alarms name textbox.
-[INFO ] 2022-52-30 16:52:00:584 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-52-30 16:52:02:485 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-52-30 16:52:05:156 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-52-30 16:52:06:845 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-52-30 16:52:09:558 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-52-30 16:52:13:064 {main} zOwnProject - Selected event type as -Door Locked
-[INFO ] 2022-52-30 16:52:14:945 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-52-30 16:52:16:060 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-52-30 16:52:30:253 {main} zOwnProject - Expected related  resources are selected.
-[INFO ] 2022-52-30 16:52:35:178 {main} zOwnProject - Expected procedure is selected.
-[INFO ] 2022-52-30 16:52:44:694 {main} zOwnProject - selected all users.
-[INFO ] 2022-52-30 16:52:45:889 {main} zOwnProject - Set Alarm expiration time as NEVER
-[INFO ] 2022-52-30 16:52:48:870 {main} zOwnProject - Clicked on SAVE button to create '1. Door Locked' Alarm
-[INFO ] 2022-52-30 16:52:52:418 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-52-30 16:52:55:845 {main} zOwnProject - Alarm name -2. Door Unlocked is entered in Alarms name textbox.
-[INFO ] 2022-52-30 16:52:56:732 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-52-30 16:52:58:602 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-53-30 16:53:01:219 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-53-30 16:53:02:881 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-53-30 16:53:05:559 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-53-30 16:53:09:710 {main} zOwnProject - Selected event type as -Unlocked
-[INFO ] 2022-53-30 16:53:11:653 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-53-30 16:53:12:767 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-53-30 16:53:26:128 {main} zOwnProject - Expected related  resources are selected.
-[INFO ] 2022-53-30 16:53:31:421 {main} zOwnProject - Expected procedure is selected.
-[INFO ] 2022-53-30 16:53:40:849 {main} zOwnProject - selected all users.
-[INFO ] 2022-53-30 16:53:41:979 {main} zOwnProject - Set Alarm expiration time as NEVER
-[INFO ] 2022-53-30 16:53:45:372 {main} zOwnProject - Clicked on SAVE button to create '2. Door Unlocked' Alarm
-[INFO ] 2022-53-30 16:53:48:848 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-53-30 16:53:52:320 {main} zOwnProject - Alarm name -3. Door Override Enable is entered in Alarms name textbox.
-[INFO ] 2022-53-30 16:53:53:216 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-53-30 16:53:55:042 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-53-30 16:53:57:707 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-53-30 16:53:59:364 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-54-30 16:54:01:984 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-54-30 16:54:06:086 {main} zOwnProject - Selected event type as -Door Override Enable
-[INFO ] 2022-54-30 16:54:08:008 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-54-30 16:54:09:046 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-54-30 16:54:23:978 {main} zOwnProject - Expected related  resources are selected.
-[INFO ] 2022-54-30 16:54:28:650 {main} zOwnProject - Expected procedure is selected.
-[INFO ] 2022-54-30 16:54:37:964 {main} zOwnProject - selected all users.
-[INFO ] 2022-54-30 16:54:39:114 {main} zOwnProject - Set Alarm expiration time as NEVER
-[INFO ] 2022-54-30 16:54:42:094 {main} zOwnProject - Clicked on SAVE button to create '3. Door Override Enable' Alarm
-[INFO ] 2022-54-30 16:54:45:436 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-54-30 16:54:48:937 {main} zOwnProject - Alarm name -4. Door Override Disable is entered in Alarms name textbox.
-[INFO ] 2022-54-30 16:54:49:818 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-54-30 16:54:51:664 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-54-30 16:54:54:280 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-54-30 16:54:55:955 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-54-30 16:54:58:488 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-55-30 16:55:02:673 {main} zOwnProject - Selected event type as -Door Override Disable
-[INFO ] 2022-55-30 16:55:04:570 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-55-30 16:55:05:650 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-55-30 16:55:20:468 {main} zOwnProject - Expected related  resources are selected.
-[INFO ] 2022-55-30 16:55:25:222 {main} zOwnProject - Expected procedure is selected.
-[INFO ] 2022-55-30 16:55:34:844 {main} zOwnProject - selected all users.
-[INFO ] 2022-55-30 16:55:36:038 {main} zOwnProject - Set Alarm expiration time as NEVER
-[INFO ] 2022-55-30 16:55:39:044 {main} zOwnProject - Clicked on SAVE button to create '4. Door Override Disable' Alarm
-[INFO ] 2022-55-30 16:55:42:467 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-55-30 16:55:45:932 {main} zOwnProject - Alarm name -5. Door Open is entered in Alarms name textbox.
-[INFO ] 2022-55-30 16:55:46:848 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-55-30 16:55:48:747 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-55-30 16:55:51:318 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-55-30 16:55:53:049 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-55-30 16:55:55:785 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-55-30 16:55:59:151 {main} zOwnProject - Selected event type as -Door Open
-[INFO ] 2022-56-30 16:56:19:696 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-56-30 16:56:20:739 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-06-30 17:06:01:564 {main} zOwnProject -  URL Opened
-[INFO ] 2022-06-30 17:06:02:254 {main} zOwnProject -  Entered username 
-[INFO ] 2022-06-30 17:06:02:758 {main} zOwnProject -  Entered password 
-[INFO ] 2022-06-30 17:06:04:587 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-06-30 17:06:09:167 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-06-30 17:06:12:106 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-06-30 17:06:26:732 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-06-30 17:06:30:528 {main} zOwnProject - Alarm name -1. Door Locked is entered in Alarms name textbox.
-[INFO ] 2022-06-30 17:06:31:539 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-06-30 17:06:33:507 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-06-30 17:06:36:435 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-06-30 17:06:38:210 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-06-30 17:06:40:975 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-06-30 17:06:45:368 {main} zOwnProject - Selected event type as -Door Locked
-[INFO ] 2022-06-30 17:06:46:966 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-06-30 17:06:48:370 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-09-30 17:09:33:948 {main} zOwnProject -  URL Opened
-[INFO ] 2022-09-30 17:09:34:512 {main} zOwnProject -  Entered username 
-[INFO ] 2022-09-30 17:09:34:952 {main} zOwnProject -  Entered password 
-[INFO ] 2022-09-30 17:09:38:321 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-09-30 17:09:42:452 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-09-30 17:09:44:242 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-09-30 17:09:58:979 {main} zOwnProject - New alarm form is opened.
-[INFO ] 2022-10-30 17:10:02:448 {main} zOwnProject - Alarm name -1. Door Locked is entered in Alarms name textbox.
-[INFO ] 2022-10-30 17:10:03:406 {main} zOwnProject - Event as 'Intergartion partner' is selected
-[INFO ] 2022-10-30 17:10:05:315 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
-[INFO ] 2022-10-30 17:10:08:254 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
-[INFO ] 2022-10-30 17:10:09:995 {main} zOwnProject - VAX Alarm configuration windoe is opened.
-[INFO ] 2022-10-30 17:10:12:805 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
-[INFO ] 2022-10-30 17:10:16:303 {main} zOwnProject - Selected event type as -Door Locked
-[INFO ] 2022-10-30 17:10:17:885 {main} zOwnProject - Access Control event is configured
-[INFO ] 2022-10-30 17:10:19:263 {main} zOwnProject - Selected all available resources.
-[INFO ] 2022-41-30 18:41:55:657 {main} zOwnProject -  URL Opened
-[INFO ] 2022-41-30 18:41:56:125 {main} zOwnProject -  Entered username 
-[INFO ] 2022-41-30 18:41:56:467 {main} zOwnProject -  Entered password 
-[INFO ] 2022-41-30 18:41:57:895 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-42-30 18:42:04:022 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-42-30 18:42:04:052 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
-[INFO ] 2022-42-30 18:42:05:977 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-42-30 18:42:11:715 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-44-30 18:44:57:688 {main} zOwnProject -  URL Opened
-[INFO ] 2022-44-30 18:44:58:172 {main} zOwnProject -  Entered username 
-[INFO ] 2022-44-30 18:44:58:497 {main} zOwnProject -  Entered password 
-[INFO ] 2022-45-30 18:45:04:329 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-45-30 18:45:07:705 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-45-30 18:45:07:718 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
-[INFO ] 2022-45-30 18:45:09:246 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-45-30 18:45:12:639 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-06-30 19:06:49:821 {main} zOwnProject -  URL Opened
-[INFO ] 2022-06-30 19:06:50:300 {main} zOwnProject -  Entered username 
-[INFO ] 2022-06-30 19:06:50:640 {main} zOwnProject -  Entered password 
-[INFO ] 2022-06-30 19:06:54:015 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-06-30 19:06:58:226 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-06-30 19:06:58:243 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
-[INFO ] 2022-06-30 19:06:59:996 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-07-30 19:07:03:568 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-13-30 19:13:16:756 {main} zOwnProject -  URL Opened
-[INFO ] 2022-13-30 19:13:17:225 {main} zOwnProject -  Entered username 
-[INFO ] 2022-13-30 19:13:17:569 {main} zOwnProject -  Entered password 
-[INFO ] 2022-13-30 19:13:22:922 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-13-30 19:13:26:282 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-13-30 19:13:26:299 {main} zOwnProject - ************  Test Case - AddWebPages is started ************
-[INFO ] 2022-13-30 19:13:27:812 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-13-30 19:13:33:620 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-19-30 19:19:33:432 {main} zOwnProject -  URL Opened
-[INFO ] 2022-19-30 19:19:33:917 {main} zOwnProject -  Entered username 
-[INFO ] 2022-19-30 19:19:34:261 {main} zOwnProject -  Entered password 
-[INFO ] 2022-19-30 19:19:39:669 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-19-30 19:19:43:032 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-19-30 19:19:44:557 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-19-30 19:19:50:549 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-22-30 19:22:11:773 {main} zOwnProject -  URL Opened
-[INFO ] 2022-22-30 19:22:12:239 {main} zOwnProject -  Entered username 
-[INFO ] 2022-22-30 19:22:12:596 {main} zOwnProject -  Entered password 
-[INFO ] 2022-22-30 19:22:15:838 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-22-30 19:22:19:953 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-22-30 19:22:21:597 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-22-30 19:22:25:855 {main} zOwnProject - Procedures page is opened
-[INFO ] 2022-32-30 19:32:14:752 {main} zOwnProject -  URL Opened
-[INFO ] 2022-32-30 19:32:15:367 {main} zOwnProject -  Entered username 
-[INFO ] 2022-32-30 19:32:15:855 {main} zOwnProject -  Entered password 
-[INFO ] 2022-32-30 19:32:17:589 {main} zOwnProject -  Clicked on Sign IN button 
-[INFO ] 2022-32-30 19:32:21:956 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
-[INFO ] 2022-32-30 19:32:25:401 {main} zOwnProject - Configuration page is opened
-[INFO ] 2022-32-30 19:32:33:505 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-10-01 11:10:22:681 {main} zOwnProject -  URL Opened
+[INFO ] 2022-10-01 11:10:23:314 {main} zOwnProject -  Entered username 
+[INFO ] 2022-10-01 11:10:23:864 {main} zOwnProject -  Entered password 
+[INFO ] 2022-10-01 11:10:27:800 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-10-01 11:10:30:816 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-10-01 11:10:30:898 {main} zOwnProject - ************  Test Case - deleteWebPages is started ************
+[INFO ] 2022-21-01 11:21:22:316 {main} zOwnProject -  URL Opened
+[INFO ] 2022-21-01 11:21:54:769 {main} zOwnProject -  URL Opened
+[INFO ] 2022-21-01 11:21:55:401 {main} zOwnProject -  Entered username 
+[INFO ] 2022-21-01 11:21:55:878 {main} zOwnProject -  Entered password 
+[INFO ] 2022-21-01 11:21:57:563 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-22-01 11:22:02:327 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-22-01 11:22:05:719 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-22-01 11:22:09:271 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-22-01 11:22:10:172 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2022-22-01 11:22:18:864 {main} zOwnProject - Alibaba webpage added.
+[INFO ] 2022-22-01 11:22:24:352 {main} zOwnProject - NDTV webpage added.
+[INFO ] 2022-22-01 11:22:30:010 {main} zOwnProject - Vicon webpage added.
+[INFO ] 2022-22-01 11:22:35:477 {main} zOwnProject - ZeeNews webpage added.
+[INFO ] 2022-22-01 11:22:41:321 {main} zOwnProject - Selenium webpage added.
+[INFO ] 2022-22-01 11:22:46:950 {main} zOwnProject - TestNG webpage added.
+[INFO ] 2022-22-01 11:22:52:950 {main} zOwnProject - CemtrexLabs webpage added.
+[INFO ] 2022-23-01 11:23:19:442 {main} zOwnProject -  URL Opened
+[INFO ] 2022-23-01 11:23:20:050 {main} zOwnProject -  Entered username 
+[INFO ] 2022-23-01 11:23:20:528 {main} zOwnProject -  Entered password 
+[INFO ] 2022-23-01 11:23:26:146 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-23-01 11:23:29:545 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-23-01 11:23:31:458 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-23-01 11:23:40:141 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-23-01 11:23:40:147 {main} zOwnProject - ************  Test Case - deleteWebPages is started ************
+[INFO ] 2022-23-01 11:23:42:077 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-01-01 15:01:26:125 {main} zOwnProject -  URL Opened
+[INFO ] 2022-01-01 15:01:26:689 {main} zOwnProject -  Entered username 
+[INFO ] 2022-01-01 15:01:27:106 {main} zOwnProject -  Entered password 
+[INFO ] 2022-01-01 15:01:30:714 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-01-01 15:01:34:900 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-01-01 15:01:36:711 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-01-01 15:01:51:278 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-01-01 15:01:54:818 {main} zOwnProject - Alarm name -1. Door Locked is entered in Alarms name textbox.
+[INFO ] 2022-01-01 15:01:55:759 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-01-01 15:01:57:654 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-02-01 15:02:00:462 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-02-01 15:02:02:126 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-02-01 15:02:04:800 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-02-01 15:02:08:190 {main} zOwnProject - Selected event type as -Door Locked
+[INFO ] 2022-02-01 15:02:09:724 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-02-01 15:02:11:037 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-02-01 15:02:21:196 {main} zOwnProject - selected all users.
+[INFO ] 2022-02-01 15:02:22:510 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-02-01 15:02:25:595 {main} zOwnProject - Clicked on SAVE button to create '1. Door Locked' Alarm
+[INFO ] 2022-02-01 15:02:29:147 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-02-01 15:02:32:722 {main} zOwnProject - Alarm name -2. Door Unlocked is entered in Alarms name textbox.
+[INFO ] 2022-02-01 15:02:33:664 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-02-01 15:02:35:520 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-02-01 15:02:38:209 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-02-01 15:02:39:849 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-02-01 15:02:42:519 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-02-01 15:02:45:874 {main} zOwnProject - Selected event type as -Unlocked
+[INFO ] 2022-02-01 15:02:47:370 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-02-01 15:02:48:709 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-02-01 15:02:58:906 {main} zOwnProject - selected all users.
+[INFO ] 2022-03-01 15:03:00:144 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-03-01 15:03:03:215 {main} zOwnProject - Clicked on SAVE button to create '2. Door Unlocked' Alarm
+[INFO ] 2022-03-01 15:03:06:837 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-03-01 15:03:10:509 {main} zOwnProject - Alarm name -3. Door Override Enable is entered in Alarms name textbox.
+[INFO ] 2022-03-01 15:03:11:414 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-03-01 15:03:13:328 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-03-01 15:03:16:106 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-03-01 15:03:17:755 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-03-01 15:03:20:419 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-03-01 15:03:24:187 {main} zOwnProject - Selected event type as -Door Override Enable
+[INFO ] 2022-03-01 15:03:25:696 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-03-01 15:03:27:009 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-03-01 15:03:37:196 {main} zOwnProject - selected all users.
+[INFO ] 2022-03-01 15:03:38:450 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-03-01 15:03:42:241 {main} zOwnProject - Clicked on SAVE button to create '3. Door Override Enable' Alarm
+[INFO ] 2022-03-01 15:03:45:750 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-03-01 15:03:49:366 {main} zOwnProject - Alarm name -4. Door Override Disable is entered in Alarms name textbox.
+[INFO ] 2022-03-01 15:03:50:290 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-03-01 15:03:52:139 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-03-01 15:03:54:786 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-03-01 15:03:56:439 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-03-01 15:03:59:092 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-04-01 15:04:02:923 {main} zOwnProject - Selected event type as -Door Override Disable
+[INFO ] 2022-04-01 15:04:04:440 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-04-01 15:04:05:707 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-04-01 15:04:15:757 {main} zOwnProject - selected all users.
+[INFO ] 2022-04-01 15:04:16:975 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-04-01 15:04:19:958 {main} zOwnProject - Clicked on SAVE button to create '4. Door Override Disable' Alarm
+[INFO ] 2022-04-01 15:04:23:511 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-04-01 15:04:27:079 {main} zOwnProject - Alarm name -5. Door Open is entered in Alarms name textbox.
+[INFO ] 2022-04-01 15:04:28:054 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-04-01 15:04:29:910 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-04-01 15:04:32:729 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-04-01 15:04:34:348 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-04-01 15:04:37:012 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-04-01 15:04:40:666 {main} zOwnProject - Selected event type as -Door Open
+[INFO ] 2022-04-01 15:04:42:155 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-04-01 15:04:43:474 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-04-01 15:04:53:686 {main} zOwnProject - selected all users.
+[INFO ] 2022-04-01 15:04:54:843 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-04-01 15:04:57:872 {main} zOwnProject - Clicked on SAVE button to create '5. Door Open' Alarm
+[INFO ] 2022-05-01 15:05:01:456 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-05-01 15:05:04:921 {main} zOwnProject - Alarm name -6. Door Close is entered in Alarms name textbox.
+[INFO ] 2022-05-01 15:05:05:920 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-05-01 15:05:07:725 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-05-01 15:05:10:437 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-05-01 15:05:12:171 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-05-01 15:05:15:222 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-05-01 15:05:18:909 {main} zOwnProject - Selected event type as -Door Close
+[INFO ] 2022-05-01 15:05:20:628 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-05-01 15:05:21:986 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-05-01 15:05:32:339 {main} zOwnProject - selected all users.
+[INFO ] 2022-05-01 15:05:33:569 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-05-01 15:05:36:946 {main} zOwnProject - Clicked on SAVE button to create '6. Door Close' Alarm
+[INFO ] 2022-05-01 15:05:40:518 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-05-01 15:05:44:257 {main} zOwnProject - Alarm name -7. Door Forced Open is entered in Alarms name textbox.
+[INFO ] 2022-05-01 15:05:45:136 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-05-01 15:05:47:051 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-05-01 15:05:49:851 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-05-01 15:05:51:560 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-05-01 15:05:54:370 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-05-01 15:05:58:507 {main} zOwnProject - Selected event type as -Door Forced Open
+[INFO ] 2022-06-01 15:06:00:175 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-06-01 15:06:01:544 {main} zOwnProject - Selected all available resources.
+[INFO ] 2022-06-01 15:06:11:757 {main} zOwnProject - selected all users.
+[INFO ] 2022-06-01 15:06:12:967 {main} zOwnProject - Set Alarm expiration time as NEVER
+[INFO ] 2022-06-01 15:06:16:061 {main} zOwnProject - Clicked on SAVE button to create '7. Door Forced Open' Alarm
+[INFO ] 2022-06-01 15:06:19:704 {main} zOwnProject - New alarm form is opened.
+[INFO ] 2022-06-01 15:06:23:468 {main} zOwnProject - Alarm name -8. Door Held Open is entered in Alarms name textbox.
+[INFO ] 2022-06-01 15:06:24:407 {main} zOwnProject - Event as 'Intergartion partner' is selected
+[INFO ] 2022-06-01 15:06:26:260 {main} zOwnProject - Integration Partner is selected as 'Access Control'.
+[INFO ] 2022-06-01 15:06:28:983 {main} zOwnProject - Integration Partner name is selected as 'VAX'.
+[INFO ] 2022-06-01 15:06:30:682 {main} zOwnProject - VAX Alarm configuration windoe is opened.
+[INFO ] 2022-06-01 15:06:33:524 {main} zOwnProject - Selected Parameter as 'EVENT' in the configure access control window.
+[INFO ] 2022-06-01 15:06:37:225 {main} zOwnProject - Selected event type as -Door Held Open
+[INFO ] 2022-06-01 15:06:38:779 {main} zOwnProject - Access Control event is configured
+[INFO ] 2022-16-01 19:16:15:698 {main} zOwnProject -  URL Opened
+[INFO ] 2022-16-01 19:16:16:382 {main} zOwnProject -  Entered username 
+[INFO ] 2022-16-01 19:16:16:919 {main} zOwnProject -  Entered password 
+[INFO ] 2022-16-01 19:16:18:696 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-16-01 19:16:23:491 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-16-01 19:16:27:167 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-16-01 19:16:29:040 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-17-01 19:17:46:449 {main} zOwnProject -  URL Opened
+[INFO ] 2022-17-01 19:17:47:099 {main} zOwnProject -  Entered username 
+[INFO ] 2022-17-01 19:17:47:606 {main} zOwnProject -  Entered password 
+[INFO ] 2022-17-01 19:17:49:419 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-17-01 19:17:54:187 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-17-01 19:17:58:336 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-18-01 19:18:04:064 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-25-01 19:25:03:176 {main} zOwnProject -  URL Opened
+[INFO ] 2022-25-01 19:25:03:833 {main} zOwnProject -  Entered username 
+[INFO ] 2022-25-01 19:25:04:322 {main} zOwnProject -  Entered password 
+[INFO ] 2022-25-01 19:25:06:054 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-25-01 19:25:10:428 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-25-01 19:25:13:664 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-25-01 19:25:21:358 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-27-01 19:27:06:740 {main} zOwnProject -  URL Opened
+[INFO ] 2022-27-01 19:27:07:416 {main} zOwnProject -  Entered username 
+[INFO ] 2022-27-01 19:27:07:896 {main} zOwnProject -  Entered password 
+[INFO ] 2022-27-01 19:27:11:819 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-27-01 19:27:16:469 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-27-01 19:27:18:795 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-27-01 19:27:24:388 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-28-01 19:28:21:675 {main} zOwnProject -  URL Opened
+[INFO ] 2022-28-01 19:28:22:946 {main} zOwnProject -  Entered username 
+[INFO ] 2022-28-01 19:28:23:531 {main} zOwnProject -  Entered password 
+[INFO ] 2022-28-01 19:28:25:737 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-28-01 19:28:32:513 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-28-01 19:28:35:112 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-28-01 19:28:38:621 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-30-01 19:30:14:170 {main} zOwnProject -  URL Opened
+[INFO ] 2022-30-01 19:30:14:939 {main} zOwnProject -  Entered username 
+[INFO ] 2022-30-01 19:30:15:475 {main} zOwnProject -  Entered password 
+[INFO ] 2022-30-01 19:30:17:273 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-30-01 19:30:22:297 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-30-01 19:30:25:856 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-30-01 19:30:29:303 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-45-01 19:45:41:976 {main} zOwnProject -  URL Opened
+[INFO ] 2022-45-01 19:45:42:546 {main} zOwnProject -  Entered username 
+[INFO ] 2022-45-01 19:45:43:053 {main} zOwnProject -  Entered password 
+[INFO ] 2022-45-01 19:45:44:737 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-45-01 19:45:49:821 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-45-01 19:45:51:958 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-45-01 19:45:54:722 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-04-02 00:04:55:400 {main} zOwnProject -  URL Opened
+[INFO ] 2022-04-02 00:04:56:151 {main} zOwnProject -  Entered username 
+[INFO ] 2022-04-02 00:04:56:755 {main} zOwnProject -  Entered password 
+[INFO ] 2022-04-02 00:04:58:762 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-05-02 00:05:03:258 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-05-02 00:05:06:587 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-05-02 00:05:09:155 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-10-02 00:10:53:236 {main} zOwnProject -  URL Opened
+[INFO ] 2022-10-02 00:10:53:934 {main} zOwnProject -  Entered username 
+[INFO ] 2022-10-02 00:10:54:473 {main} zOwnProject -  Entered password 
+[INFO ] 2022-10-02 00:10:58:199 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-11-02 00:11:02:589 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-11-02 00:11:04:682 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-11-02 00:11:07:137 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-14-02 00:14:18:364 {main} zOwnProject -  URL Opened
+[INFO ] 2022-14-02 00:14:19:094 {main} zOwnProject -  Entered username 
+[INFO ] 2022-14-02 00:14:19:666 {main} zOwnProject -  Entered password 
+[INFO ] 2022-14-02 00:14:21:564 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-14-02 00:14:26:239 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-14-02 00:14:29:436 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-14-02 00:14:31:820 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-21-02 00:21:35:742 {main} zOwnProject -  URL Opened
+[INFO ] 2022-21-02 00:21:36:402 {main} zOwnProject -  Entered username 
+[INFO ] 2022-21-02 00:21:36:975 {main} zOwnProject -  Entered password 
+[INFO ] 2022-21-02 00:21:43:108 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-21-02 00:21:46:629 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-21-02 00:21:48:612 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-21-02 00:21:51:108 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-21-02 00:21:52:565 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-21-02 00:21:53:386 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-22-02 00:22:37:536 {main} zOwnProject -  URL Opened
+[INFO ] 2022-22-02 00:22:38:220 {main} zOwnProject -  Entered username 
+[INFO ] 2022-22-02 00:22:38:790 {main} zOwnProject -  Entered password 
+[INFO ] 2022-22-02 00:22:40:764 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-22-02 00:22:46:099 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-22-02 00:22:48:408 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-22-02 00:22:50:919 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-22-02 00:22:52:430 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-22-02 00:22:53:271 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-11-02 11:11:28:961 {main} zOwnProject -  URL Opened
+[INFO ] 2022-11-02 11:11:29:567 {main} zOwnProject -  Entered username 
+[INFO ] 2022-11-02 11:11:30:042 {main} zOwnProject -  Entered password 
+[INFO ] 2022-11-02 11:11:31:726 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-11-02 11:11:36:661 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-11-02 11:11:40:018 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-11-02 11:11:42:052 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-11-02 11:11:43:763 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-11-02 11:11:44:473 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-13-02 11:13:09:279 {main} zOwnProject -  URL Opened
+[INFO ] 2022-13-02 11:13:09:873 {main} zOwnProject -  Entered username 
+[INFO ] 2022-13-02 11:13:10:275 {main} zOwnProject -  Entered password 
+[INFO ] 2022-13-02 11:13:15:586 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-13-02 11:13:18:941 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-13-02 11:13:20:761 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-13-02 11:13:22:988 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-13-02 11:13:24:727 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-13-02 11:13:27:751 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-34-02 11:34:59:782 {main} zOwnProject -  URL Opened
+[INFO ] 2022-35-02 11:35:00:397 {main} zOwnProject -  Entered username 
+[INFO ] 2022-35-02 11:35:00:888 {main} zOwnProject -  Entered password 
+[INFO ] 2022-35-02 11:35:06:737 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-35-02 11:35:10:230 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-35-02 11:35:12:128 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-35-02 11:35:14:383 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-35-02 11:35:17:184 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-35-02 11:35:19:174 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-36-02 11:36:03:285 {main} zOwnProject -  URL Opened
+[INFO ] 2022-36-02 11:36:03:897 {main} zOwnProject -  Entered username 
+[INFO ] 2022-36-02 11:36:04:404 {main} zOwnProject -  Entered password 
+[INFO ] 2022-36-02 11:36:06:114 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-36-02 11:36:11:609 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-36-02 11:36:13:054 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-36-02 11:36:16:768 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-36-02 11:36:18:729 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-36-02 11:36:21:091 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-39-02 11:39:21:845 {main} zOwnProject -  URL Opened
+[INFO ] 2022-39-02 11:39:22:494 {main} zOwnProject -  Entered username 
+[INFO ] 2022-39-02 11:39:22:967 {main} zOwnProject -  Entered password 
+[INFO ] 2022-39-02 11:39:24:690 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-39-02 11:39:29:742 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-39-02 11:39:31:755 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-39-02 11:39:34:082 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-39-02 11:39:36:041 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-39-02 11:39:38:694 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-40-02 11:40:39:275 {main} zOwnProject -  URL Opened
+[INFO ] 2022-40-02 11:40:39:885 {main} zOwnProject -  Entered username 
+[INFO ] 2022-40-02 11:40:40:350 {main} zOwnProject -  Entered password 
+[INFO ] 2022-40-02 11:40:45:903 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-40-02 11:40:49:279 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-40-02 11:40:51:263 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-40-02 11:40:53:478 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-40-02 11:40:55:192 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-43-02 11:43:56:756 {main} zOwnProject -  URL Opened
+[INFO ] 2022-43-02 11:43:57:379 {main} zOwnProject -  Entered username 
+[INFO ] 2022-43-02 11:43:57:831 {main} zOwnProject -  Entered password 
+[INFO ] 2022-43-02 11:43:59:545 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-44-02 11:44:04:984 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-45-02 11:45:40:033 {main} zOwnProject -  URL Opened
+[INFO ] 2022-45-02 11:45:40:621 {main} zOwnProject -  Entered username 
+[INFO ] 2022-45-02 11:45:41:063 {main} zOwnProject -  Entered password 
+[INFO ] 2022-45-02 11:45:42:770 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-45-02 11:45:48:065 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-45-02 11:45:50:384 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-46-02 11:46:54:769 {main} zOwnProject -  URL Opened
+[INFO ] 2022-46-02 11:46:55:386 {main} zOwnProject -  Entered username 
+[INFO ] 2022-46-02 11:46:55:864 {main} zOwnProject -  Entered password 
+[INFO ] 2022-46-02 11:46:57:549 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-47-02 11:47:02:186 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-47-02 11:47:03:835 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-47-02 11:47:07:515 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-47-02 11:47:10:338 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-47-02 11:47:12:828 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-47-02 11:47:31:389 {main} zOwnProject -  URL Opened
+[INFO ] 2022-47-02 11:47:32:295 {main} zOwnProject -  Entered username 
+[INFO ] 2022-47-02 11:47:33:221 {main} zOwnProject -  Entered password 
+[INFO ] 2022-47-02 11:47:35:233 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-47-02 11:47:40:722 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-47-02 11:47:44:424 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-47-02 11:47:47:931 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-47-02 11:47:50:956 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-47-02 11:47:53:949 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-10-02 13:10:12:129 {main} zOwnProject -  URL Opened
+[INFO ] 2022-10-02 13:10:12:866 {main} zOwnProject -  Entered username 
+[INFO ] 2022-10-02 13:10:13:370 {main} zOwnProject -  Entered password 
+[INFO ] 2022-10-02 13:10:15:231 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-10-02 13:10:21:009 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-10-02 13:10:23:284 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-10-02 13:10:25:831 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-10-02 13:10:27:559 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-10-02 13:10:52:522 {main} zOwnProject -  URL Opened
+[INFO ] 2022-10-02 13:10:53:205 {main} zOwnProject -  Entered username 
+[INFO ] 2022-10-02 13:10:53:775 {main} zOwnProject -  Entered password 
+[INFO ] 2022-10-02 13:10:55:627 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-11-02 13:11:00:936 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-11-02 13:11:03:169 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-11-02 13:11:05:687 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-11-02 13:11:07:437 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-12-02 13:12:22:020 {main} zOwnProject -  URL Opened
+[INFO ] 2022-12-02 13:12:22:694 {main} zOwnProject -  Entered username 
+[INFO ] 2022-12-02 13:12:23:238 {main} zOwnProject -  Entered password 
+[INFO ] 2022-12-02 13:12:25:080 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-12-02 13:12:30:736 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-12-02 13:12:33:098 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-12-02 13:12:35:631 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-12-02 13:12:38:589 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2022-12-02 13:12:40:837 {main} zOwnProject - VAX IP is entered
+[INFO ] 2022-13-02 13:13:20:287 {main} zOwnProject -  URL Opened
+[INFO ] 2022-13-02 13:13:21:038 {main} zOwnProject -  Entered username 
+[INFO ] 2022-13-02 13:13:21:594 {main} zOwnProject -  Entered password 
+[INFO ] 2022-13-02 13:13:23:539 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-13-02 13:13:28:824 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-13-02 13:13:31:809 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-13-02 13:13:34:517 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-13-02 13:13:36:299 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-20-02 13:20:39:453 {main} zOwnProject -  URL Opened
+[INFO ] 2022-20-02 13:20:40:155 {main} zOwnProject -  Entered username 
+[INFO ] 2022-20-02 13:20:40:697 {main} zOwnProject -  Entered password 
+[INFO ] 2022-20-02 13:20:42:468 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-20-02 13:20:47:065 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-20-02 13:20:50:247 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-20-02 13:20:52:826 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-20-02 13:20:54:582 {main} zOwnProject - VAX Tab is already enabled.
+[INFO ] 2022-21-02 13:21:30:281 {main} zOwnProject -  URL Opened
+[INFO ] 2022-21-02 13:21:30:872 {main} zOwnProject -  Entered username 
+[INFO ] 2022-21-02 13:21:31:294 {main} zOwnProject -  Entered password 
+[INFO ] 2022-21-02 13:21:37:272 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-21-02 13:21:40:620 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-21-02 13:21:41:448 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-21-02 13:21:48:752 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-33-02 13:33:41:449 {main} zOwnProject -  URL Opened
+[INFO ] 2022-33-02 13:33:42:001 {main} zOwnProject -  Entered username 
+[INFO ] 2022-33-02 13:33:42:405 {main} zOwnProject -  Entered password 
+[INFO ] 2022-33-02 13:33:47:749 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-33-02 13:33:51:094 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-33-02 13:33:52:879 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-33-02 13:33:55:055 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-38-02 13:38:44:425 {main} zOwnProject -  URL Opened
+[INFO ] 2022-38-02 13:38:44:993 {main} zOwnProject -  Entered username 
+[INFO ] 2022-38-02 13:38:45:438 {main} zOwnProject -  Entered password 
+[INFO ] 2022-38-02 13:38:50:543 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-38-02 13:38:54:050 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-38-02 13:38:55:759 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-38-02 13:38:57:860 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-41-02 13:41:15:652 {main} zOwnProject -  URL Opened
+[INFO ] 2022-41-02 13:41:16:280 {main} zOwnProject -  Entered username 
+[INFO ] 2022-41-02 13:41:16:723 {main} zOwnProject -  Entered password 
+[INFO ] 2022-41-02 13:41:22:121 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-41-02 13:41:25:468 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-41-02 13:41:27:192 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-41-02 13:41:29:323 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-56-02 13:56:48:117 {main} zOwnProject -  URL Opened
+[INFO ] 2022-56-02 13:56:48:701 {main} zOwnProject -  Entered username 
+[INFO ] 2022-56-02 13:56:49:152 {main} zOwnProject -  Entered password 
+[INFO ] 2022-56-02 13:56:50:839 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-56-02 13:56:55:841 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-56-02 13:56:57:795 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-57-02 13:57:00:047 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-01-02 14:01:43:736 {main} zOwnProject -  URL Opened
+[INFO ] 2022-01-02 14:01:44:337 {main} zOwnProject -  Entered username 
+[INFO ] 2022-01-02 14:01:44:786 {main} zOwnProject -  Entered password 
+[INFO ] 2022-01-02 14:01:50:185 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-01-02 14:01:53:519 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-01-02 14:01:55:204 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-01-02 14:01:57:372 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-03-02 14:03:00:271 {main} zOwnProject -  URL Opened
+[INFO ] 2022-03-02 14:03:00:877 {main} zOwnProject -  Entered username 
+[INFO ] 2022-03-02 14:03:01:326 {main} zOwnProject -  Entered password 
+[INFO ] 2022-03-02 14:03:06:652 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-03-02 14:03:10:004 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-03-02 14:03:11:698 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-03-02 14:03:13:828 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-04-02 14:04:39:216 {main} zOwnProject -  URL Opened
+[INFO ] 2022-04-02 14:04:39:783 {main} zOwnProject -  Entered username 
+[INFO ] 2022-04-02 14:04:40:221 {main} zOwnProject -  Entered password 
+[INFO ] 2022-04-02 14:04:45:533 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-04-02 14:04:48:873 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-04-02 14:04:50:555 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-04-02 14:04:52:732 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-37-02 15:37:31:268 {main} zOwnProject -  URL Opened
+[INFO ] 2022-37-02 15:37:31:917 {main} zOwnProject -  Entered username 
+[INFO ] 2022-37-02 15:37:32:418 {main} zOwnProject -  Entered password 
+[INFO ] 2022-37-02 15:37:37:406 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-37-02 15:37:41:447 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-37-02 15:37:43:442 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-37-02 15:37:49:549 {main} zOwnProject - Webpages page is opened
+[INFO ] 2022-37-02 15:37:50:668 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2022-37-02 15:37:57:993 {main} zOwnProject - Alibaba webpage added.
+[INFO ] 2022-38-02 15:38:03:953 {main} zOwnProject - NDTV webpage added.
+[INFO ] 2022-38-02 15:38:10:124 {main} zOwnProject - Vicon webpage added.
+[INFO ] 2022-38-02 15:38:16:108 {main} zOwnProject - ZeeNews webpage added.
+[INFO ] 2022-38-02 15:38:21:996 {main} zOwnProject - Selenium webpage added.
+[INFO ] 2022-38-02 15:38:27:859 {main} zOwnProject - TestNG webpage added.
+[INFO ] 2022-38-02 15:38:33:973 {main} zOwnProject - CemtrexLabs webpage added.
+[INFO ] 2022-39-02 15:39:16:733 {main} zOwnProject - deleteWebPages  -  Passed. 
+[INFO ] 2022-39-02 15:39:16:736 {main} zOwnProject - All webpages are deleted.
+[INFO ] 2022-39-02 15:39:16:736 {main} zOwnProject - ************  Test Case - deleteWebPages is finished ************
+[INFO ] 2022-39-02 15:39:18:646 {main} zOwnProject -  URL Opened
+[INFO ] 2022-39-02 15:39:19:319 {main} zOwnProject -  Entered username 
+[INFO ] 2022-39-02 15:39:19:875 {main} zOwnProject -  Entered password 
+[INFO ] 2022-39-02 15:39:21:670 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-39-02 15:39:26:682 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-39-02 15:39:28:744 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-39-02 15:39:31:648 {main} zOwnProject - Procedures page is opened
+[INFO ] 2022-39-02 15:39:39:661 {main} zOwnProject -  URL Opened
+[INFO ] 2022-39-02 15:39:40:327 {main} zOwnProject -  Entered username 
+[INFO ] 2022-39-02 15:39:40:855 {main} zOwnProject -  Entered password 
+[INFO ] 2022-39-02 15:39:46:651 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2022-39-02 15:39:50:040 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2022-39-02 15:39:52:009 {main} zOwnProject - Configuration page is opened
+[INFO ] 2022-39-02 15:39:54:561 {main} zOwnProject - Networking page is opened
+[INFO ] 2022-39-02 15:39:56:317 {main} zOwnProject - VAX Tab is already enabled.

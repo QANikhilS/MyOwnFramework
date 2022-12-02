@@ -9,6 +9,7 @@ import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -58,7 +59,7 @@ public class BaseClass
 			
 		   case "ie" :
 				System.setProperty("webdriver.ie.driver", ".\\Drivers\\IEDriverServer.exe");
-				driver = new InternetExplorerDriver();
+			   driver = new InternetExplorerDriver();
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
 			break;
@@ -124,7 +125,7 @@ public class BaseClass
 		
 		//Step 2 : Call getScreenshotAs method to create image file.
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
-		File dest = new File(System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png");  
+		File dest = new File("C:\\Users\\nikhils\\Music\\OwnFramework\\Screenshots\\"+testName+".png");  
 		
 		// Step 3 : Copy image file to destination.
 		FileUtils.copyFile(src, dest);
@@ -148,7 +149,7 @@ public class BaseClass
 	  }
 	
 	
-	//@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.close();

@@ -6,13 +6,14 @@
 <listener class-name="com.VMS.Utilities.ExtentListnerClass"/>
 </listeners>
 
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.VMS.TestCases.TC_loginPageTest"/>
+  <test name="Test">
+     <classes>
+ <!--     <class name="com.VMS.TestCases.TC_loginPageTest"/>  -->
       <class name="com.VMS.TestCases.TC_WebPagesTest"/>
-      <class name="com.VMS.TestCases.TC_ConfigurationPageTest"/>
+      <!--  <class name="com.VMS.TestCases.TC_ConfigurationPageTest"/>   -->
      <!-- <class name="com.VMS.TestCases.TC_AlarmsPageTest"/>  -->
       <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

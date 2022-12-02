@@ -37,7 +37,7 @@ public class TC_loginPageTest extends BaseClass
 		  log.info("************  Test Case - verifyADMINLogin is finish ************");		
 	}
 	
-	@Test(priority = 2, dependsOnMethods = {"verifyADMINLogin"})
+	@Test(priority = 2)
 	public void verifyLogOut()
 	{
 		log.info("************  Test Case - verifyLogOut is started ************");	

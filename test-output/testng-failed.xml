@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest">
         <methods>
-          <include name="addProcedureToAttachFileForReference"/>
+          <include name="verifyIntegratedVAX"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
+      </class> <!-- com.VMS.TestCases.TC_NetworkingPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
