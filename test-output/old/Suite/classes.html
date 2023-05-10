@@ -4,6 +4,76 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
+<td>com.VMS.TestCases.TC_AlarmsJournalPageTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyAccessGrantedCardAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorLockedAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorForcedOpenAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorOpenAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorClosedAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorOverrideEnableAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorOverrideAutoResumeAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorHeldOpenAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>openAlarmTab</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyAccessDeniedCardAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorOverrideDisableAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyDoorUnlockedAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
 <td>com.VMS.TestCases.TC_NetworkingPageTest</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
@@ -12,11 +82,13 @@
 <tr>
 <td>&nbsp;</td>
 <td>enableVAXTab</td>
-<td>&nbsp;</td></tr>
+<td>Setup SetupVAX </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>verifyIntegratedVAX</td>
-<td>&nbsp;</td></tr>
+<td>Setup </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -41,17 +113,12 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>openWebPage</td>
+<td>OpenWebPages</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>deleteWebPages</td>
+<td>addAllWebpage</td>
 <td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>AddWebPages</td>
-<td>Setup </td>
-</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -76,13 +143,139 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>openProcedurePage</td>
-<td>&nbsp;</td></tr>
+<td>addProcedureToOpenNextActionAfterAck</td>
+<td>SetupVAS Setup SetupVAX </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>addProcedureToAcknowledge</td>
 <td>Setup </td>
 </tr>
+<tr>
+<td>&nbsp;</td>
+<td>addProcedureUserMustCommentToAcknowledge</td>
+<td>SetupVAS Setup SetupVAX </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>OpenProcedurePage</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addProcedureToAttachFileForReference</td>
+<td>SetupVAS Setup SetupVAX </td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>com.VMS.TestCases.TC_MapTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>addNewMapInVMS</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addNewMap</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>com.VMS.TestCases.TC_VAXwebpageTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>triggerDigitalInputAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>LoginTotheVAXwebpage</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>triggerDoorLockUnlockOverrideEvents</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>triggerRelayOutputAlarm</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>com.VMS.TestCases.TC_AlarmsPageTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>addVAXalarmOfDoorFromPanel</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addVAXalarmOfDoorFromVAXWebpage</td>
+<td>Setup SetupVAX </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>addVAXalarmOfAccessCardForMessage</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OpenAlarmsPage</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addVAXalarmOfAccessCard</td>
+<td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>

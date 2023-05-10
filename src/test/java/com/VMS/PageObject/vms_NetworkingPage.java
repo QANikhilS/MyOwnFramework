@@ -27,10 +27,10 @@ public class vms_NetworkingPage {
 	@FindBy(xpath = "//span[@vms-navigation-state='vax']") 
 	public WebElement vaxTab;
 	
-	@FindBy(xpath = "(//md-switch[@role='checkbox'])[2]") 
-	public WebElement enableVAXIntegrationToggleBtn1;
+	//@FindBy(xpath = "//toggle-switch[@name='openVaxInterface']/following-sibling::md-switch[@aria-checked='true']") 
+	//public WebElement enableVAXIntegrationToggleBtn1;
 	
-	@FindBy(xpath = "(//div[@class='md-thumb'])[2]") 
+	@FindBy(xpath = "//toggle-switch[@name='openVaxInterface']/following-sibling::md-switch[@aria-checked='false']") 
 	public WebElement enableVAXIntegrationToggleBtn2;
 	
 	@FindBy(css = "input[name='vaxAddress']")
@@ -40,6 +40,19 @@ public class vms_NetworkingPage {
 	public WebElement saveBtn;
 	
 	
+	
+	public void openNetworingPage()
+	{
+		 vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		   vms_ConfigurationPage cp = hm.openConfigurationPage();
+		   cp.openNetworkingPage();
+		try {
+			Thread.sleep(500);
+	    } catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+	}
 	
 	public String verifyVAXtabIsEnabled()
 	{
@@ -54,7 +67,7 @@ public class vms_NetworkingPage {
 		
 	public void enabletheVAXIntegrationToggleBtn()
 	{
-		if(enableVAXIntegrationToggleBtn1.getAttribute("aria-checked").equalsIgnoreCase("true"))
+		if(enableVAXIntegrationToggleBtn2.getAttribute("aria-checked").equalsIgnoreCase("true"))
 		{ }
 		else 
 		{  enableVAXIntegrationToggleBtn2.click();   }
@@ -91,18 +104,28 @@ public class vms_NetworkingPage {
 		
 		ldriver.switchTo().window(ChildWindow);
 		Thread.sleep(1000);
-
-		String childWindow = ldriver.getCurrentUrl();
 		ldriver.manage().window().minimize();
-		
+		ldriver.close();
 		ldriver.switchTo().window(MainWindow);
 		
 	}
 	
+	public void enableVAXTab(String VAXipToConfigure) throws Exception
+	{
+	if(verifyVAXtabIsEnabled().equalsIgnoreCase("Disabled"))
+	{
+	   openNetworingPage();
+	   enabletheVAXIntegrationToggleBtn();
+	   System.out.println("VAX Integration toggle btn enabled");
+	   enterVAXIP(VAXipToConfigure);
+	   System.out.println("VAX IP is entered");
+	   clickOnSaveBtn();
+	   Thread.sleep(1500);
+	}
+	else
+	{  System.out.println("VAX Tab is already enabled.");  }
 	
-	
-	
-	
+	}
 	
 	
 	

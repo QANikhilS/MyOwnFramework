@@ -3,72 +3,117 @@ package com.VMS.TestCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.VMS.PageObject.vms_ConfigurationPage;
-import com.VMS.PageObject.vms_Home_MonitoringPage;
-import com.VMS.PageObject.vms_IntegrationPartnerPage;
-
 public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	
-	@Test(priority = 1)
+	@Test(priority = 0)
+	public void openIntegrationPartnerpage()
+	{
+		Integrationpartner.openIntegrationPartnerPage();
+	}
+	
+	
+	
+	@Test(priority = 1, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
 	public void AddIntrgrationPartner()
 	{
-		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		hm.openConfigurationPage();
-		vms_ConfigurationPage cp = new vms_ConfigurationPage(driver);
-		cp.openIntegrationPartnerPage();
-		log.info("Integration Partner page has been opened");
-		
-		vms_IntegrationPartnerPage ip = new vms_IntegrationPartnerPage(driver);
-		ip.clickOnAddPartner();
+		Integrationpartner.openIntegrationPartnerPage();
+		Integrationpartner.clickOnAddPartner();
 		log.info("Add new Integration Partner form has been opened");
-		ip.PartnerTypeAsAccessControl();
+		Integrationpartner.PartnerTypeAsAccessControl();
 		log.info("Selected access control type");
-		ip.PartnerNameAsVAX();
-		log.info("Selected partner name ");
-		ip.IntrgrationPartnerEnterName("VAX-54");
+		Integrationpartner.PartnerNameAsVAX();
+		log.info("Selected partner name as VAX");
+		Integrationpartner.IntrgrationPartnerEnterName("VAX3.1");
 		log.info("Entered VAX name");
-		ip.IntrgrationPartnerEnterIP("192.168.1.54");
+		Integrationpartner.IntrgrationPartnerEnterIP("192.168.1.51");
 		log.info("Entered VAX IP");
-		ip.IntrgrationPartnerEnterUsername("vjathode@cemtrexlabs.com");
+		Integrationpartner.IntrgrationPartnerEnterUsername("ADMIN");
 		log.info("Entered VAX Username");
-		ip.IntrgrationPartnerEnterpassword("Cemtrex@321");
+		Integrationpartner.IntrgrationPartnerEnterpassword("Cemtrex@123");
 		log.info("Entered VAX password");
-		ip.ClickOnNEXTbtn();
-		ip.selectAllDoors();
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.selectAllDoors();
 		log.info("Selected all Doors");
-		ip.ClickOnNEXTbtn();
-		ip.ClickOnSAVEbtn();
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.ClickOnSAVEbtn();
 		log.info("Integration Partner has been added");		
 	}
 
+	//@Test(priority = 2, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
+	public void AddIntrgrationPartner2_10_54()
+	{
+		Integrationpartner.clickOnAddPartner();
+		log.info("Add new Integration Partner form has been opened");
+		Integrationpartner.PartnerTypeAsAccessControl();
+		log.info("Selected access control type");
+		Integrationpartner.PartnerNameAsVAX();
+		log.info("Selected partner name as VAX");
+		Integrationpartner.IntrgrationPartnerEnterName("VAX2.1_1");
+		log.info("Entered VAX name");
+		Integrationpartner.IntrgrationPartnerEnterIP("192.168.1.54");
+		log.info("Entered VAX IP");
+		Integrationpartner.IntrgrationPartnerEnterUsername("vjathode@cemtrexlabs.com");
+		log.info("Entered VAX Username");
+		Integrationpartner.IntrgrationPartnerEnterpassword("Cemtrex@321");
+		log.info("Entered VAX password");
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.selectAllDoors();
+		log.info("Selected all Doors");
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.ClickOnSAVEbtn();
+		log.info("Integration Partner has been added");		
+	}
 	
-	@Test(priority = 2)
+	
+	//@Test(priority = 2, groups = {"Setup", "SetupVAX"}, dependsOnMethods = "openIntegrationPartnerpage")
+	public void AddIntrgrationPartner2_10_68()
+	{
+		Integrationpartner.clickOnAddPartner();
+		log.info("Add new Integration Partner form has been opened");
+		Integrationpartner.PartnerTypeAsAccessControl();
+		log.info("Selected access control type");
+		Integrationpartner.PartnerNameAsVAX();
+		log.info("Selected partner name as VAX");
+		Integrationpartner.IntrgrationPartnerEnterName("VAX2.1_2");
+		log.info("Entered VAX name");
+		Integrationpartner.IntrgrationPartnerEnterIP("192.168.1.68");
+		log.info("Entered VAX IP");
+		Integrationpartner.IntrgrationPartnerEnterUsername("vjathode@cemtrexlabs.com");
+		log.info("Entered VAX Username");
+		Integrationpartner.IntrgrationPartnerEnterpassword("Cemtrex@321");
+		log.info("Entered VAX password");
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.selectAllDoors();
+		log.info("Selected all Doors");
+		Integrationpartner.ClickOnNEXTbtn();
+		Integrationpartner.ClickOnSAVEbtn();
+		log.info("Integration Partner has been added");		
+	}
+	
+	
+	
+	
+	
+	
+	
+	//@Test(priority = 3 , dependsOnMethods = {"openIntegrationPartnerpage"})
 	public void RefreshUserInformationfeature() throws Exception
 	{
-		
-		/*
-		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		 * hm.openConfigurationPage(); vms_ConfigurationPage cp = new
-		 * vms_ConfigurationPage(driver); cp.openIntegrationPartnerPage();
-		 * log.info("Integration Partner page has been opened");
-		 */
-		
+			
 		Thread.sleep(2000);
-		vms_IntegrationPartnerPage ip = new vms_IntegrationPartnerPage(driver);
-		Thread.sleep(2000);
-		ip.clickonRefreshUserInfo();
+		Integrationpartner.clickonRefreshUserInfo();
 		log.info("Clicked on RefreshUserInfo button.");
 
-		if (ip.refreshUserInfoConfirmationMessageWindowVisibility() == true)
+		if (Integrationpartner.refreshUserInfoConfirmationMessageWindowVisibility() == true)
 		{
 			String ExpectedConfirmationMsg = "User Information Refreshed Successfully";
-			String ActualConfirmationMsg = ip.refreshUserInfoConfirmationMessage(); 
+			String ActualConfirmationMsg = Integrationpartner.refreshUserInfoConfirmationMessage(); 
 			
 			if (ExpectedConfirmationMsg.equals(ActualConfirmationMsg))
 			{
 				log.info("RefreshUserInformationfeature  -  Passed. ");
 				Assert.assertTrue(true);
-				ip.clickOnOKbtn();
+				Integrationpartner.clickOnOKbtn();
 				log.info("User's Information has been refreshed successfully.");
 			}
 			else
@@ -88,24 +133,17 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	
 	
 	
-	@Test(priority = 3, enabled = true)
+	//@Test(priority = 4, enabled = true)
 	public void DeleteIntrgrationPartner() throws Exception
 	{
-		/*
-		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
-		 * hm.openConfigurationPage(); vms_ConfigurationPage cp = new
-		 * vms_ConfigurationPage(driver); cp.openIntegrationPartnerPage();
-		 * log.info("Integration Partner page has been opened");
-		 */  
-		
+				
 		Thread.sleep(2000);
-		vms_IntegrationPartnerPage ip = new vms_IntegrationPartnerPage(driver);
-		
-		if (ip.listOfAvailableIPs()>0)
+				
+		if (Integrationpartner.listOfAvailableIPs()>0)
 		{
-			ip.deleteAnyIntegrationPartner();
-			log.info(ip.deleteConfirmationMessage());
-			ip.closeDeleteProcessWindow();
+			Integrationpartner.deleteAnyIntegrationPartner();
+			log.info(Integrationpartner.deleteConfirmationMessage());
+			Integrationpartner.closeDeleteProcessWindow();
 			log.info("Delete Device Progress window closed");
 			//Assert.assertEquals("Deleted", ip.deleteConfirmationMessage());
 		}

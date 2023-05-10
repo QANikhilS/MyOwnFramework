@@ -12,12 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 public class vms_WebPagesPage {
 
 	WebDriver ldriver;
+	public JavascriptExecutor js ;
 
 	public vms_WebPagesPage(WebDriver rdriver) 
 	{
-		// TODO Auto-generated constructor stub
-
-		ldriver = rdriver;
+     	ldriver = rdriver;
+     	js = ((JavascriptExecutor) ldriver);
 		PageFactory.initElements(rdriver, this);
 	}
 	
@@ -59,11 +59,22 @@ public class vms_WebPagesPage {
 	
 
 
+	public void openWebPagespage()
+	    {
+		   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		   vms_ConfigurationPage cp = hm.openConfigurationPage();
+		   cp.openWebPagePage();
+		try {
+			Thread.sleep(500);
+	    } catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+	 }
 	
 	public void clickOnNewWebpageBtn()
 	{
-		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
-		executor.executeScript("arguments[0].click();", addNewWebPagebtn);
+		js.executeScript("arguments[0].click();", addNewWebPagebtn);
 	}
 	
 	public void enterWebPageName(String WebpgName) throws Exception
@@ -113,8 +124,7 @@ public class vms_WebPagesPage {
 	
 	public void clickOnSaveBtn()
 	{
-		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
-		executor.executeScript("arguments[0].click();", saveBtn);
+		js.executeScript("arguments[0].click();", saveBtn);
 	}	
 	
 	public void addWebPage(String WebPageName, String WebPageURL) throws Exception

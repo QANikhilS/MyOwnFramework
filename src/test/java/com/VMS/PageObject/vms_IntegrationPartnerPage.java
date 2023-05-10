@@ -98,8 +98,24 @@ public class vms_IntegrationPartnerPage {
 	@FindBy(xpath = "//span[contains(text(),'VAX-54')]")
 	public WebElement addedVAX;
 	
+
+	
 	
 
+	
+	
+    public void openIntegrationPartnerPage()
+    {
+		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		vms_ConfigurationPage cp = hm.openConfigurationPage();
+		cp.openIntegrationPartnerPage();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 
 	public void nameOfAddedVAX()
     {
@@ -107,14 +123,12 @@ public class vms_IntegrationPartnerPage {
 		//return IPvalue; 
     }
 
-
 	public String ipOFCurrentVAX()
     {
 		ipNameInRHSprop.click();
 		String IPvalue = ipNameInRHSprop.getText();
 		return IPvalue; 
     }
-	
 	
 	public void clickOnAddPartner()
     {
@@ -191,8 +205,7 @@ public class vms_IntegrationPartnerPage {
     	String DCM = DeletedConfirmationMessage.getText();
     	return DCM;
     }
-		
-       
+		       
     public void getIPofPresentVAX() throws Exception, Exception
     {
     	 /*    	String presentIPofVAX;
@@ -233,7 +246,6 @@ public class vms_IntegrationPartnerPage {
 		//return presentIPofVAX;   */
     }
     
-    
     public void closeDeleteProcessWindow()
     {
     	ClosebuttonOnDeleteDeviceProcess.click();    	
@@ -258,10 +270,7 @@ public class vms_IntegrationPartnerPage {
 		return true;
     	
     }
-    
-    
-    
-    
+     
     public void clickOnOKbtn()
     {
     	new WebDriverWait(ldriver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(OKBtn));

@@ -19,7 +19,6 @@ public class vms_ProcedurePage {
 	     ldriver = rdriver;
 	     PageFactory.initElements(rdriver, this);
 	     wait = new WebDriverWait(ldriver, Duration.ofSeconds(15));
-	
 	}
 	
 	@FindBy(xpath = "//button[text()='New']")
@@ -62,6 +61,19 @@ public class vms_ProcedurePage {
 	public WebElement addAction;
 				
 	
+	
+	public void openProdecurepage()
+	    {
+		   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		   vms_ConfigurationPage cp = hm.openConfigurationPage();
+		  cp.openProcedurePage();
+		try {
+			Thread.sleep(500);
+	    } catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+	 }
 	
 	public void clickOnNEWbtn()
 	{

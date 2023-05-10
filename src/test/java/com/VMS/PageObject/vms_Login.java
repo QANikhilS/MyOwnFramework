@@ -46,11 +46,15 @@ public class vms_Login extends BaseClass {
 	
 	public void enterUsername(String username)
 	{
+		loginTextbox.click();
+		loginTextbox.clear();
 		loginTextbox.sendKeys(username);
 	}
 	
 	public void enterPassword(String pwd)
 	{
+		passwordTextBox.click();;
+		passwordTextBox.clear();
 		passwordTextBox.sendKeys(pwd);
 	}	
 	

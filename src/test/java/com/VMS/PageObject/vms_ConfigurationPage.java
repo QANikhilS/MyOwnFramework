@@ -1,16 +1,19 @@
 package com.VMS.PageObject;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class vms_ConfigurationPage {
 
 	WebDriver ldriver;
 
 	public vms_ConfigurationPage(WebDriver rdriver) {
-		// TODO Auto-generated constructor stub
 
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
@@ -240,7 +243,8 @@ public class vms_ConfigurationPage {
 	
 	public void openRelayOutputPage()
 	{
-		try  {  RelayOutputPage.click(); }
+		try  {  
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(RelayOutputPage)).click(); }
 		catch (Exception e)
 		{
 			 e.printStackTrace();
@@ -249,7 +253,7 @@ public class vms_ConfigurationPage {
 		}
 	}
 	
-	public void openWebPagePage()
+	public vms_WebPagesPage openWebPagePage()
 	{
 		try  {  WebPagesPage.click(); }
 		catch (Exception e)
@@ -258,9 +262,10 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 WebPagesPage.click();
 		}
+		return new vms_WebPagesPage(ldriver);
 	}
 
-	public void openProcedurePage()
+	public vms_ProcedurePage openProcedurePage()
 	{
 		try  {  ProceduresPage.click(); }
 		catch (Exception e)
@@ -269,9 +274,10 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 ProceduresPage.click();
 		}
+	  return new vms_ProcedurePage(ldriver);
 	}
 	
-	public void openViewsPage()
+	public vms_ViewPage openViewsPage()
 	{
 		try  {  ViewsPage.click(); }
 		catch (Exception e)
@@ -280,6 +286,7 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 ViewsPage.click();
 		}
+		return new vms_ViewPage(ldriver);
 	}
 	
 	public void openTourPage()
@@ -292,6 +299,18 @@ public class vms_ConfigurationPage {
 			 ToursPage.click();
 		}
 	}
+	
+	public void openMapPage()
+	{
+		try  {  MapsPage.click(); }
+		catch (Exception e)
+		{
+			 e.printStackTrace();
+			 HomePage.click();
+			 MapsPage.click();
+		}
+	}
+	
 	
 	public void openNumericIDsPage()
 	{
@@ -316,7 +335,7 @@ public class vms_ConfigurationPage {
 		}
 	}
 	
-	public void openVAXDoorsPage()
+	public vms_AlarmsPage openVAXDoorsPage()
 	{
 		try  {  DoorsPage.click(); }
 		catch (Exception e)
@@ -325,6 +344,7 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 DoorsPage.click();
 		}
+		return new vms_AlarmsPage(ldriver);
 	}
 	
 	public void openRulesPage()
@@ -409,9 +429,9 @@ public class vms_ConfigurationPage {
 		try  {  NetworkingPage.click(); }
 		catch (Exception e)
 		{
-			 e.printStackTrace();
 			 HomePage.click();
 			 NetworkingPage.click();
+			 e.printStackTrace();
 		}
 	}
 	

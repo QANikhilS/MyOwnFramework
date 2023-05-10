@@ -7,20 +7,18 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.VMS.PageObject.vms_Login;
-import com.VMS.Utilities.ReadExcelFile;
 
 public class TC_loginPageTest2 extends BaseClass
 {
 	
-	@Test(priority = 1, dataProvider = "LoginDataProvider")
+	@Test(priority = 1)
 	public void verifyADMINLogin(String username, String password) throws IOException
 	{
 		
 		vms_Login lgpg = new vms_Login(driver);
 		lgpg.clickOnUserNamefromTopCorner();
 		lgpg.clickOnLogOutBtbn();
-	
-		
+
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "http://localhost/#/monitoring";
 		
@@ -44,8 +42,49 @@ public class TC_loginPageTest2 extends BaseClass
 
 		lgpg.clickOnUserNamefromTopCorner();
 		lgpg.clickOnLogOutBtbn();
+	}
+	
+	//@Test(priority = 1, dataProvider = "LoginTestData")
+	public void login(String uname, String pwd)
+	{
+		
+		vms_Login lgpg = new vms_Login(driver);
+		lgpg.enterUsername(uname);
+		log.info(" Entered username ");
+		lgpg.enterPassword(pwd);
+		log.info(" Entered password ");
+		lgpg.disableReturnToMyLastDisplay();
+		lgpg.Submitbtn();
+		log.info(" Clicked on Sign IN button ");
+		try 
+		{
+			handlePlayerWidnow();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		log.info(" User has logged in to VMS and Monitoring page is opened.");
 		
 	}
+	
+	
+	
+	   @DataProvider(name = "LoginTestData")
+		public Object[][] loginDataset()
+		{
+			return new Object[][] 
+					{
+                        {"Invalid","1234"}, {"admin","Invalid"} , {"admin",""} , {"admin","1234"} 
+					};
+		}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//@Test(priority = 2)
 	public void verifyLogOut()

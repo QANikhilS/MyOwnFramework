@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Setup">
+
+
+	<listeners>
+		<listener class-name="com.VMS.Utilities.ExtentListnerClass" />
+	</listeners>
+
+	<test name="TestingSetup">
+		<groups>
+		<run>
+			<include name="Setup"></include>
+		</run>
+	</groups>
+		<classes>
+	<!--		<class name="com.VMS.TestCases.BaseClass" />   -->
+	<!--		<class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest" />   -->
+	<!--		<class name="com.VMS.TestCases.TC_WebPagesTest" />   -->
+	<!-- 	<class name="com.VMS.TestCases.TC_ProcedurePageTest" />  -->
+			<class name="com.VMS.TestCases.TC_AlarmsPageTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

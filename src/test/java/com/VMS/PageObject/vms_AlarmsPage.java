@@ -4,29 +4,35 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class vms_AlarmsPage {
+import com.VMS.TestCases.BaseClass;
+
+public class vms_AlarmsPage extends BaseClass{
 
 	
 	WebDriver ldriver;
-	WebDriverWait wait;
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	public vms_AlarmsPage(WebDriver rdriver)
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
-		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 	}
 	
 	// Identify webElements
-	@FindBy(xpath = "//button[text()='New']") 
+	@FindAll(@FindBy(xpath = "//div[@class='ui-grid-canvas']//div[@ng-class='view-row']")) 
+	public List<WebElement> listOfAllpresentAlarms;
+	
+	@FindBy(xpath = "//div[@class='flex flex-between']/button[1]") 
 	public WebElement NewBtn;
 	
 	@FindBy(xpath = "//button[text()='Delete']") 
@@ -62,7 +68,7 @@ public class vms_AlarmsPage {
 	@FindBy(xpath  = "//*[@id='parameter']/div/ul/li[2]") 
 	public WebElement parameterAsEvent;
 	
-	@FindBy(xpath  = "//*[@id='parameter']/div/ul/li[3]") 
+	@FindBy(xpath  = "//*[@id='parameter']/div/ul/li[3]/a") 
 	public WebElement parameterAsMessage;	
 	
 	@FindBy(xpath = "//*[@id='parameter']/div/ul/li[4]") 
@@ -95,6 +101,9 @@ public class vms_AlarmsPage {
 	@FindBy(xpath = "//multiselect[@id='subEventType']//li[2]")
 	public WebElement filteredEventType;	
 	
+	@FindBy(xpath = "//input[@ng-show='item.isText']")
+	public WebElement messageTextBox;	
+	
 	@FindBy(xpath = "//div[@class='lpr-footer']/button[2]")
 	public WebElement saveButton;	
 
@@ -111,8 +120,14 @@ public class vms_AlarmsPage {
 	public WebElement relatedResourceDropdownSearchbox;	
 		
 	@FindBy(xpath = "//multiselect[@header='Select related resources']//li[2]/a/i")
-	public WebElement filteredRelatedResource;	
+	public WebElement filteredRelatedResource;
 
+	@FindBy(xpath = "//multiselect[@id='rel-resources']//li[@class='ng-scope']")
+	public List<WebElement> listOfRelatedResources;
+	
+	@FindBy(xpath = "//multiselect[@id='rel-resources']//li[@class='ng-scope']/a/i")
+	public List<WebElement> listOfRelatedResourcescheckboxes;
+	
 	@FindBy(xpath = "//multiselect[@header='Select Procedure']//span[2]")
 	public WebElement procedureDropDown;
 	
@@ -131,23 +146,151 @@ public class vms_AlarmsPage {
 	@FindBy(xpath = "//button[text()='Never']")
 	public WebElement expirationTimeNever;
 	
-	@FindBy(xpath = "//div[@class='vms-big-btn-footer']//button[@ng-click='submitForm()']")
+	@FindBy(xpath = "//div[@class='vms-big-btn-footer']/button[2]")
 	public WebElement saveButtonOfAlarmsForm;
+	
+	@FindBy(xpath = "//div[contains(@ng-show,'selectedAlarm.isPartnerAlarm')]//span[text()=' Select']/preceding-sibling::span")
+	public WebElement selectEventsRadioButton;
+	
+	@FindBy(xpath = "//div[contains(@ng-show,'!selectedAlarm.isPartnerAlarm')]//dropdown-submenu[contains(@class,'evenlist-dropdown')]")
+	public WebElement eventsDropdown;
+	
+	@FindBy(xpath = "//span[text()='Analytics Services']")
+	public WebElement analyticsServiceEvent;
+	
+	@FindAll (@FindBy(xpath = "//nav[@id='primary_nav_wrap']//li[@ng-repeat='event in event.events']"))
+	public List<WebElement> listOfsubEvents;
+	
+	@FindAll (@FindBy(xpath = "//nav[@id='primary_nav_wrap']//li[@ng-repeat='event in events']"))
+	public List<WebElement> listOfValerusEvents;	
+	
+	@FindAll (@FindBy(xpath = "//multiselect[@id='subEventType']//li[@class='ng-scope']/a"))
+	public List<WebElement> listOfVAXevents;
+	
+//	@FindAll (@FindBy(xpath = "//multiselect[@id='subEventType']//li[@class='ng-scope']/a"))
+//	public List<WebElement> listOfVAXconfigurationParameter;
+	
+	@FindBy(xpath = "//div[@class='evnt-option-grp']//label[1]")
+	public WebElement radioBtnToSelectSingleEvents;
+	
+	@FindBy(xpath = "(//div[contains(@class,'selected-event')])[1]")
+	public WebElement dropdownToSelectEvent;
+	
+	@FindBy(xpath = "//multiselect[@header='Select Resources']//span[contains(@class,'v-arrow')]")
+	public WebElement dropdownToSelectResources;
+	
+	@FindBy(xpath = "//multiselect[@header='Select Resources']//input")
+	public WebElement selectResourcesTxtBx;
+	
+	@FindAll(@FindBy(xpath = "//nav[@id='primary_nav_wrap']//li[@ng-repeat='event in events']/a/span"))
+	public List<WebElement> listOfAllValerusEvents;
+	
+	@FindAll(@FindBy(xpath = "//multiselect[@header='Select Resources']//li[@class='ng-scope']"))
+	public List<WebElement> listOfAvailableResources;
 	
 	
 
-	public void addNewAlarm()
+	
+	
+	
+	public void openAlarmsPage()      
 	{
+		ldriver.navigate().to(BaseClass.VMSURL+"/#/configuration/advanced/alarms");
+		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(NewBtn));
+		/*
+		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		 * vms_ConfigurationPage cp = hm.openConfigurationPage(); cp.openAlarmsPage();
+		 * try { Thread.sleep(500); } catch (InterruptedException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
+	}
+	
+	public void selectResources_Vax_InputORoutput_All(String InputORoutput) throws Exception
+	{
+		dropdownToSelectResources.click();
+		Thread.sleep(300);
+		selectResourcesTxtBx.sendKeys(InputORoutput);
+		Thread.sleep(200);
+		for (int i = 0; i<listOfAvailableResources.size() ; i++)
+		{
+			listOfAvailableResources.get(i).click();
+			Thread.sleep(300);
+		}	
+		dropdownToSelectResources.click();
+	}
+	
+	public void selectSingleEventRadioBtn()
+	{
+		radioBtnToSelectSingleEvents.click();
+	}
+	
+	public void openDropdownToSelectEvent()
+	{
+		dropdownToSelectEvent.click();
+	}
+	
+	public void selectValerusEvent(String ExpectedEventName)
+	{
+		for (int i=0; i<listOfAllValerusEvents.size(); i++)
+		{
+			String CuttrntEvent = listOfAllValerusEvents.get(i).getText();
+			if(CuttrntEvent.equalsIgnoreCase(ExpectedEventName))
+			  {
+				  listOfAllValerusEvents.get(i).click();
+				  try {
+					Thread.sleep(400);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			  }
+		}
+			
+	}
+	
+	public void selectEventRadioButton()
+	{
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(selectEventsRadioButton)).click();
+		try {
+			Thread.sleep(800);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void selectVASEvent(String eventName) throws Exception
+	{
+		
+		js.executeScript("window.scrollBy(0,300)");
+		Actions act = new Actions (ldriver);
+		act.moveToElement(eventsDropdown).build().perform();
+		Thread.sleep(1500);
+		act.moveToElement(analyticsServiceEvent).build().perform();
+		Thread.sleep(1500);
+		for (int i = 0 ; i< listOfsubEvents.size() ; i++)
+		{
+			String expectedEvent = listOfsubEvents.get(i).getText();
+			if (expectedEvent.contains(eventName))
+			{
+				act.moveToElement(listOfsubEvents.get(i)).build().perform();
+				act.click().build().perform();
+			}
+		}
+	}
+	
+	public void clickOnAddNewAlarmBtn()
+	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(NewBtn));
 		NewBtn.click();
 	}
 	
 	public void enterAlarmName(String alarmName)
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(alarmNameTxtBx));
-		alarmNameTxtBx.click();
-		alarmNameTxtBx.clear();
-		alarmNameTxtBx.sendKeys(alarmName);
+	   new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(alarmNameTxtBx)).click();
+	   alarmNameTxtBx.clear();
+	   alarmNameTxtBx.sendKeys(alarmName);
 	}
 	
 	public void selectEventTypeAsIntegrationPartner()
@@ -169,6 +312,10 @@ public class vms_AlarmsPage {
 		selectAccessControlNameAsVAX.click();
 	}
 
+	public void openAccessControlConfigurationWindow() throws Exception
+	{
+		accesControlConfiguration.click();	
+	}
 	
 	public void selectParameterASEVENTInConfigureAccessControl() throws Exception
 	{
@@ -179,93 +326,95 @@ public class vms_AlarmsPage {
 	
 	public void selectParameterASMESSAGEInConfigureAccessControl() throws Exception
 	{
+		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(parameterDropDownInConfiguration));
 		parameterDropDownInConfiguration.click();
-		Thread.sleep(500);
-		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
-		executor.executeScript("arguments[0].click();", parameterAsMessage);
+		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(parameterAsMessage));
+	    js.executeScript("arguments[0].click();", parameterAsMessage);
 	}
 	
 	public void selectParameterAsCARDHOLDERInConfigureAccessControl() throws Exception
 	{
 		parameterDropDownInConfiguration.click();
 		Thread.sleep(500);
-		JavascriptExecutor executor = (JavascriptExecutor)ldriver;
-		executor.executeScript("arguments[0].click();", parameterAsCardHolders);
+		js.executeScript("arguments[0].click();", parameterAsCardHolders);
 	}
-	
-	public void openAccessControlConfigurationWindow() throws Exception
-	{
-		accesControlConfiguration.click();	
-	}
-		
+			
 	public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
 	{
-		wait.until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
+		new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
 	    parameterValueDropdowninAccessControlConfiguration.click();
 	 	Thread.sleep(300);
-	 	eventTypesSearchBox.sendKeys(eventValue);
-	 	wait.until(ExpectedConditions.elementToBeClickable(filteredEventType));
-	 	filteredEventType.click();
+        for (int i = 0 ; i<listOfVAXevents.size() ; i++)
+        {
+        	String currentEvent = listOfVAXevents.get(i).getText();
+        	if(currentEvent.contains(eventValue))
+        	{
+        		try
+    	 	{
+        			listOfVAXevents.get(i).click();
+        	 	}
+        	 	catch(Exception e)
+        	 	{   js.executeScript("arguments[0].click();", listOfVAXevents.get(i));   
+        		}
+        	}
+        }
+	 }
+	
+	public void EnterMessage(String Message)
+	{
+		new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(messageTextBox));
+		messageTextBox.clear();
+		messageTextBox.sendKeys(Message);
 	}
 	
 	public void clickSAVEConfigureAccessControl() throws Exception
 	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
          wait.until(ExpectedConditions.elementToBeClickable(saveButton));
          saveButton.click();
 	}
 		
 	public void selectAllResources()
 	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(selectAllResourceRadioButton));
 		selectAllResourceRadioButton.click();
 	}
 	
 	public void selectRelatedResources(String CameraName, String WebPage, String Map) throws Exception
 	{
-        wait.until(ExpectedConditions.elementToBeClickable(relatedResourceDropdown));
+	   WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(relatedResourceDropdown)).click();
         Thread.sleep(500);
-        relatedResourceDropdown.click();
+		relatedResourceDropdownSearchbox.click();
 		Thread.sleep(300);
-		relatedResourceDropdownSearchbox.click();
 		relatedResourceDropdownSearchbox.sendKeys(CameraName);
-		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
-		Thread.sleep(500);
-		try {
-			filteredRelatedResource.click();
-		} catch (Exception e) {
-			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
-			executor.executeScript("arguments[0].click();", filteredRelatedResource);
-		}
-		Thread.sleep(200);
+		Thread.sleep(1500);
+	    js.executeScript("arguments[0].click();", filteredRelatedResource);
+		Thread.sleep(1000);
 		relatedResourceDropdownSearchbox.click();
+		Thread.sleep(500);
 		relatedResourceDropdownSearchbox.clear();
+		Thread.sleep(500);
 		relatedResourceDropdownSearchbox.sendKeys(WebPage);
-		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
-		Thread.sleep(500);
-		try {
-			filteredRelatedResource.click();
-		} catch (Exception e) {
-			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
-			executor.executeScript("arguments[0].click();", filteredRelatedResource);
-		}
-		Thread.sleep(200);
+		Thread.sleep(1500);
+		js.executeScript("arguments[0].click();", filteredRelatedResource);
+		Thread.sleep(1000);
 		relatedResourceDropdownSearchbox.click();
-		relatedResourceDropdownSearchbox.clear();
-		relatedResourceDropdownSearchbox.sendKeys(Map);
-		wait.until(ExpectedConditions.elementToBeClickable(filteredRelatedResource));
 		Thread.sleep(500);
-		try {
-			filteredRelatedResource.click();
-		} catch (Exception e) {
-			JavascriptExecutor executor = (JavascriptExecutor) ldriver;
-			executor.executeScript("arguments[0].click();", filteredRelatedResource);
-		}
-		Thread.sleep(200);
-		relatedResourceDropdown.click();
+		relatedResourceDropdownSearchbox.clear();
+		Thread.sleep(500);
+		relatedResourceDropdownSearchbox.sendKeys(Map);
+		Thread.sleep(1500);
+		js.executeScript("arguments[0].click();", filteredRelatedResource);  
+		Thread.sleep(500);
+		relatedResourceDropdown.click();  
+		Thread.sleep(500);
 	}
 	
 	public void selectProcedure(String procedureNo) throws Exception
 	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		procedureDropDown.click();
 		procedureDropDownSearchBox.click();
 		procedureDropDownSearchBox.sendKeys(procedureNo);
@@ -288,37 +437,189 @@ public class vms_AlarmsPage {
 	
 	public void setAlarmExipryAsNever() throws Exception
 	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(expirationTimeNever));
 		expirationTimeNever.click();
 	}
 	
 	public void clickOnSaveButtonOfAlarmsPage() throws Exception
 	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(saveButtonOfAlarmsForm));
 		saveButtonOfAlarmsForm.click();
-		  Thread.sleep(1500);
+		wait.until(ExpectedConditions.elementToBeClickable(NewBtn));
 	}
 	
-	public void addVAXAlarm(String AlarmName) throws Exception
+	public void addVAXAlarm(String AlarmName, String VAXEventType) throws Exception
 	{
-		addNewAlarm();
+		clickOnAddNewAlarmBtn();
+		log.debug("Clicked on Add New Alarm button");
+		Thread.sleep(500);
 		enterAlarmName(AlarmName);
+		log.debug("Alarm name is entered");
+		Thread.sleep(500);
 		selectEventTypeAsIntegrationPartner();
+		log.debug("Selected Event type as Integration Partner");
+		Thread.sleep(500);
 		selectIntegrationPartnerAsAccessControl();
+		log.debug("Selected Partner type as Access Control.");
+		Thread.sleep(500);
 		selectAccessControlPartnerasVAX();
+		log.debug("Selected Partner as VAX.");
+		Thread.sleep(500);
 		openAccessControlConfigurationWindow();
+		log.debug("VAX Event configuration window is opened.");
+		Thread.sleep(500);
 		selectParameterASEVENTInConfigureAccessControl();
-		selectSubEventInConfigureAccessControl("Security");
+		log.debug("Selected Partner type as Access Control.");
+		Thread.sleep(500);
+		selectSubEventInConfigureAccessControl(VAXEventType);
+		log.debug("Selected event type as "+VAXEventType);
+		Thread.sleep(500);
 		clickSAVEConfigureAccessControl();
+		log.debug("VAX event configuration is saved.");
+		Thread.sleep(500);
 		selectAllResources();
+		log.debug("Select all resources/Doors.");
+		Actions act = new Actions(ldriver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(200);
+        selectRelatedResources("Camera_.3", "NDTV", "Map");
+        log.debug("Selected expected related  resources.");
+		Thread.sleep(500);
+        selectProcedure("1. Procedure-User must acknowledge");
+        log.debug("selected procedure.");
+        Thread.sleep(200);
+        selectAllUsers();
+        log.debug("selected all users.");
+        Thread.sleep(500);
+        setAlarmExipryAsNever();
+        log.debug("selected alarms expiry as NEVER.");
+        Thread.sleep(500);
+        clickOnSaveButtonOfAlarmsPage();
+        log.debug("Click on SAVE button to create new alarm.");
+        Thread.sleep(5000);
+	}
+
+	public void addVASAlarm(String AlarmeName, String vasEventName) throws Exception
+	{
+		clickOnAddNewAlarmBtn();
+		log.debug("Clicked on Add New Alarm button");
+		Thread.sleep(500);
+		enterAlarmName(AlarmeName);
+		log.debug("Alarm name is entered");
+		Thread.sleep(500);
+		selectEventRadioButton();
+		log.debug("Select Event radio button is selected.");
+		Thread.sleep(200);
+		selectVASEvent(vasEventName);
+		log.debug("selected "+ vasEventName +" events to trigger.");
+		Thread.sleep(500);
+		selectAllResources();
+		log.debug("selected all resources.");
+        Thread.sleep(200);
+		Actions act = new Actions(ldriver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(200);
+        selectRelatedResources("Camera_.3", "NDTV", "Map");
+        Thread.sleep(200);
+        log.debug("selected expected related resources.");
+        selectProcedure("1. Procedure-User must acknowledge");
+        log.debug("selected procedure.");
+        Thread.sleep(200);
+        selectAllUsers();
+        log.debug("selected all users.");
+        Thread.sleep(500);
+        setAlarmExipryAsNever();
+        log.debug("selected alarms expiry as NEVER.");
+        Thread.sleep(500);
+        clickOnSaveButtonOfAlarmsPage();
+        log.debug("Click on SAVE button to create new alarm.");
+        Thread.sleep(5000);
+	}
+	
+	public void addVAX_InputsOutputs_Alarm(String AlarmeName, String EventName, String selectVAXinputOROutput) throws Exception
+	{
+		clickOnAddNewAlarmBtn();
+		log.debug("Clicked on Add New Alarm button");
+		Thread.sleep(500);
+		enterAlarmName(AlarmeName);
+		log.debug("Alarm name is entered");
+	    selectSingleEventRadioBtn();
+	    log.debug("Single Event radio button is selected.");
+	    openDropdownToSelectEvent();
+	    selectValerusEvent(EventName);
+	    log.debug("Selected "+EventName+" Event.");
+	    selectResources_Vax_InputORoutput_All(selectVAXinputOROutput);
+		log.debug("selected all resources.");
         Thread.sleep(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");
         Thread.sleep(200);
-        selectProcedure("1. Procedure-User must acknowledge");
+        log.debug("selected expected related resources.");
+        Actions act = new Actions(ldriver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(200);
+        selectProcedure("2. Procedure-Enter comment acknowledge");
+        log.debug("selected procedure.");
         Thread.sleep(200);
         selectAllUsers();
-        setAlarmExipryAsNever();
+        log.debug("selected all users.");
+        Thread.sleep(500);
+        setAlarmExipryAsNever(); 
+        log.debug("selected alarms expiry as NEVER.");
+        Thread.sleep(500);
         clickOnSaveButtonOfAlarmsPage();
+        log.debug("Click on SAVE button to create new alarm.");
+        Thread.sleep(5000);
 	}
 	
-}
+	public void addVAXalarmWithMessageParameter(String AlarmeName, String msg) throws Exception
+	{
+		clickOnAddNewAlarmBtn();
+		log.debug("Clicked on Add New Alarm button");
+		Thread.sleep(500);
+		enterAlarmName(AlarmeName);
+		log.debug("Alarm name is entered");
+		Thread.sleep(500);
+		selectEventTypeAsIntegrationPartner();
+		log.debug("Selected Event type as Integration Partner");
+		Thread.sleep(500);
+		selectIntegrationPartnerAsAccessControl();
+		log.debug("Selected Partner type as Access Control.");
+		Thread.sleep(500);
+		selectAccessControlPartnerasVAX();
+		log.debug("Selected Partner as VAX.");
+		Thread.sleep(500);
+		openAccessControlConfigurationWindow();
+		log.debug("VAX Event configuration window is opened.");
+		Thread.sleep(500);
+		selectParameterASMESSAGEInConfigureAccessControl();
+		log.debug("Selected Partner type as Access Control.");
+		Thread.sleep(500);
+        EnterMessage(msg);
+		Thread.sleep(500);
+		clickSAVEConfigureAccessControl();
+		log.debug("VAX event configuration is saved.");
+		Thread.sleep(500);
+		selectAllResources();
+		log.debug("Select all resources/Doors.");
+		Actions act = new Actions(ldriver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(200);
+        selectRelatedResources("Camera_.3", "NDTV", "Map");
+        log.debug("Selected expected related  resources.");
+		Thread.sleep(500);
+        selectProcedure("4. Procedure-Add reference");
+        log.debug("selected procedure.");
+        Thread.sleep(200);
+        selectAllUsers();
+        log.debug("selected all users.");
+        Thread.sleep(500);
+        setAlarmExipryAsNever();
+        log.debug("selected alarms expiry as NEVER.");
+        Thread.sleep(500);
+        clickOnSaveButtonOfAlarmsPage();
+        log.debug("Click on SAVE button to create new alarm.");
+        Thread.sleep(5000);
+	}
+	}

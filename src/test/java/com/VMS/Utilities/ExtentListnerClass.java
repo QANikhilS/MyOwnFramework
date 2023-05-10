@@ -76,7 +76,7 @@ public class ExtentListnerClass implements ITestListener {
 			test.fail("Captcured screenshot of failed test case is below : " + test.addScreenCaptureFromPath(ScreenShotPath));
 		}
 		
-		 test.addScreenCaptureFromPath(null);
+		// test.addScreenCaptureFromPath(null);
 	}
 	
 	
@@ -85,7 +85,7 @@ public class ExtentListnerClass implements ITestListener {
 	{
 		System.out.println("Name of the skipped test method =" + Result.getName());
 		test = reports.createTest(Result.getName());    // To created any entery in HTML reporter. 
-		test.log(Status.SKIP, MarkupHelper.createLabel("Name of the Skipped test case = "+ Result.getName(), ExtentColor.YELLOW));	
+		test.log(Status.SKIP, MarkupHelper.createLabel("Name of the Skipped test case = "+ Result.getName(), ExtentColor.ORANGE));	
 	}
 	
 	// This method will execute when any test case gets Passed.
@@ -99,7 +99,7 @@ public class ExtentListnerClass implements ITestListener {
 
 	public void onTestStart(ITestResult Result)
 	{
-		System.out.println("Name of the test method started = " + Result.getName());
+		System.out.println("Name of the test method started = " + Result.getName()); 
 	}
 	
 	
