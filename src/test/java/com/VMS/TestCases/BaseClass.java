@@ -28,6 +28,7 @@ import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
 import com.VMS.PageObject.vms_AlarmsPage;
+import com.VMS.PageObject.vms_CamerasAndDevicesPage;
 import com.VMS.PageObject.vms_DigitalInputsPage;
 import com.VMS.PageObject.vms_EventAlarmsSearchPage;
 import com.VMS.PageObject.vms_GroupHierarchyPage;
@@ -55,6 +56,7 @@ public class BaseClass
 	public static String currentIP;
 	public static FileInputStream fs;		
 	
+	public vms_CamerasAndDevicesPage camAndDev;
 	public vms_IntegrationPartnerPage Integrationpartner;
 	public vms_WebPagesPage webpage ;
 	public vms_ProcedurePage procedure ;
@@ -121,6 +123,7 @@ public class BaseClass
 		  vms_Login login = new vms_Login(driver); 
 		  login.DoLogin();
 		 
+		  camAndDev = new vms_CamerasAndDevicesPage(driver); 
 		  webpage = new vms_WebPagesPage(driver);  
 		  procedure = new vms_ProcedurePage(driver);
 		  alarm = new vms_AlarmsPage(driver);
@@ -180,7 +183,7 @@ public class BaseClass
 		FileUtils.copyFile(src, dest);
 	  }
 	
-	public static String getcurrentMachineIP() throws Exception
+	public static String getcurrentMachineIP() throws Exception 
 	  {
 		try(final DatagramSocket socket = new DatagramSocket())
 		{     socket.connect(InetAddress.getByName("8.8.4.4"), 80);

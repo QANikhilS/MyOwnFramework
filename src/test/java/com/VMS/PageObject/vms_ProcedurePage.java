@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_ProcedurePage {
 
 	WebDriver ldriver;
@@ -66,13 +68,8 @@ public class vms_ProcedurePage {
 	    {
 		   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		   vms_ConfigurationPage cp = hm.openConfigurationPage();
-		  cp.openProcedurePage();
-		try {
-			Thread.sleep(500);
-	    } catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
+		   cp.openProcedurePage();
+		   BaseClass.wait(1000);
 	 }
 	
 	public void clickOnNEWbtn()
@@ -123,22 +120,12 @@ public class vms_ProcedurePage {
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(addReferenceFileWithBroser));
 		addReferenceFileWithBroser.click();		
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BaseClass.wait(500);
 	}
 	
 	public void uploadFile(String FilePath)
 	{
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BaseClass.wait(500);
 		attachFileLink.sendKeys(FilePath);		
 	}
 	

@@ -20,6 +20,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_IntegrationPartnerPage {
 	
 	WebDriver ldriver;
@@ -122,18 +124,7 @@ public class vms_IntegrationPartnerPage {
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		vms_ConfigurationPage cp = hm.openConfigurationPage();
 		cp.openIntegrationPartnerPage();
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
-
-	public void nameOfAddedVAX()
-    {
-			
-		//return IPvalue; 
+		BaseClass.wait(1000);
     }
 
 	public String ipOFCurrentVAX()
@@ -205,12 +196,12 @@ public class vms_IntegrationPartnerPage {
 		return presentIPS;
     }
     
-    public void deleteAnyIntegrationPartner() throws Exception
+    public void deleteAnyIntegrationPartner()
     {
     	DeletePartnerbtn.click();
-    	Thread.sleep(2000);
+    	BaseClass.wait(1000);
     	YesBtn.click();
-    	Thread.sleep(2000);
+    	BaseClass.wait(1000);
     }
     
     public String deleteConfirmationMessage()
@@ -218,46 +209,7 @@ public class vms_IntegrationPartnerPage {
     	String DCM = DeletedConfirmationMessage.getText();
     	return DCM;
     }
-		       
-    public void getIPofPresentVAX() throws Exception, Exception
-    {
-    	 /*    	String presentIPofVAX;
-    	
-    	Actions act = new Actions(ldriver);
-    	act.moveToElement(ipAddressOfVAXInProperties).contextClick().build().perform();
-  
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();    	
-    	Thread.sleep(500);
-    	act.sendKeys(Keys.ENTER).build().perform();
-     	Thread.sleep(500);
-     	
-      	act.contextClick().build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-     	Thread.sleep(500);
-    	act.sendKeys(Keys.ENTER).build().perform();     
-     	Thread.sleep(500);     
-     	act.moveToElement(SearchBox).click().build().perform();
-     	act.moveToElement(SearchBox).contextClick().build().perform();
-     	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform(); 	
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	act.sendKeys(Keys.DOWN).build().perform();
-    	Thread.sleep(500);	
-    	act.sendKeys(Keys.ENTER).build().perform();
-    	Thread.sleep(500);
-     	presentIPofVAX =  SearchBox.getText();
-     	
-		//  HERE WRITE A CODE TO PASE X
 
-		//return presentIPofVAX;   */
-    }
     
     public void closeDeleteProcessWindow()
     {
@@ -281,7 +233,6 @@ public class vms_IntegrationPartnerPage {
     	new WebDriverWait(ldriver, Duration.ofSeconds(45)).until(ExpectedConditions.visibilityOf(RefreshUserInfoConfirmationMessage));
     	RefreshUserInfoConfirmationMessage.isDisplayed();
 		return true;
-    	
     }
      
     public void clickOnOKbtn()
@@ -298,39 +249,27 @@ public class vms_IntegrationPartnerPage {
     	//String elementText = (String) js.executeScript("return arguments[0].innerText;", element);
     	Actions act = new Actions(ldriver);
         act.moveToElement(element).click().build().perform();
-        try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+        BaseClass.wait(1000);
         act.doubleClick().build().perform();
-        
-        try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-        
+        BaseClass.wait(1000);
         act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
         //act.sendKeys(Keys.DOWN).perform();act.sendKeys(Keys.DOWN).perform();act.sendKeys(Keys.DOWN).perform();
         //act.sendKeys(Keys.ENTER).perform();
-        
-        try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+        BaseClass.wait(1000);
+        try
+        {
+			elementText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+		}
+        catch (HeadlessException e) 
+        {
 			e.printStackTrace();
 		}
-        
-        try {
-			elementText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
-		} catch (HeadlessException e) {
-			// TODO Auto-generated catch block
+        catch (UnsupportedFlavorException e) 
+        {
 			e.printStackTrace();
-		} catch (UnsupportedFlavorException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} 
+        catch (IOException e) 
+        {
 			e.printStackTrace();
 		} 
     	 return elementText ;
