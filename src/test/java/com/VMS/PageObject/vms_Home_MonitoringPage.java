@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class vms_Home_MonitoringPage {
 	
-	 WebDriver ldriver;
+	 static WebDriver ldriver;
 	 static JavascriptExecutor executor;
 
 	public vms_Home_MonitoringPage(WebDriver rdriver) {
@@ -21,20 +21,20 @@ public class vms_Home_MonitoringPage {
 
 	// Identify webElements
 	@FindBy(xpath = "//span[contains(@class,'vms-header-navigation-button vms-nav-button-state-configuration')]") 
-	public WebElement ConfigurationTab;
+	public  WebElement ConfigurationTab;
 	
 	@FindBy(xpath = "//a[text()='Search']") 
-	public WebElement SearchTab;
+	public  WebElement SearchTab;
 	
 	@FindBy(css = "span[class*='Alarm']") 
-	public static WebElement AlarmsTab;
+	public  WebElement AlarmsTab;
 	
 	@FindBy(css = "span[class*='vax']") 
-	public static WebElement VaxTab;
+	public  WebElement VaxTab;
 	
 	
 	
-	public vms_ConfigurationPage openConfigurationPage()
+	public  vms_ConfigurationPage openConfigurationPage()
 	{
 		  try
 		   {
@@ -48,7 +48,7 @@ public class vms_Home_MonitoringPage {
 		return new vms_ConfigurationPage(ldriver);
      }
 	
-	public void openSearchPage()
+	public  void openSearchPage()
 	{
 		  try
 		   {
@@ -62,7 +62,7 @@ public class vms_Home_MonitoringPage {
 	  System.out.println("Search Page Opened");
      }
 	
-	public static void openAlarmPage()
+	public void openAlarmPage()
 	{
 		  try
 		   {
@@ -77,7 +77,7 @@ public class vms_Home_MonitoringPage {
      }
 	
 	
-	public static void openVAXPageWindow()
+	public  void openVAXPageWindow()
 	{
 		  try
 		   {

@@ -2,7 +2,7 @@ package com.VMS.TestCases;
 
 import org.testng.annotations.Test;
 
-public class TC_ProcedurePageTest extends BaseClass{
+public class TC_VAXResourcesTest extends BaseClass{
 
 	
 	@Test(priority = 0)

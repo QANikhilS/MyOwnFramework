@@ -105,7 +105,7 @@ public class TC_EventAlarmSearchPageTest extends BaseClass
 	}	
 	
 	
-  // @Test
+  
 	public void addVAXeventQuert() throws Exception
 	{
 		EventQuerySearch.createVAXeventSearchQuery("1. Door Unlock event query", "VAX Event", "Event", "Door Unlock");
@@ -143,15 +143,27 @@ public class TC_EventAlarmSearchPageTest extends BaseClass
 	}
 	
     
-	@Test
+	@Test(priority = 21)
 	public void addVAXAlarmQuery() throws Exception
 	{
 		EventQuerySearch.addNewAlarmQuery("1.Alarm Search-Door Open", "Door Open");
 		Thread.sleep(1000);
 		EventQuerySearch.addNewAlarmQuery("2.Alarm Search-Door Close", "Door Close");
-		Thread.sleep(1000);
-		
-			
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("3.Alarm Search-Door Locked", "Door Locked");
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("4.Alarm Search-Door Unlocked", "Door Unlocked");
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("5.Alarm Search-Door Forced open", "Forced");
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("6.Alarm Search-Door Held Open", "Held");
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("7.Alarm Search-Access Granted-Card", "Access Granted - Card");
+		Thread.sleep(1000);	
+		EventQuerySearch.addNewAlarmQuery("8.Alarm Search-Access Denied-Card", "Access Denied - Invalid Card");
+		Thread.sleep(1000);  
+		EventQuerySearch.addNewAlarmQuery("9.Alarm Search-Auto Resume", "Auto");
+		Thread.sleep(1000);	
 	}
 	
 }

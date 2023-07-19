@@ -52,7 +52,7 @@ public class vms_EventAlarmsSearchPage {
    @FindBy(css = "span[class='checkmark']")
    public WebElement includeOpenAlarmsBtn;
    
-   @FindBy(xpath = "//div[@class='ms-options-wrap' and @id='ms-list-5']")
+   @FindBy(xpath = "//div//span[text()='Select an alarm(s)']")
    public WebElement selectAnAlarmDropdown;
    
    @FindBy(xpath = "//div[contains(@class,'event-search-container')]//span[text()='Select days']")
@@ -339,9 +339,13 @@ public class vms_EventAlarmsSearchPage {
 		BaseClass.log.info("Days as last 7 days  is selected.");
 		
 		clickOnSaveQueryBtn();
-		Thread.sleep(2000);
-		ldriver.navigate().refresh();
 		BaseClass.log.info("clicked on Save Query button.");
+		Thread.sleep(2000);
+		
+		ldriver.get(BaseClass.VMSURL+"/#/search/analytics_services");
+		Thread.sleep(1500);
+		ldriver.navigate().back();
+		Thread.sleep(2000);
      }
  
     public void addNewEventQuery(String eventQueryName, String EventName) throws Exception

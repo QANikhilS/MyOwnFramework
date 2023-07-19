@@ -1,6 +1,5 @@
 package com.VMS.TestCases;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +8,9 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.VMS.PageObject.vms_WebPagesPage;
 
 public class TC_WebPagesTest extends BaseClass
 {
@@ -18,6 +18,15 @@ public class TC_WebPagesTest extends BaseClass
 	public void OpenWebPages()  
 	{
     	webpage.openWebPagespage();
+    	log.info("Webpage page is opened");
+    	if (driver.getCurrentUrl().equalsIgnoreCase("http://"+readConfigData.getBaseURL()+"/#/configuration/network_entities/web_sites"))
+    	{
+    		Assert.assertTrue(true, "Webpage is successfuly opened.");
+    	}
+    	else 
+    	{
+    		Assert.assertFalse(false, "Webpage is not opened");
+    	}
 	}
 	
 	//@Test(priority = 1, groups = {"Setup", "SetupVAX", "SetupVAS"}, dataProvider = "WebpagesTestData")
@@ -29,7 +38,7 @@ public class TC_WebPagesTest extends BaseClass
 		Thread.sleep(300);
      }
 	
-	@DataProvider(name = "WebpagesTestData")
+	//@DataProvider(name = "WebpagesTestData")
 	public Object[][] addWebpagesDataset()
 	{
 		return new Object[][] 
@@ -76,46 +85,29 @@ public class TC_WebPagesTest extends BaseClass
 	@Test
 	   public void addAllWebpage() throws Exception
 	   {
-           //Path of the excel file	   
-           //FileInputStream fs = new FileInputStream("C:\\Users\\nikhils\\Music\\OwnFramework\\TestData\\TestData.xlsx");	--> This fs is declared at base class globally	
-
-            //Creating a workbook	
            XSSFWorkbook workbook = new XSSFWorkbook(fs);	
            XSSFSheet sheet = workbook.getSheetAt(1);	 
            
            String sheetName = sheet.getSheetName();			
            Row row = sheet.getRow(0);	
            Cell column = row.getCell(0);	
-
-           System.out.println(sheet.getRow(0).getCell(0)); 
       
            int lengthOfColumnWebpageName = sheet.getLastRowNum();
            
-           
-           System.out.println("1. Total number of Rows = " + sheet.getLastRowNum()); // Start with 0 that is total 4 rows 
-           System.out.println("2. Total number of Columns = " + sheet.getRow(0).getLastCellNum()); 
-           System.out.println("3. First cell of first column = " + sheet.getRow(0).getCell(0).getStringCellValue()); 
-           System.out.println("4. First cell of second column = " + sheet.getRow(0).getCell(1).getStringCellValue()); 
-
-            List<String> listOfWebpagename = new ArrayList<String>() ; 
-            List<String> listOfWebpageURL = new ArrayList<String>() ; 	 
+           List<String> listOfWebpagename = new ArrayList<String>() ; 
+           List<String> listOfWebpageURL = new ArrayList<String>() ; 	 
 
            for (int i = 1 ; i< lengthOfColumnWebpageName+1 ; i++)	 
             {		
-             // System.out.println( sheet.getRow(i).getCell(0));	
               String CurrentWebpageNames = sheet.getRow(i).getCell(0).getStringCellValue();		 
               listOfWebpagename.add(CurrentWebpageNames);		 		 
       
               for ( int j = i ; j<=i ; j++)		 
                  {			 
-                    //  System.out.println( sheet.getRow(j).getCell(1));			 
-                      String CurrentWebpageURLs = sheet.getRow(j).getCell(1).getStringCellValue();			 
-                      listOfWebpageURL.add(CurrentWebpageURLs);		
+                     String CurrentWebpageURLs = sheet.getRow(j).getCell(1).getStringCellValue();			 
+                     listOfWebpageURL.add(CurrentWebpageURLs);		
                  } 	
              }
-         //  System.out.println(listOfWebpagename  + "++++"); 
-          // System.out.println(listOfWebpageURL  + "++++");
-           
            
            //add Webpages 
            for (int i = 0 ; i<listOfWebpagename.size() ; i++)
@@ -130,9 +122,9 @@ public class TC_WebPagesTest extends BaseClass
                   	webpage.enterWebPageURL(webPageURL);
                   	Thread.sleep(1000);
                   	webpage.clickOnSaveBtn();
+                  	log.info("Webpage "+webPageName+" is added.");
                   	Thread.sleep(2000);
                  }
-	        
            }
 	
 	

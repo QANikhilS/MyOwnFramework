@@ -19,7 +19,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  Thread.sleep(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Locked");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Locked");
+		  Thread.sleep(1000);
 	  }
 	
 	
@@ -32,6 +33,7 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Unlocked");  
+		  Thread.sleep(1000);
 	  }
 	
 	  @Test(priority = 4)
@@ -42,7 +44,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Granted - Card");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Granted - Card");
+		  Thread.sleep(1000);
 	  }
 	
 	  @Test(priority = 5)
@@ -53,7 +56,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Denied - Invalid Card");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Denied - Invalid Card");
+		  Thread.sleep(1000);
 	  }
 	  
 	 @Test(priority = 6)
@@ -64,7 +68,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Forced Open");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Forced Open");
+		  Thread.sleep(1000);
 	  }
 	  
 	 @Test(priority = 7)
@@ -75,7 +80,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Held Open");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Held Open");
+		  Thread.sleep(1000);
 	  }
 	  
 	  @Test(priority = 8)
@@ -86,7 +92,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Open");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Open");
+		  Thread.sleep(1000);
 	  }
 	
 	  @Test(priority = 9)
@@ -97,7 +104,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Closed");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Closed");
+		  Thread.sleep(1000);
 	  }	  
 	  
 	 @Test(priority = 10)
@@ -108,7 +116,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Auto Resume");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Auto Resume");
+		  Thread.sleep(1000);
 	  }	
 
 	 @Test(priority = 11)
@@ -119,7 +128,8 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Enabled");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Enabled");
+		  Thread.sleep(1000);
 	  }	
 	  
 	  @Test(priority = 12)
@@ -130,6 +140,7 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  Thread.sleep(1000);
-		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Disabled");  
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Disabled");
+		  Thread.sleep(1000);
 	  }	
 }

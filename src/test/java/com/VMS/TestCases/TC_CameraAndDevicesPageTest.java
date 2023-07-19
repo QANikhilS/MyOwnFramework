@@ -21,10 +21,11 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 		log.info("Cameras and Devices page is opened");
 	
 		vms_CamerasAndDevicesPage cd = new vms_CamerasAndDevicesPage(driver);
-		cd.verifyAndAddSimulatorCamerainVMS("172.20.10.10");
+		cd.clickOnAddDiscoveredDevicesBtn();
+		cd.enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(BaseClass.getcurrentMachineIP());
+		cd.selectFilteredCamerafromDiscoveredDevicesWindow();
 		
-		
-	/*	String ExpectedSuccessMsg = "Successfully added";
+		String ExpectedSuccessMsg = "Successfully added";
 		
 		if (cd.successMessageOnAddingCamera().equalsIgnoreCase(ExpectedSuccessMsg))
 		{
@@ -38,7 +39,7 @@ public class TC_CameraAndDevicesPageTest extends BaseClass {
 			capctureScreenshot(driver, "AddCamera");
 			Assert.assertTrue(false);
 			cd.clickOnCloseSuccessWindow();   
-		}*/
+		}  
 		
 	}
 	

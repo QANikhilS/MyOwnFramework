@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_WebPagesPage {
 
 	WebDriver ldriver;
@@ -70,11 +72,13 @@ public class vms_WebPagesPage {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		}
+	  BaseClass.log.info("Webpage page is opened.");	
 	 }
 	
 	public void clickOnNewWebpageBtn()
 	{
 		js.executeScript("arguments[0].click();", addNewWebPagebtn);
+        BaseClass.log.info("Clicked on New webpage button.");	
 	}
 	
 	public void enterWebPageName(String WebpgName) throws Exception
@@ -86,12 +90,14 @@ public class vms_WebPagesPage {
 				
 		webPageNametxtbox.clear();
 		webPageNametxtbox.sendKeys(WebpgName);
+		BaseClass.log.info("Webpage name is entered.");	
 	}
 	
 	public void enterWebPageURL(String WebpgURL) throws Exception
 	{
 		urlTextBox.clear();
 		urlTextBox.sendKeys(WebpgURL);
+		BaseClass.log.info("Webpage URL is entered.");	
 	}
 	
 	public void enableVisiblToggleBtn()
@@ -106,6 +112,7 @@ public class vms_WebPagesPage {
 		{
 			visibleCheckBox.click();
 		}
+	  BaseClass.log.info("Visible toggle button is enabled.");	
 	}
 	
 	public void disableVisiblToggleBtn()
@@ -120,11 +127,13 @@ public class vms_WebPagesPage {
 		{
 			visibleCheckBox.click();
 		}
+		  BaseClass.log.info("Visible toggle button is disabled.");			
 	}
 	
 	public void clickOnSaveBtn()
 	{
 		js.executeScript("arguments[0].click();", saveBtn);
+		BaseClass.log.info("Clicked on SAVE button.");	
 	}	
 	
 	public void addWebPage(String WebPageName, String WebPageURL) throws Exception

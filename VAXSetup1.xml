@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  
-  	<listeners>
+	
+	<listeners>
     <listener class-name="com.VMS.Utilities.ExtentListnerClass" />
    </listeners>
+
+  <test thread-count="5" name="VAXSetup">
   
-  <test thread-count="5" name="Test">
     <classes>
-      
-   <!--   <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      
+      <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      
       <class name="com.VMS.TestCases.TC_WebPagesTest"/>
-      <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>  -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>
       <class name="com.VMS.TestCases.TC_MapTest"/>
-  <!--    <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>  
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>  
       <class name="com.VMS.TestCases.TC_AlarmsPageTest"/>    
-       <class name="com.VMS.TestCases.TC_VAXwebpageTest"/>  
+<!--  <class name="com.VMS.TestCases.TC_VAXwebpageTest"/>  
       <class name="com.VMS.TestCases.TC_AlarmsJournalPageTest"/>  --> 
 
 

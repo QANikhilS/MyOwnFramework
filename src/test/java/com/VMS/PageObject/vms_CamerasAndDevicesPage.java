@@ -3,6 +3,7 @@ package com.VMS.PageObject;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,18 @@ public class vms_CamerasAndDevicesPage {
 	@FindBy(xpath = "//span[text()='Add Discovered Devices']") 
 	public WebElement addDiscoveredDevicesBtn;
 	
+	@FindBy(xpath = "//span[text()='Default ONVIF Credentials']") 
+	public WebElement firstTimeCameraAdditonWindowTitle;
+	
+	@FindBy(xpath = "//input[@type='password']") 
+	public WebElement firstTimeCameraAdditonWindowPassword;
+	
+	@FindBy(xpath = "//button[@class='vms-popup-btn']") 
+	public WebElement firstTimeCameraAdditonWindowSaveBtn;
+	
+	
+	
+	
 	@FindBy(xpath = "//span[text()='Add Device Manually']") 
 	public WebElement addDeviceManuallyBtn;
 	
@@ -36,7 +49,7 @@ public class vms_CamerasAndDevicesPage {
 	@FindBy(css = "input[type='search']") 
 	public WebElement searchCameraTxtbox;
 	
-	@FindBy(css = "input[type='search']") 
+	@FindBy(xpath = "(//input[@type='search'])[2]") 
 	public WebElement searchCameraTxtboxOnDiscoveredDevicesWindow;
 	
 	@FindBy(xpath = "//span[@class='ng-binding ng-scope' and @ng-if='!row.groupHeader']") 
@@ -79,14 +92,21 @@ public class vms_CamerasAndDevicesPage {
 	
 	public void clickOnAddDiscoveredDevicesBtn()
 	{
-		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(searchCameraTxtboxOnDiscoveredDevicesWindow));
 		addDiscoveredDevicesBtn.click();
-	}
+	    BaseClass.wait(2000);
+		try
+		{   firstTimeCameraAdditonWindowPassword.sendKeys("1234");
+			firstTimeCameraAdditonWindowSaveBtn.click();             
+		}
+		catch(NoSuchElementException e)
+		{ e.printStackTrace(); }
+	    BaseClass.wait(2000);
+	 }
 	
 	public void clickOnAddToNVRandCloseBtn()
 	{
-		addToNVRandCloseBtn.click();
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(addToNVRandCloseBtn));
+		BaseClass.jsClick(addToNVRandCloseBtn);
 	}	
 	
 	public void enterSimulatorIpInSearchTextBoxOfCamerasAndDevicesPage(String IPofCamera)
@@ -96,6 +116,7 @@ public class vms_CamerasAndDevicesPage {
 
 	public void enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(String IPofCamera)
 	{
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(searchCameraTxtboxOnDiscoveredDevicesWindow)).clear();
 		searchCameraTxtboxOnDiscoveredDevicesWindow.sendKeys(IPofCamera);
 	}
 	
@@ -107,7 +128,8 @@ public class vms_CamerasAndDevicesPage {
 
 	public void selectFilteredCamerafromDiscoveredDevicesWindow() throws Exception
 	{
-		filteredCameraOnDiscoveredDevicesPage.click();
+		new WebDriverWait(ldriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(filteredCameraOnDiscoveredDevicesPage));
+		filteredCameraOnDiscoveredDevicesPage.click();  BaseClass.wait(1500);  clickOnAddToNVRandCloseBtn(); 
 	}
 
 	public boolean isSimulatorCameraPresentinVMS() throws Exception

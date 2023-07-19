@@ -77,6 +77,9 @@ public class vms_ConfigurationPage {
 	@FindBy(xpath = "//div[contains(@class,'Numeric ID')]") 
 	public WebElement NumericISsPage;
 	
+	@FindBy(xpath = "//div[contains(@class,'VAX Resources')]") 
+	public WebElement VAXResourcesPage;
+	
 	@FindBy(xpath = "//div[contains(@class,'Monitors')]") 
 	public WebElement MonitorsPage;
 	
@@ -171,8 +174,7 @@ public class vms_ConfigurationPage {
 			 CamerasAndDevices.click();
 		}
 	}
-	
-	
+
 	
 	public void openViconNetGatewayPage()
 	{
@@ -253,7 +255,8 @@ public class vms_ConfigurationPage {
 		}
 	}
 	
-	public vms_WebPagesPage openWebPagePage()
+	
+	public void openWebPagePage()
 	{
 		try  {  WebPagesPage.click(); }
 		catch (Exception e)
@@ -262,7 +265,6 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 WebPagesPage.click();
 		}
-		return new vms_WebPagesPage(ldriver);
 	}
 
 	public vms_ProcedurePage openProcedurePage()
@@ -323,6 +325,16 @@ public class vms_ConfigurationPage {
 		}
 	}
 	
+	public void openVAXResourcesPage()
+	{
+		try  {  VAXResourcesPage.click(); }
+		catch (Exception e)
+		{
+			 e.printStackTrace();
+			 HomePage.click();
+			 VAXResourcesPage.click();
+		}
+	}
 	
 	public void openAlarmsPage()
 	{

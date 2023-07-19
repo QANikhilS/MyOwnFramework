@@ -32,7 +32,7 @@ public class vms_AlarmsPage extends BaseClass{
 	@FindAll(@FindBy(xpath = "//div[@class='ui-grid-canvas']//div[@ng-class='view-row']")) 
 	public List<WebElement> listOfAllpresentAlarms;
 	
-	@FindBy(xpath = "//div[@class='flex flex-between']/button[1]") 
+	@FindBy(xpath = "//button[normalize-space()='New']") 
 	public WebElement NewBtn;
 	
 	@FindBy(xpath = "//button[text()='Delete']") 
@@ -550,7 +550,9 @@ public class vms_AlarmsPage extends BaseClass{
 	    openDropdownToSelectEvent();
 	    selectValerusEvent(EventName);
 	    log.debug("Selected "+EventName+" Event.");
+        Thread.sleep(200);
 	    selectResources_Vax_InputORoutput_All(selectVAXinputOROutput);
+        Thread.sleep(200);
 		log.debug("selected all resources.");
         Thread.sleep(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");

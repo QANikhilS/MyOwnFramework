@@ -125,7 +125,7 @@ public class TC_AlarmsPageTest extends BaseClass {
 
 	@Test(priority = 6)
 	public void addVAXalarmOfAccessCardForMessage() throws Exception 
-	{
+	{           
 		alarm.addVAXalarmWithMessageParameter(ReadExcelFile.getCellValue("vaxalarms", 22, 0), "is Now Locked");
 		alarm.addVAXalarmWithMessageParameter(ReadExcelFile.getCellValue("vaxalarms", 23, 0), "is Now Unlocked");
 		alarm.addVAXalarmWithMessageParameter(ReadExcelFile.getCellValue("vaxalarms", 24, 0), "has been overridden");

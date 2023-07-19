@@ -24,7 +24,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
@@ -38,6 +37,7 @@ import com.VMS.PageObject.vms_MapPage;
 import com.VMS.PageObject.vms_NetworkingPage;
 import com.VMS.PageObject.vms_ProcedurePage;
 import com.VMS.PageObject.vms_RelayOutputPage;
+import com.VMS.PageObject.vms_VAXResourcesPage;
 import com.VMS.PageObject.vms_VAXWebpagePage;
 import com.VMS.PageObject.vms_WebPagesPage;
 import com.VMS.Utilities.readConfig;
@@ -46,8 +46,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class BaseClass 
-
-  {
+{
 	public static readConfig readConfigData = new readConfig();
 	public static String VMSURL = readConfigData.getBaseURL();
 	public static String BrowserName = readConfigData.getBrowser();
@@ -68,6 +67,9 @@ public class BaseClass
 	public vms_MapPage Maps ;
 	public vms_GroupHierarchyPage GroupH ;
 	public vms_AlarmsJournalPage AlarmTab ;
+	public vms_VAXResourcesPage VAXresources ;
+	public JavascriptExecutor executor;
+	
 	
 	
 	@BeforeClass
@@ -113,7 +115,7 @@ public class BaseClass
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		// Implicit wait of 30 seconds on all web Element
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get(VMSURL);
 			
 		  vms_Login login = new vms_Login(driver); 
@@ -131,13 +133,11 @@ public class BaseClass
 		  Maps = new vms_MapPage(driver);
 		  GroupH = new vms_GroupHierarchyPage(driver);
 		  AlarmTab = new vms_AlarmsJournalPage(driver);
-		  fs = new FileInputStream("C:\\Users\\nikhils\\Music\\OwnFramework\\TestData\\TestData.xlsx");		  
+		  VAXresources = new vms_VAXResourcesPage(driver);
+		  fs = new FileInputStream("C:\\Users\\nikhils\\Music\\OwnFramework\\TestData\\TestData.xlsx");		
+		  
 	}
 		
-	
-	
-	
-	
 	public void handlePlayerWidnow() throws Exception
 	{
 		try 
@@ -188,12 +188,29 @@ public class BaseClass
 		return currentIP;
 	  }
 	
-	public static void jsClick(WebElement Element) throws Exception
+	public static void jsClick(WebElement Element)
 	  {JavascriptExecutor executor = (JavascriptExecutor)driver;
 	  executor.executeScript("arguments[0].click();", Element);  }
 	
+	public static void jsScrollDownByPixels(int pixels) throws Exception
+	  {JavascriptExecutor executor = (JavascriptExecutor)driver;
+	  executor.executeScript("window.scrollBy(0,"+pixels+")"); }
 	
-	@AfterClass
+	public static void jsSendKeys(WebElement textBoxToEnterTextUsingJS, String textToEnter) throws Exception
+	  {    JavascriptExecutor executor = (JavascriptExecutor)driver;
+		   executor.executeScript("document.getElementByID("+textBoxToEnterTextUsingJS+").value = ‘"+textToEnter+"’;");      }
+	
+	public static void wait(int sleepTime)
+	{
+		try { Thread.sleep(sleepTime); } catch (InterruptedException e) { e.printStackTrace();  }
+	}
+	
+	
+	
+	
+	
+	
+	//@AfterClass
 	public void tearDown()
 	{
 		if (driver != null)

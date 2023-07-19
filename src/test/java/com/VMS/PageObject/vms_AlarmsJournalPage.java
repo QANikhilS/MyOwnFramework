@@ -30,7 +30,7 @@ public class vms_AlarmsJournalPage {
 	}
 	
 	
-   @FindBy(xpath = "//span[@class='vms-header-navigation-button vms-nav-button-state-Alarm']")
+   @FindBy(xpath = "//span[@class='vms-header-navigation-button vms-nav-button-state-Alarm']/a")
    public WebElement AlarmsTab;	
 
    @FindBy(xpath = "//span[text()='Alarm ID']")
@@ -72,6 +72,7 @@ public class vms_AlarmsJournalPage {
 				Actions act = new Actions(ldriver);
 				act.moveToElement(AlarmsTab).click().build().perform();
 			}
+	   	BaseClass.log.info("Alarms Journal page is opened.");
    }
    
    public void EnterAlarmsDetailsToSearch(String alarmDetails)
@@ -79,6 +80,7 @@ public class vms_AlarmsJournalPage {
 	   wait.until(ExpectedConditions.elementToBeClickable(SearchAlarmTextBox)).click();
 	   SearchAlarmTextBox.clear();
 	   SearchAlarmTextBox.sendKeys(alarmDetails);
+	   BaseClass.log.info("Alarm details are entered in search textbox of Alarms page.");
 	   Actions act = new Actions (ldriver);
 	   act.sendKeys(Keys.ENTER).build().perform();
     }
@@ -88,6 +90,7 @@ public class vms_AlarmsJournalPage {
 	   wait.until(ExpectedConditions.elementToBeClickable(FirstAlarmFromTriggeredAlarmsList));
 	   Thread.sleep(1000);
 	   BaseClass.jsClick(FirstAlarmFromTriggeredAlarmsList);
+	   BaseClass.log.info("Most recent triggered alarm is selected.");
    } 
    
    public void sortAlarmsInDescendingOrder_BasedOnAlarmID()
@@ -98,6 +101,7 @@ public class vms_AlarmsJournalPage {
 	   {   Column1_AlarmID.click();   }
 	   else
 	   {   Column1_AlarmID.click(); Column1_AlarmID.click();    }
+	   BaseClass.log.info("All triggered alarms are sorted in the Descending order.");
    }
    
    public void verifyEventTypeInAdditionalInformation(String ExpectedEventType)

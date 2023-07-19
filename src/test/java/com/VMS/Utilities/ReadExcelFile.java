@@ -1,13 +1,11 @@
 package com.VMS.Utilities;
 
 import java.io.FileInputStream;
-import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.Test;
 
 public class ReadExcelFile {
 	
@@ -22,17 +20,18 @@ public class ReadExcelFile {
 	{
 	  try
 	  {
-		inputStream = new FileInputStream("C:\\Users\\nikhils\\Music\\OwnFramework\\TestData\\TestData.xlsx");
+		inputStream = new FileInputStream(".\\TestData\\TestData.xlsx");
 		workBook = new XSSFWorkbook(inputStream);
 		excelSheet = workBook.getSheet(sheetName);
 		cell = workBook.getSheet(sheetName).getRow(rowNo).getCell(cellNo);
 		
-		workBook.close();
+		//workBook.close();
 		
 		return cell.getStringCellValue();
 	  }
 	  catch (Exception e)
 	  {
+		  e.printStackTrace();
 		  return "";
 	  }
 	}
@@ -50,7 +49,7 @@ public class ReadExcelFile {
 		
 		int totalRows = excelSheet.getLastRowNum()+1;
 		
-		workBook.close();
+		//workBook.close();
 		return totalRows;
 	  }
 	  catch(Exception e)
@@ -72,23 +71,13 @@ public class ReadExcelFile {
 		
 		int totalCels = excelSheet.getRow(0).getLastCellNum();
 		
-		workBook.close();
+		//workBook.close();
 		return totalCels;
 	  }
 	  catch(Exception e)
 	  {
 		  return 0;
 	  }
-	}
-	
-	
-	
-	
-
-	public void getexceldata() throws Exception
-	{
-		System.out.println(getCellValue("webpages", 4, 1));
-
 	}
 
 }

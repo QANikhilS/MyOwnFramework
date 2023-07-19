@@ -16,7 +16,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 	@Test(priority = 1, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
 	public void AddIntrgrationPartner()
 	{
-		Integrationpartner.openIntegrationPartnerPage();
+		String ExpectedIPtoAdd = "192.168.1.51";
 		Integrationpartner.clickOnAddPartner();
 		log.info("Add new Integration Partner form has been opened");
 		Integrationpartner.PartnerTypeAsAccessControl();
@@ -25,7 +25,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 		log.info("Selected partner name as VAX");
 		Integrationpartner.IntrgrationPartnerEnterName("VAX3.1");
 		log.info("Entered VAX name");
-		Integrationpartner.IntrgrationPartnerEnterIP("192.168.1.51");
+		Integrationpartner.IntrgrationPartnerEnterIP(ExpectedIPtoAdd);
 		log.info("Entered VAX IP");
 		Integrationpartner.IntrgrationPartnerEnterUsername("ADMIN");
 		log.info("Entered VAX Username");
@@ -36,7 +36,12 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 		log.info("Selected all Doors");
 		Integrationpartner.ClickOnNEXTbtn();
 		Integrationpartner.ClickOnSAVEbtn();
-		log.info("Integration Partner has been added");		
+		log.info("Integration Partner has been added");	
+		try { Thread.sleep(2000); } catch (InterruptedException e) {   e.printStackTrace();  }
+		
+		String ActualIP = Integrationpartner.getaddedIntegrationPartnerIP();
+		Assert.assertEquals(ExpectedIPtoAdd, ActualIP, "Integration Partner is added Successfully.");
+	
 	}
 
 	//@Test(priority = 2, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
@@ -89,11 +94,6 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 		Integrationpartner.ClickOnSAVEbtn();
 		log.info("Integration Partner has been added");		
 	}
-	
-	
-	
-	
-	
 	
 	
 	//@Test(priority = 3 , dependsOnMethods = {"openIntegrationPartnerpage"})
@@ -155,8 +155,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass{
 		
 		
 	}
-	
-	
+
 
 	
 }

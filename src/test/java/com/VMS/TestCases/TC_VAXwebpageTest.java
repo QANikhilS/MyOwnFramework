@@ -1,9 +1,11 @@
 package com.VMS.TestCases;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -61,6 +63,28 @@ public class TC_VAXwebpageTest extends BaseClass
 	}
 	
 	@Test(priority = 1)
+	public void verifyAllVAXResources()
+	{
+		vaxwebserver.openDoorsPage();
+		List<WebElement> allDoors = vaxwebserver.ListOfAllAvailableDoors;
+		vaxwebserver.openActionPlansPage();;
+		List<WebElement> allActionPlans = vaxwebserver.ListOfAllAvailableActionPlans;
+		
+		driver.switchTo().window(parent_VMS_window);
+		VAXresources.openVAXResourcesPage();
+		
+		if (VAXresources.allVAXdoorsInVMS.equals(allDoors) && VAXresources.allVAXactionPlansInVMS.equals(allActionPlans))
+		{   Assert.assertTrue(true, "All VAX Resources are available");   }	
+		else
+		{   Assert.fail();   	}
+			
+		
+		
+		
+	}
+	
+	
+	//@Test(priority = 1)
 	public void triggerDoorLockUnlockOverrideEvents() throws Exception
 	{
 		vaxwebserver.openOverrideOptions();
@@ -73,13 +97,13 @@ public class TC_VAXwebpageTest extends BaseClass
 		vaxwebserver.triggerDoorUnlocked();
 		vaxwebserver.triggerDoorLocked();
 		vaxwebserver.triggerDoorUnlocked();
-	     Thread.sleep(1000);
+	    Thread.sleep(1000);
 	    vaxwebserver.clickOnClearNotificationsBtn();
-	     Thread.sleep(500);
+	    Thread.sleep(500);
 	    vaxwebserver.clickOnResumeBtn();
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void triggerDigitalInputAlarm() 
 	{
 		vaxwebserver.openVAXhomepage();
@@ -92,7 +116,7 @@ public class TC_VAXwebpageTest extends BaseClass
 		vaxwebserver.selectVAXinput4();
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void triggerRelayOutputAlarm() throws Exception 
 	{
 		Thread.sleep(1500);
@@ -100,6 +124,18 @@ public class TC_VAXwebpageTest extends BaseClass
 		Thread.sleep(1500);
 		RelayOutput.openRelayOutputPage();
 		RelayOutput.triggerRelayOutput("VAX_Output 3_VAX Demo");
-		
 	}
+	
+	//@Test(priority = 4)
+	public void verifyAvailablePanelsInVAXandVMS()
+	{
+		vaxwebserver.openOverrideOptions();
+		vaxwebserver.openPanelsList();
+		vaxwebserver.getAvailablePanelLink();
+		for (int i = 0 ; i < vaxwebserver.getAvailablePanelLink().size(); i++)
+		{
+			System.out.println(vaxwebserver.getAvailablePanelLink().get(i).getText());
+		}
+	}
+	
 }

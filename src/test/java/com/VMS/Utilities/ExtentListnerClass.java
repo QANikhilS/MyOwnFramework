@@ -18,39 +18,45 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentListnerClass implements ITestListener {
 	
-	ExtentSparkReporter htmlReporter;
-	ExtentReports reports;
-	ExtentTest test;
+	public ExtentSparkReporter htmlReporter;
+	public ExtentReports reports;
+	public ExtentTest test;
 	
 	
 	public void configureReport()
 	{
 		readConfig rc = new readConfig();
 		String timestamp = new SimpleDateFormat("dd.MM.yyyy "+"-"+" hh.mm.ss").format(new Date());
-		String reportName = "zOwnProject -" + timestamp + ".html";
-		htmlReporter = new ExtentSparkReporter("C:\\Users\\nikhils\\Music\\OwnFramework\\Reports\\"+reportName);
+		String reportName = "VaxExecutionReport -" + timestamp + ".html";
+		
+		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") +"\\Reports\\"+reportName);
+		htmlReporter.config().setEncoding("utf-8");
+		
+		// Configuration to change feel and look of report.
+		htmlReporter.config().setDocumentTitle("Automation Report");
+		htmlReporter.config().setReportName("VAX Test cases execution Report");
+		htmlReporter.config().setTheme(Theme.DARK);	
+		
+		
+		// this attaches to the report to above configured HTML report file in order to start .
 		reports = new ExtentReports();
-		reports.attachReporter(htmlReporter);		
+		reports.attachReporter(htmlReporter);	
 		
 		// add system information/environment info to reports
-		reports.setSystemInfo("Machine", "NikhilShivarkarPC");
+		reports.setSystemInfo("Machine", "NikhilShivarkarPC");   // key and value
 		reports.setSystemInfo("OS", "Windows 11");
 		reports.setSystemInfo("Browser", rc.getBrowser());
 		reports.setSystemInfo("VMS Version", rc.getAppServerVersion());
 		reports.setSystemInfo("Username", "Nikhil");
-		
-		// Configuration to change feel and look of report.
-		htmlReporter.config().setDocumentTitle("Extent Listener Report Demo");
-		htmlReporter.config().setReportName("Execution Report");
-		htmlReporter.config().setTheme(Theme.DARK);	
 	}
 	
-	// This method is called when first test execution Starts
 	
+	
+	// This method is called when first test execution Starts
 	public void onStart(ITestContext Result)
 	{
 		configureReport();
-		System.out.println("On start this method invoked.");
+		//System.out.println("On start this method invoked.");
 	}
 	
 	
@@ -58,7 +64,7 @@ public class ExtentListnerClass implements ITestListener {
 	public void onFinish(ITestContext Result)
 	{
 		reports.flush();   // This method writes test information from the started reporters to their output view
-		System.out.println("On start this method invoked.");
+		//System.out.println("On start this method invoked.");
 	}
 	
 	

@@ -1,10 +1,19 @@
 package com.VMS.PageObject;
 
+import java.awt.HeadlessException;
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,10 +41,10 @@ public class vms_IntegrationPartnerPage {
 	@FindBy(css = "input[type='search']")
 	public WebElement SearchBox;	
 
-	@FindBy(xpath = "//div[contains(@class,'container-body')]/div[2]/div/div")
+	@FindAll(@FindBy(xpath = "//div[contains(@class,'container-body')]/div[2]/div/div"))
 	public List<WebElement> AvailableIntegrationPartners;
 	
-	@FindBy(xpath = "//ul[contains(@class,'children')]//span[3]")
+	@FindAll(@FindBy(xpath = "//ul[contains(@class,'children')]//span[3]"))
 	public List<WebElement> AvailableDoors;
 	
 	@FindBy(id = "partnerTypeFormat")  
@@ -98,7 +107,11 @@ public class vms_IntegrationPartnerPage {
 	@FindBy(xpath = "//span[contains(text(),'VAX-54')]")
 	public WebElement addedVAX;
 	
-
+	@FindBy(xpath = "//img[@src='/app/images/xls-export-icon.svg']")
+	public WebElement exportExcel;
+	
+	
+	
 	
 	
 
@@ -276,5 +289,53 @@ public class vms_IntegrationPartnerPage {
     	new WebDriverWait(ldriver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(OKBtn));
     	OKBtn.click();
     }
+    
+    public String getaddedIntegrationPartnerIP()
+    {
+    	String elementText="";
+    	//JavascriptExecutor js = (JavascriptExecutor) ldriver;
+    	WebElement element = ldriver.findElement(By.xpath("//input[@id='access-ip']"));
+    	//String elementText = (String) js.executeScript("return arguments[0].innerText;", element);
+    	Actions act = new Actions(ldriver);
+        act.moveToElement(element).click().build().perform();
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        act.doubleClick().build().perform();
+        
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+        act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
+        //act.sendKeys(Keys.DOWN).perform();act.sendKeys(Keys.DOWN).perform();act.sendKeys(Keys.DOWN).perform();
+        //act.sendKeys(Keys.ENTER).perform();
+        
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+        try {
+			elementText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+		} catch (HeadlessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedFlavorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    	 return elementText ;
+    }
+    
+
     
 }
