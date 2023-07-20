@@ -13,7 +13,7 @@ import com.VMS.TestCases.BaseClass;
 
 public class vms_ProcedurePage {
 
-	WebDriver ldriver;
+	static WebDriver ldriver;
 	WebDriverWait wait ;
 	
 	public vms_ProcedurePage(WebDriver rdriver)
@@ -70,12 +70,14 @@ public class vms_ProcedurePage {
 		   vms_ConfigurationPage cp = hm.openConfigurationPage();
 		   cp.openProcedurePage();
 		   BaseClass.wait(1000);
+		   BaseClass.log.info("Procedure page is opened");
 	 }
 	
 	public void clickOnNEWbtn()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(newProcedureBtn));
-		newProcedureBtn.click();	
+		newProcedureBtn.click();
+		BaseClass.log.info("Clicked on Add New button.");
 	}
 	
 	public void enterProcedureName(String ProcName)
@@ -83,37 +85,43 @@ public class vms_ProcedurePage {
 		wait.until(ExpectedConditions.elementToBeClickable(procedureNameTxtbx));
 		procedureNameTxtbx.click();
 		procedureNameTxtbx.clear();
-		procedureNameTxtbx.sendKeys(ProcName);	
+		procedureNameTxtbx.sendKeys(ProcName);
+		BaseClass.log.info("Procedure name "+ProcName+" is entered");
 	}
 	
 	public void clickOnSaveBtn()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(saveProcedureButton));
-		saveProcedureButton.click();	
+		saveProcedureButton.click();
+		BaseClass.log.info("Clicked on Save button");
 	}
 	
 	public void selectUserMustAcknowledgeChkBx()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(userMustAcknowledgeChkbx));
 		userMustAcknowledgeChkbx.click();	
+		BaseClass.log.info("selected User must Acknowledge checkbox");
 	}
 	
 	public void selectCommentToAcknowledgeChkBx()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(userMustProvideACommentToAcknowledgeChkbx));
-		userMustProvideACommentToAcknowledgeChkbx.click();	
+		userMustProvideACommentToAcknowledgeChkbx.click();
+		BaseClass.log.info("selected User Must Provide a comment to Ack checkbox");
 	}
 	
 	public void selectNextActionAfterAcknowledgeChkBx()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(nxtActionOnlyAfterAcknowledgeChkbx));
-		nxtActionOnlyAfterAcknowledgeChkbx.click();	
+		nxtActionOnlyAfterAcknowledgeChkbx.click();
+		BaseClass.log.info("selected Next Action after Ack checkbox");
 	}
 	
 	public void clickOnAddActionBtn()
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(addAction));
 		addAction.click();	
+		BaseClass.log.info("Clicked on Add Action button");
 	}
 	
 	public void selectAddReferenceFileWithBrowserandSelectFileChkBx()

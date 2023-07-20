@@ -10,6 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_MapPage 
 {
 
@@ -54,25 +56,26 @@ public class vms_MapPage
 	public List<WebElement> listOfAvailableMaps;	
 	
 	
-	
-	
 	public void openMapPage()
 	{
 		   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		   vms_ConfigurationPage cp = hm.openConfigurationPage();
 		   cp.openMapPage();
-	       try {  Thread.sleep(500);  } catch (InterruptedException e)  {   e.printStackTrace();   }
+		   BaseClass.log.info("Maps page is opened");
+           BaseClass.wait(500);
 	 }
 	
 	public void openNewMapForm()
 	{
 		addMapBtn.click();
+		BaseClass.log.info("Clicked on New Map button");
 	}
 	
 	public void enterMapName(String MapName)
 	{
 		mapName.clear();
 		mapName.sendKeys(MapName);
+		BaseClass.log.info("Maps name "+MapName+" is entered.");
 	}
 	
 	public void uploadMapImage(String filepath)
@@ -83,32 +86,15 @@ public class vms_MapPage
 	public void clickOnDoneBtnTocreateNewMap()
 	{
 		doneBtnToaddMap.click();
+		BaseClass.log.info("Clicked on DONE button to create Map");
 	}
 	
-  
-	 public void getLocationOfAddedMap()
-	 {
-		
-		System.out.println("+++++++++>>>>>>    "+ addedImage.getLocation());
-		System.out.println("                         ");
-		System.out.println("+++++++++>>>>>>    "+ addedImage.getSize());
-
-	 }
-	
-	 public void dragAndDropAvailableResourceOnMap()
-	 {
+    public void dragAndDropAvailableResourceOnMap()
+	{
 		 searchTextboxOfAvailableResources.sendKeys("VAX_Output 3");
-		 try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	     BaseClass.wait(3000);
 		 Actions act = new Actions(ldriver);
 		 act.moveToElement(filteredAvailableResource).clickAndHold(filteredAvailableResource).moveByOffset(900,300).release(mapImageCanvas).build().perform();
-		 
-		 
-		 
 	 }
 	
 }

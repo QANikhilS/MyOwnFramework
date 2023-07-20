@@ -4,15 +4,42 @@
   <listeners>
     <listener class-name="com.VMS.Utilities.ExtentListnerClass"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="OldVMSVersionSetup(BeforeUpgrade)(failed)">
     <classes>
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest">
+        <methods>
+          <include name="verifyIntegratedVAX"/>
+          <include name="enableVAXTab"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_NetworkingPageTest -->
+      <class name="com.VMS.TestCases.TC_WebPagesTest">
+        <methods>
+          <include name="addAllWebpage"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
       <class name="com.VMS.TestCases.TC_MapTest">
         <methods>
+          <include name="addNewMap"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="addNewMapInVMS"/>
         </methods>
       </class> <!-- com.VMS.TestCases.TC_MapTest -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
+        <methods>
+          <include name="addProcedureToAcknowledge"/>
+          <include name="OpenProcedurePage"/>
+          <include name="addProcedureToOpenNextActionAfterAck"/>
+          <include name="addProcedureToAttachFileForReference"/>
+          <include name="tearDown"/>
+          <include name="addProcedureUserMustCommentToAcknowledge"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- OldVMSVersionSetup(BeforeUpgrade)(failed) -->
 </suite> <!-- Failed suite [Suite] -->

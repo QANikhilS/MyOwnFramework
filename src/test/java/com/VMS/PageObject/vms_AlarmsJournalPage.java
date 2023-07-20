@@ -42,7 +42,6 @@ public class vms_AlarmsJournalPage {
    @FindBy(xpath = "//input[@ng-change='alarmsByFilterText()']")
    public WebElement SearchAlarmTextBox;
 
-
    @FindBy(xpath = "//div[@id='alarm_main_table_body']//tr[1]/td[2]/div/span")
    public WebElement FirstAlarmFromTriggeredAlarmsList;
    
@@ -52,15 +51,7 @@ public class vms_AlarmsJournalPage {
    @FindBy(xpath = "//div[@ng-if='alarm.additionalInfo']/div[16]//div")
    public WebElement EventMessageInAdditionalInformation;
  
-
-   
-   
-   
-   
-   
-   
-   
-   
+ 
    public void openAlarmsJournalPage()
    {
 	   	wait.until(ExpectedConditions.elementToBeClickable(AlarmsTab));
@@ -85,10 +76,10 @@ public class vms_AlarmsJournalPage {
 	   act.sendKeys(Keys.ENTER).build().perform();
     }
    
-   public void selectFirstAlarmFromFilteredAlarmsList() throws Exception
+   public void selectFirstAlarmFromFilteredAlarmsList() 
    {
 	   wait.until(ExpectedConditions.elementToBeClickable(FirstAlarmFromTriggeredAlarmsList));
-	   Thread.sleep(1000);
+	   BaseClass.wait(1000);
 	   BaseClass.jsClick(FirstAlarmFromTriggeredAlarmsList);
 	   BaseClass.log.info("Most recent triggered alarm is selected.");
    } 
@@ -108,31 +99,24 @@ public class vms_AlarmsJournalPage {
    {
 	   String EventType = EventTypeInAdditionalInformation.getText();
 	   try 
-	   {if (EventType.equalsIgnoreCase(ExpectedEventType))
+	   {   
+		  if (EventType.equalsIgnoreCase(ExpectedEventType))
+	        {
+		       BaseClass.log.info(ExpectedEventType+" Alarm is triggered.");
+		       Assert.assertTrue(true);
+	        }
+	      else
+	        {
+		       BaseClass.log.info(ExpectedEventType+" Alarm is NOT triggered.");
+		       Assert.assertTrue(false);
+	        }
+	   }
+	   catch (Exception e) 
 	   {
-		   System.out.println("**********************************************************");
-		   System.out.println(ExpectedEventType+" Alarm is triggered.");
-		   System.out.println("**********************************************************");
-		   Assert.assertTrue(true);
-	   }
-	   else
-	   {
-		   System.out.println(ExpectedEventType+" Alarm is NOT triggered.");
-		   Assert.assertTrue(false);
-	   }
-	   }
-	   catch (Exception e) {
-		// TODO: handle exception
-		   System.out.println("**********************************************************");
-		   System.out.println(ExpectedEventType+"\u001B[31mRed Alarm is NOT triggered.");
-		   System.out.println("**********************************************************");
+		   BaseClass.log.info(ExpectedEventType+" Alarm is NOT triggered.");
 		   Assert.assertTrue(false);
 	}
 		   
    }
    
-   
-   
-   
-   
-}
+  }

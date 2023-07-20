@@ -31,30 +31,30 @@ public class TC_AlarmsPageTest extends BaseClass {
 		vms_AlarmsPage ap = new vms_AlarmsPage(driver);
 		ap.openAlarmsPage();
 		ap.addVASAlarm("aaaaaaaa1. Intrusion", "Intrusion");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa2. Loitering", "Loitering");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa3. Person Moving", "Person Moving");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa4. Crowding", "Crowding");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa5. People Gruoping", "Grouping");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa6. Person Line Cross", "Person Line Cross");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa7. Vehicle Stopped", "Vehicle Stopped");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa8. Vehicle Moving", "Vehicle Moving");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa9. Vehicle Line cross", "Vehicle Line Cross");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		ap.addVASAlarm("aaaaaaaa10. Asset Protection", "Asset Removed");	
-		Thread.sleep(300);
+		BaseClass.wait(300);
 	}
 	
 	
 	@Test(priority = 1 , groups = {"Setup", "SetupVAX"})
-	public void addVAXDigitalInputAlarm() throws Exception
+	public void addVAXDigitalInputAlarm() 
 	{
 		alarm.addVAX_InputsOutputs_Alarm(ReadExcelFile.getCellValue("vaxalarms", 20, 0), "Digital Input","VAX_Input 4");
 		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfAllElements(alarm.listOfAllpresentAlarms)); 

@@ -8,7 +8,7 @@ public class TC_ProcedurePageTest extends BaseClass{
 	@Test(priority = 0)
 	public void OpenProcedurePage() throws Exception 
 	{
-		  procedure.openProdecurepage();
+		procedure.openProdecurepage();
 	}
 		
 	
@@ -19,7 +19,6 @@ public class TC_ProcedurePageTest extends BaseClass{
 		  procedure.enterProcedureName("1. Procedure-User must acknowledge");
 		  procedure.selectUserMustAcknowledgeChkBx(); 
 		  procedure.clickOnSaveBtn();
-		  log.info("Procedure '1. Procedure-User must acknowledge' is added.");
 	}
 
 	@Test(priority = 2, groups = {"Setup", "SetupVAX", "SetupVAS"})
@@ -30,7 +29,7 @@ public class TC_ProcedurePageTest extends BaseClass{
 		procedure.selectUserMustAcknowledgeChkBx();
 		procedure.selectCommentToAcknowledgeChkBx();
 		procedure.clickOnSaveBtn();
-		log.info("Procedure '2. Procedure-Enter comment acknowledge' is added.");
+		
 	}
 
 	@Test(priority = 3,groups = {"Setup", "SetupVAX", "SetupVAS"})

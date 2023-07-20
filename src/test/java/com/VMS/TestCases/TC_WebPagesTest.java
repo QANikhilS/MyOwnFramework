@@ -10,8 +10,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.VMS.PageObject.vms_WebPagesPage;
-
 public class TC_WebPagesTest extends BaseClass
 {
     @Test(priority = 0)
@@ -25,40 +23,40 @@ public class TC_WebPagesTest extends BaseClass
     	}
     	else 
     	{
+    		capctureScreenshot(driver, "deleteWebPages");
+			log.info(" Something went wrong. Webpages page is not opened");
     		Assert.assertFalse(false, "Webpage is not opened");
     	}
 	}
 	
-	//@Test(priority = 1, groups = {"Setup", "SetupVAX", "SetupVAS"}, dataProvider = "WebpagesTestData")
-	public void AddWebPages(String webpageName, String webURL) throws Exception 
+	//@Test(priority = 1)
+	public void AddSingleWebPages()
 	{
+		String ExpectedwebPageName = "Alibaba";
+		String ExpectedwebURL = "www.alibaba.com";
 		webpage.clickOnNewWebpageBtn(); 
         log.info("clicked on NEW button.");
-        webpage.addWebPage(webpageName, webURL); 
-		Thread.sleep(300);
+        webpage.addWebPage(ExpectedwebPageName, ExpectedwebURL); 
+        BaseClass.wait(1000);
+        if(webpage.firstWebPage.getText().equalsIgnoreCase(ExpectedwebPageName))
+        {
+        	Assert.assertTrue(true);
+        }
+        else 
+        {
+        	capctureScreenshot(driver, "deleteWebPages");
+			log.info(" Something went wrong. Webpages page is not opened");
+    		Assert.assertFalse(false, "Webpage is not opened");
+		}
+        
      }
-	
-	//@DataProvider(name = "WebpagesTestData")
-	public Object[][] addWebpagesDataset()
-	{
-		return new Object[][] 
-				{
-                    {"1. Alibaba","http://www.alibaba.com"}, {"2. NDTV","http://www.ndtv.com"} , 
-                    {"3. Vicon","https://www.vicon.com/"} , {"4. ZeeNews","http://www.zeenews.com"} , 
-                    {"5. Selenium Dev","https://www.selenium.dev/"}, {"6. TestNG","https://testng.org/doc/"} , 
-                    {"7. Cemtrex Labs","https://cemtrex.com/"} 
-				};
-	}
-		
-	
-	
 	
 
 	//@Test(priority = 2)
 	public void deleteWebPages() throws Exception
 	 {
 		webpage.deleteAllWebPages();
-		Thread.sleep(1000);
+		BaseClass.wait(1000);
 
 		if (webpage.listOfAvailableWebPages.size() == 0) 
 		 {
@@ -77,13 +75,8 @@ public class TC_WebPagesTest extends BaseClass
 	}
 	
 	
-	
-	
-	
-	
-	
 	@Test
-	   public void addAllWebpage() throws Exception
+	   public void addAllWebpage() throws Exception 
 	   {
            XSSFWorkbook workbook = new XSSFWorkbook(fs);	
            XSSFSheet sheet = workbook.getSheetAt(1);	 
@@ -101,17 +94,17 @@ public class TC_WebPagesTest extends BaseClass
             {		
               String CurrentWebpageNames = sheet.getRow(i).getCell(0).getStringCellValue();		 
               listOfWebpagename.add(CurrentWebpageNames);		 		 
-      
-              for ( int j = i ; j<=i ; j++)		 
-                 {			 
-                     String CurrentWebpageURLs = sheet.getRow(j).getCell(1).getStringCellValue();			 
-                     listOfWebpageURL.add(CurrentWebpageURLs);		
-                 } 	
-             }
+       
+                 for ( int j = i ; j<=i ; j++)		 
+                   {			 
+                       String CurrentWebpageURLs = sheet.getRow(j).getCell(1).getStringCellValue();			 
+                       listOfWebpageURL.add(CurrentWebpageURLs);		
+                   } 	
+            }
            
            //add Webpages 
            for (int i = 0 ; i<listOfWebpagename.size() ; i++)
-           {
+             {
         	   webpage.clickOnNewWebpageBtn();
         	   String webPageName = listOfWebpagename.get(i);
         	   webpage.enterWebPageName(webPageName);
@@ -120,16 +113,12 @@ public class TC_WebPagesTest extends BaseClass
                  {
                  	String webPageURL = listOfWebpageURL.get(j);
                   	webpage.enterWebPageURL(webPageURL);
-                  	Thread.sleep(1000);
+                  	BaseClass.wait(1000);
                   	webpage.clickOnSaveBtn();
                   	log.info("Webpage "+webPageName+" is added.");
-                  	Thread.sleep(2000);
+                  	BaseClass.wait(2000);
                  }
-           }
-	
-	
-	
-	
+             }
 	   }
 	
 	

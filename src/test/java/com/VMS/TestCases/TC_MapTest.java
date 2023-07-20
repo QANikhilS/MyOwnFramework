@@ -29,15 +29,15 @@ public class TC_MapTest extends BaseClass
 		Maps.enterMapName(MapName);
 		Maps.uploadMapImage(System.getProperty("user.dir")+"\\src\\main\\resource\\VAX_Map_Structure.png");
 		Maps.clickOnDoneBtnTocreateNewMap();
-		try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace();  }
+		BaseClass.wait(1000);
 		List<String> allMapsName = new ArrayList<String>();
 		
 		for (int i = 1 ; i<Maps.listOfAvailableMaps.size() ; i++)
 		{
-			try {  Thread.sleep(500);  } catch (InterruptedException e)  {   e.printStackTrace();   }
+			BaseClass.wait(500);
 			CurrentMapNames = Maps.listOfAvailableMaps.get(i).getText();
 			allMapsName.add(CurrentMapNames);		 		 
-			try {  Thread.sleep(500);  } catch (InterruptedException e)  {   e.printStackTrace();   }
+			BaseClass.wait(500);
 		}
 		if (allMapsName.contains(MapName) == true)  
 	      {   Assert.assertTrue(true, "Maps is added successfully.");   }

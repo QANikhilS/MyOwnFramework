@@ -170,7 +170,7 @@ public class BaseClass
 		   }
 		}
 	
-	public void capctureScreenshot(WebDriver driver, String testName) throws IOException
+	public void capctureScreenshot(WebDriver driver, String testName) 
 	  {
 		// Step 1: Convert WebDriver object to TakeScreenshot Interface.
 		TakesScreenshot screenshot = ((TakesScreenshot)driver); 
@@ -180,7 +180,7 @@ public class BaseClass
 		File dest = new File(System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png");  
 	
 		// Step 3 : Copy image file to destination.
-		FileUtils.copyFile(src, dest);
+		try { FileUtils.copyFile(src, dest);   } catch (IOException e)  {e.printStackTrace();    }
 	  }
 	
 	public static String getcurrentMachineIP() throws Exception 

@@ -47,6 +47,9 @@ public class vms_WebPagesPage {
 	@FindBy(xpath = "//button[text()='Delete']")
 	public WebElement deleteWebPageBtn;
 	
+	@FindBy(xpath = "//div[@class=\"ui-grid-cell-contents ng-binding ng-scope\"]")
+	public WebElement firstWebPage;
+	
 	@FindBy(css = "div[class*='ui-grid-selection-row-header-buttons']")
 	public List<WebElement> listOfAvailableWebPages;
 	
@@ -66,14 +69,9 @@ public class vms_WebPagesPage {
 		   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		   vms_ConfigurationPage cp = hm.openConfigurationPage();
 		   cp.openWebPagePage();
-		try {
-			Thread.sleep(500);
-	    } catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
-	  BaseClass.log.info("Webpage page is opened.");	
-	 }
+		   BaseClass.wait(500);
+	       BaseClass.log.info("Webpage page is opened.");	
+	    }
 	
 	public void clickOnNewWebpageBtn()
 	{
@@ -81,19 +79,18 @@ public class vms_WebPagesPage {
         BaseClass.log.info("Clicked on New webpage button.");	
 	}
 	
-	public void enterWebPageName(String WebpgName) throws Exception
+	public void enterWebPageName(String WebpgName) 
 	{
 		//new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(webPageNametxtbox));
 		Actions act = new Actions(ldriver);
 		act.moveToElement(webPageNametxtbox).click().build().perform();
-		Thread.sleep(300);
-				
+		BaseClass.wait(500);
 		webPageNametxtbox.clear();
 		webPageNametxtbox.sendKeys(WebpgName);
 		BaseClass.log.info("Webpage name is entered.");	
 	}
 	
-	public void enterWebPageURL(String WebpgURL) throws Exception
+	public void enterWebPageURL(String WebpgURL) 
 	{
 		urlTextBox.clear();
 		urlTextBox.sendKeys(WebpgURL);
@@ -136,13 +133,13 @@ public class vms_WebPagesPage {
 		BaseClass.log.info("Clicked on SAVE button.");	
 	}	
 	
-	public void addWebPage(String WebPageName, String WebPageURL) throws Exception
+	public void addWebPage(String WebPageName, String WebPageURL) 
 	{
 		clickOnNewWebpageBtn();
 		enterWebPageName(WebPageName);
 		enterWebPageURL(WebPageURL);
 		clickOnSaveBtn();
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 	}
 	
 	public void selectWebPage()
@@ -158,9 +155,9 @@ public class vms_WebPagesPage {
 		}
 	}
 	
-	public void deleteAllWebPages() throws Exception
+	public void deleteAllWebPages()
 	{
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		selectWebPage();
 		deleteWebPageBtn.click();
 		yesBtn.click();		

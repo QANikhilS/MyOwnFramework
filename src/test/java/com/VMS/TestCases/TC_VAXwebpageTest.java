@@ -77,10 +77,6 @@ public class TC_VAXwebpageTest extends BaseClass
 		{   Assert.assertTrue(true, "All VAX Resources are available");   }	
 		else
 		{   Assert.fail();   	}
-			
-		
-		
-		
 	}
 	
 	

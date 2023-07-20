@@ -1,7 +1,5 @@
 package com.VMS.TestCases;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,12 +24,7 @@ public class TC_loginPageTest extends BaseClass
 		else
 		{
 			log.info("DoLogin  -  Failed.");
-			try {
-				capctureScreenshot(driver, "DoLogin");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			capctureScreenshot(driver, "DoLogin");
 			Assert.assertTrue(false);
 		}
 		  log.info("************  Test Case - verifyADMINLogin is finish ************");		
@@ -55,12 +48,7 @@ public class TC_loginPageTest extends BaseClass
 		else
 		{
 			log.info("verifyLogOut  -  Failed.");
-			try {
-				capctureScreenshot(driver, "verifyLogOut");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			capctureScreenshot(driver, "verifyLogOut");
 			Assert.assertTrue(false);
 		}
 		log.info("************  Test Case - verifyLogOut is finished ************");	

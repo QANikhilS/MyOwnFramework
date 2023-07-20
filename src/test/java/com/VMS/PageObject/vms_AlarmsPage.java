@@ -16,9 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.VMS.TestCases.BaseClass;
 
-public class vms_AlarmsPage extends BaseClass{
-
-	
+public class vms_AlarmsPage extends BaseClass
+{
 	WebDriver ldriver;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
@@ -195,27 +194,21 @@ public class vms_AlarmsPage extends BaseClass{
 	
 	public void openAlarmsPage()      
 	{
-		ldriver.navigate().to(BaseClass.VMSURL+"/#/configuration/advanced/alarms");
-		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(NewBtn));
-		/*
-		 * vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
-		 * vms_ConfigurationPage cp = hm.openConfigurationPage(); cp.openAlarmsPage();
-		 * try { Thread.sleep(500); } catch (InterruptedException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
+		  vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		  vms_ConfigurationPage cp = hm.openConfigurationPage(); 
+		  cp.openAlarmsPage();
+		  BaseClass.wait(500);
 	}
 	
-	public void selectResources_Vax_InputORoutput_All(String InputORoutput) throws Exception
+	public void selectResources_Vax_InputORoutput_All(String InputORoutput)
 	{
 		dropdownToSelectResources.click();
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		selectResourcesTxtBx.sendKeys(InputORoutput);
-		Thread.sleep(200);
+		BaseClass.wait(200);
 		for (int i = 0; i<listOfAvailableResources.size() ; i++)
-		{
-			listOfAvailableResources.get(i).click();
-			Thread.sleep(300);
-		}	
+		{   listOfAvailableResources.get(i).click();
+			BaseClass.wait(300);    	}	
 		dropdownToSelectResources.click();
 	}
 	
@@ -235,39 +228,25 @@ public class vms_AlarmsPage extends BaseClass{
 		{
 			String CuttrntEvent = listOfAllValerusEvents.get(i).getText();
 			if(CuttrntEvent.equalsIgnoreCase(ExpectedEventName))
-			  {
-				  listOfAllValerusEvents.get(i).click();
-				  try {
-					Thread.sleep(400);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			  }
+			  {   listOfAllValerusEvents.get(i).click();
+				  BaseClass.wait(400);     }
 		}
-			
 	}
 	
 	public void selectEventRadioButton()
 	{
 		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(selectEventsRadioButton)).click();
-		try {
-			Thread.sleep(800);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BaseClass.wait(800);
 	}
 	
-	public void selectVASEvent(String eventName) throws Exception
+	public void selectVASEvent(String eventName) 
 	{
-		
 		js.executeScript("window.scrollBy(0,300)");
 		Actions act = new Actions (ldriver);
 		act.moveToElement(eventsDropdown).build().perform();
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		act.moveToElement(analyticsServiceEvent).build().perform();
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		for (int i = 0 ; i< listOfsubEvents.size() ; i++)
 		{
 			String expectedEvent = listOfsubEvents.get(i).getText();
@@ -288,9 +267,9 @@ public class vms_AlarmsPage extends BaseClass{
 	
 	public void enterAlarmName(String alarmName)
 	{
-	   new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(alarmNameTxtBx)).click();
-	   alarmNameTxtBx.clear();
-	   alarmNameTxtBx.sendKeys(alarmName);
+	    new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(alarmNameTxtBx)).click();
+	    alarmNameTxtBx.clear();
+	    alarmNameTxtBx.sendKeys(alarmName);
 	}
 	
 	public void selectEventTypeAsIntegrationPartner()
@@ -298,52 +277,52 @@ public class vms_AlarmsPage extends BaseClass{
 		eventTypeAsIntegrationPartner.click();
 	}
 	
-	public void selectIntegrationPartnerAsAccessControl() throws Exception
+	public void selectIntegrationPartnerAsAccessControl() 
 	{
 		Actions act = new Actions (ldriver);  
 		act.moveToElement(selectIntegrationPartnerDropdown).click().build().perform();		
-		Thread.sleep(1000);
+		BaseClass.wait(1000);
 		act.moveToElement(selectIntegrationPartnerAsAccessControl).click().build().perform();
 	}
 
-	public void selectAccessControlPartnerasVAX() throws Exception
+	public void selectAccessControlPartnerasVAX() 
 	{
 		selectAccessControlNameAsDropdown.click();
 		selectAccessControlNameAsVAX.click();
 	}
 
-	public void openAccessControlConfigurationWindow() throws Exception
+	public void openAccessControlConfigurationWindow() 
 	{
 		accesControlConfiguration.click();	
 	}
 	
-	public void selectParameterASEVENTInConfigureAccessControl() throws Exception
+	public void selectParameterASEVENTInConfigureAccessControl() 
 	{
 		parameterDropDownInConfiguration.click();
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		parameterAsEvent.click();
 	}
 	
-	public void selectParameterASMESSAGEInConfigureAccessControl() throws Exception
+	public void selectParameterASMESSAGEInConfigureAccessControl()
 	{
 		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(parameterDropDownInConfiguration));
 		parameterDropDownInConfiguration.click();
 		new WebDriverWait(ldriver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(parameterAsMessage));
-	    js.executeScript("arguments[0].click();", parameterAsMessage);
+	    BaseClass.jsClick(parameterAsMessage);
 	}
 	
-	public void selectParameterAsCARDHOLDERInConfigureAccessControl() throws Exception
+	public void selectParameterAsCARDHOLDERInConfigureAccessControl() 
 	{
 		parameterDropDownInConfiguration.click();
-		Thread.sleep(500);
-		js.executeScript("arguments[0].click();", parameterAsCardHolders);
+		BaseClass.wait(500);
+		BaseClass.jsClick(parameterAsCardHolders);
 	}
 			
-	public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
+	public void selectSubEventInConfigureAccessControl(String eventValue) 
 	{
 		new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
 	    parameterValueDropdowninAccessControlConfiguration.click();
-	 	Thread.sleep(300);
+	 	BaseClass.wait(500);
         for (int i = 0 ; i<listOfVAXevents.size() ; i++)
         {
         	String currentEvent = listOfVAXevents.get(i).getText();
@@ -354,7 +333,7 @@ public class vms_AlarmsPage extends BaseClass{
         			listOfVAXevents.get(i).click();
         	 	}
         	 	catch(Exception e)
-        	 	{   js.executeScript("arguments[0].click();", listOfVAXevents.get(i));   
+        	 	{   BaseClass.jsClick(listOfVAXevents.get(i));   
         		}
         	}
         }
@@ -367,7 +346,7 @@ public class vms_AlarmsPage extends BaseClass{
 		messageTextBox.sendKeys(Message);
 	}
 	
-	public void clickSAVEConfigureAccessControl() throws Exception
+	public void clickSAVEConfigureAccessControl() 
 	{
 		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
          wait.until(ExpectedConditions.elementToBeClickable(saveButton));
@@ -381,38 +360,38 @@ public class vms_AlarmsPage extends BaseClass{
 		selectAllResourceRadioButton.click();
 	}
 	
-	public void selectRelatedResources(String CameraName, String WebPage, String Map) throws Exception
+	public void selectRelatedResources(String CameraName, String WebPage, String Map) 
 	{
-	   WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
+	    WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(relatedResourceDropdown)).click();
-        Thread.sleep(500);
+        BaseClass.wait(500);
 		relatedResourceDropdownSearchbox.click();
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		relatedResourceDropdownSearchbox.sendKeys(CameraName);
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 	    js.executeScript("arguments[0].click();", filteredRelatedResource);
-		Thread.sleep(1000);
+		BaseClass.wait(1000);
 		relatedResourceDropdownSearchbox.click();
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		relatedResourceDropdownSearchbox.clear();
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		relatedResourceDropdownSearchbox.sendKeys(WebPage);
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		js.executeScript("arguments[0].click();", filteredRelatedResource);
-		Thread.sleep(1000);
+		BaseClass.wait(1000);
 		relatedResourceDropdownSearchbox.click();
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		relatedResourceDropdownSearchbox.clear();
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		relatedResourceDropdownSearchbox.sendKeys(Map);
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		js.executeScript("arguments[0].click();", filteredRelatedResource);  
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		relatedResourceDropdown.click();  
-		Thread.sleep(500);
+		BaseClass.wait(500);
 	}
 	
-	public void selectProcedure(String procedureNo) throws Exception
+	public void selectProcedure(String procedureNo)
 	{
 		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		procedureDropDown.click();
@@ -420,29 +399,29 @@ public class vms_AlarmsPage extends BaseClass{
 		procedureDropDownSearchBox.sendKeys(procedureNo);
 		wait.until(ExpectedConditions.elementToBeClickable(filteredProcedure));
 		filteredProcedure.click();
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		}
 	
-	public void selectAllUsers() throws Exception
+	public void selectAllUsers() 
 	{
 		usersDropdown.click();
-		Thread.sleep(300);
+		BaseClass.wait(300);
 		for (int i =0; i < listOfUsers.size(); i++)
 		{
-			Thread.sleep(200);
+			BaseClass.wait(200);
 			listOfUsers.get(i).click();
 		}
-		Thread.sleep(200);
+		BaseClass.wait(200);
 	}
 	
-	public void setAlarmExipryAsNever() throws Exception
+	public void setAlarmExipryAsNever() 
 	{
 		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(expirationTimeNever));
 		expirationTimeNever.click();
 	}
 	
-	public void clickOnSaveButtonOfAlarmsPage() throws Exception
+	public void clickOnSaveButtonOfAlarmsPage() 
 	{
 		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(saveButtonOfAlarmsForm));
@@ -450,99 +429,99 @@ public class vms_AlarmsPage extends BaseClass{
 		wait.until(ExpectedConditions.elementToBeClickable(NewBtn));
 	}
 	
-	public void addVAXAlarm(String AlarmName, String VAXEventType) throws Exception
+	public void addVAXAlarm(String AlarmName, String VAXEventType)
 	{
 		clickOnAddNewAlarmBtn();
 		log.debug("Clicked on Add New Alarm button");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		enterAlarmName(AlarmName);
 		log.debug("Alarm name is entered");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectEventTypeAsIntegrationPartner();
 		log.debug("Selected Event type as Integration Partner");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectIntegrationPartnerAsAccessControl();
 		log.debug("Selected Partner type as Access Control.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectAccessControlPartnerasVAX();
 		log.debug("Selected Partner as VAX.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		openAccessControlConfigurationWindow();
 		log.debug("VAX Event configuration window is opened.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectParameterASEVENTInConfigureAccessControl();
 		log.debug("Selected Partner type as Access Control.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectSubEventInConfigureAccessControl(VAXEventType);
 		log.debug("Selected event type as "+VAXEventType);
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		clickSAVEConfigureAccessControl();
 		log.debug("VAX event configuration is saved.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectAllResources();
 		log.debug("Select all resources/Doors.");
 		Actions act = new Actions(ldriver);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
+		BaseClass.wait(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");
         log.debug("Selected expected related  resources.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
         selectProcedure("1. Procedure-User must acknowledge");
         log.debug("selected procedure.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         selectAllUsers();
         log.debug("selected all users.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         setAlarmExipryAsNever();
         log.debug("selected alarms expiry as NEVER.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         clickOnSaveButtonOfAlarmsPage();
         log.debug("Click on SAVE button to create new alarm.");
-        Thread.sleep(5000);
+        BaseClass.wait(5000);
 	}
 
-	public void addVASAlarm(String AlarmeName, String vasEventName) throws Exception
+	public void addVASAlarm(String AlarmeName, String vasEventName) 
 	{
 		clickOnAddNewAlarmBtn();
 		log.debug("Clicked on Add New Alarm button");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		enterAlarmName(AlarmeName);
 		log.debug("Alarm name is entered");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectEventRadioButton();
 		log.debug("Select Event radio button is selected.");
-		Thread.sleep(200);
+		BaseClass.wait(200);
 		selectVASEvent(vasEventName);
 		log.debug("selected "+ vasEventName +" events to trigger.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectAllResources();
 		log.debug("selected all resources.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
 		Actions act = new Actions(ldriver);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
+		BaseClass.wait(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         log.debug("selected expected related resources.");
         selectProcedure("1. Procedure-User must acknowledge");
         log.debug("selected procedure.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         selectAllUsers();
         log.debug("selected all users.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         setAlarmExipryAsNever();
         log.debug("selected alarms expiry as NEVER.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         clickOnSaveButtonOfAlarmsPage();
         log.debug("Click on SAVE button to create new alarm.");
-        Thread.sleep(5000);
+        BaseClass.wait(5000);
 	}
 	
-	public void addVAX_InputsOutputs_Alarm(String AlarmeName, String EventName, String selectVAXinputOROutput) throws Exception
+	public void addVAX_InputsOutputs_Alarm(String AlarmeName, String EventName, String selectVAXinputOROutput)
 	{
 		clickOnAddNewAlarmBtn();
 		log.debug("Clicked on Add New Alarm button");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		enterAlarmName(AlarmeName);
 		log.debug("Alarm name is entered");
 	    selectSingleEventRadioBtn();
@@ -550,78 +529,78 @@ public class vms_AlarmsPage extends BaseClass{
 	    openDropdownToSelectEvent();
 	    selectValerusEvent(EventName);
 	    log.debug("Selected "+EventName+" Event.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
 	    selectResources_Vax_InputORoutput_All(selectVAXinputOROutput);
-        Thread.sleep(200);
+        BaseClass.wait(200);
 		log.debug("selected all resources.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         log.debug("selected expected related resources.");
         Actions act = new Actions(ldriver);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
+		BaseClass.wait(200);
         selectProcedure("2. Procedure-Enter comment acknowledge");
         log.debug("selected procedure.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         selectAllUsers();
         log.debug("selected all users.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         setAlarmExipryAsNever(); 
         log.debug("selected alarms expiry as NEVER.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         clickOnSaveButtonOfAlarmsPage();
         log.debug("Click on SAVE button to create new alarm.");
-        Thread.sleep(5000);
+        BaseClass.wait(5000);
 	}
 	
-	public void addVAXalarmWithMessageParameter(String AlarmeName, String msg) throws Exception
+	public void addVAXalarmWithMessageParameter(String AlarmeName, String msg) 
 	{
 		clickOnAddNewAlarmBtn();
 		log.debug("Clicked on Add New Alarm button");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		enterAlarmName(AlarmeName);
 		log.debug("Alarm name is entered");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectEventTypeAsIntegrationPartner();
 		log.debug("Selected Event type as Integration Partner");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectIntegrationPartnerAsAccessControl();
 		log.debug("Selected Partner type as Access Control.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectAccessControlPartnerasVAX();
 		log.debug("Selected Partner as VAX.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		openAccessControlConfigurationWindow();
 		log.debug("VAX Event configuration window is opened.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectParameterASMESSAGEInConfigureAccessControl();
 		log.debug("Selected Partner type as Access Control.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
         EnterMessage(msg);
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		clickSAVEConfigureAccessControl();
 		log.debug("VAX event configuration is saved.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
 		selectAllResources();
 		log.debug("Select all resources/Doors.");
 		Actions act = new Actions(ldriver);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(200);
+		BaseClass.wait(200);
         selectRelatedResources("Camera_.3", "NDTV", "Map");
         log.debug("Selected expected related  resources.");
-		Thread.sleep(500);
+		BaseClass.wait(500);
         selectProcedure("4. Procedure-Add reference");
         log.debug("selected procedure.");
-        Thread.sleep(200);
+        BaseClass.wait(200);
         selectAllUsers();
         log.debug("selected all users.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         setAlarmExipryAsNever();
         log.debug("selected alarms expiry as NEVER.");
-        Thread.sleep(500);
+        BaseClass.wait(500);
         clickOnSaveButtonOfAlarmsPage();
         log.debug("Click on SAVE button to create new alarm.");
-        Thread.sleep(5000);
+        BaseClass.wait(5000);
 	}
 	}

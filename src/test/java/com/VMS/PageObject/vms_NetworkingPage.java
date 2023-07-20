@@ -10,6 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_NetworkingPage {
 
 	
@@ -46,12 +48,8 @@ public class vms_NetworkingPage {
 		 vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		   vms_ConfigurationPage cp = hm.openConfigurationPage();
 		   cp.openNetworkingPage();
-		try {
-			Thread.sleep(500);
-	    } catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
+           BaseClass.wait(500);
+           BaseClass.log.info("Networking page is opened.");
 	}
 	
 	public String verifyVAXtabIsEnabled()
@@ -71,6 +69,7 @@ public class vms_NetworkingPage {
 		{ }
 		else 
 		{  enableVAXIntegrationToggleBtn2.click();   }
+		BaseClass.log.info("Enable VAX taggle button is enabled.");
 	}
 	
 	public void enterVAXIP(String VAXIP)
@@ -78,14 +77,16 @@ public class vms_NetworkingPage {
 		VAXIPtestbox.click();
 		VAXIPtestbox.clear();
 		VAXIPtestbox.sendKeys(VAXIP);
+		BaseClass.log.info("VAX ip is entered");
 	}
 	
 	public void clickOnSaveBtn()
 	{
 		saveBtn.click();
+		BaseClass.log.info("Clicked on SAVE button");
 	}
 	
-	public void verifyConfiguredVAX() throws Exception
+	public void verifyConfiguredVAX() 
 	{
 		String MainWindow, ChildWindow ;
 		if(verifyVAXtabIsEnabled().equalsIgnoreCase("Enabled"))
@@ -103,24 +104,22 @@ public class vms_NetworkingPage {
 		ChildWindow = I1.next();
 		
 		ldriver.switchTo().window(ChildWindow);
-		Thread.sleep(1000);
+		BaseClass.wait(1000);
 		ldriver.manage().window().minimize();
 		ldriver.close();
 		ldriver.switchTo().window(MainWindow);
 		
 	}
 	
-	public void enableVAXTab(String VAXipToConfigure) throws Exception
+	public void enableVAXTab(String VAXipToConfigure) 
 	{
 	if(verifyVAXtabIsEnabled().equalsIgnoreCase("Disabled"))
 	{
 	   openNetworingPage();
 	   enabletheVAXIntegrationToggleBtn();
-	   System.out.println("VAX Integration toggle btn enabled");
 	   enterVAXIP(VAXipToConfigure);
-	   System.out.println("VAX IP is entered");
 	   clickOnSaveBtn();
-	   Thread.sleep(1500);
+	   BaseClass.wait(1500);
 	}
 	else
 	{  System.out.println("VAX Tab is already enabled.");  }

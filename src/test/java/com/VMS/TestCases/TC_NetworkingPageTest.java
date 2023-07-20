@@ -15,7 +15,7 @@ public class TC_NetworkingPageTest extends BaseClass {
 		   networking.enterVAXIP("192.168.1.51");
 		   log.info("VAX IP is entered");
 		   networking.clickOnSaveBtn();
-		   Thread.sleep(1500);
+		   BaseClass.wait(1500);
 		}
 		else
 		{  log.info("VAX Tab is already enabled.");  }

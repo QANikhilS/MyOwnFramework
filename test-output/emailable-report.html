@@ -8,11 +8,58 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">36,871</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">OldVMSVersionSetup(BeforeUpgrade)</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">10</td><td class="num">1,556</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.VMS.TestCases.TC_CameraAndDevicesPageTest</td><td><a href="#m0">AddSimulatorCamera</a></td><td rowspan="1">1689777060162</td><td rowspan="1">27400</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OldVMSVersionSetup(BeforeUpgrade) &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.VMS.TestCases.TC_MapTest</td><td><a href="#m0">addNewMap</a></td><td rowspan="1">1689858077315</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m1">addNewMapInVMS</a></td><td rowspan="1">1689858077317</td><td rowspan="1">1</td></tr><tr class="failedodd"><td rowspan="2">com.VMS.TestCases.TC_NetworkingPageTest</td><td><a href="#m2">enableVAXTab</a></td><td rowspan="1">1689858077320</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m3">verifyIntegratedVAX</a></td><td rowspan="1">1689858077323</td><td rowspan="1">2</td></tr><tr class="failedeven"><td rowspan="5">com.VMS.TestCases.TC_ProcedurePageTest</td><td><a href="#m4">OpenProcedurePage</a></td><td rowspan="1">1689858077299</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m5">addProcedureToAcknowledge</a></td><td rowspan="1">1689858077301</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m6">addProcedureToAttachFileForReference</a></td><td rowspan="1">1689858077310</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m7">addProcedureToOpenNextActionAfterAck</a></td><td rowspan="1">1689858077307</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m8">addProcedureUserMustCommentToAcknowledge</a></td><td rowspan="1">1689858077303</td><td rowspan="1">2</td></tr><tr class="failedodd"><td rowspan="1">com.VMS.TestCases.TC_WebPagesTest</td><td><a href="#m9">addAllWebpage</a></td><td rowspan="1">1689858077251</td><td rowspan="1">45</td></tr><tr><th colspan="4">OldVMSVersionSetup(BeforeUpgrade) &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.VMS.TestCases.TC_WebPagesTest</td><td><a href="#m10">OpenWebPages</a></td><td rowspan="1">1689858076011</td><td rowspan="1">1223</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.VMS.TestCases.TC_CameraAndDevicesPageTest#AddSimulatorCamera</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>OldVMSVersionSetup(BeforeUpgrade)</h2><h3 id="m0">com.VMS.TestCases.TC_MapTest#addNewMap</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_MapPage.openMapPage()&quot; because &quot;this.Maps&quot; is null
+	at com.VMS.TestCases.TC_MapTest.addNewMap(TC_MapTest.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.VMS.TestCases.TC_MapTest#addNewMapInVMS</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_MapPage.openNewMapForm()&quot; because &quot;this.Maps&quot; is null
+	at com.VMS.TestCases.TC_MapTest.addNewMapInVMS(TC_MapTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.VMS.TestCases.TC_NetworkingPageTest#enableVAXTab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_NetworkingPage.verifyVAXtabIsEnabled()&quot; because &quot;this.networking&quot; is null
+	at com.VMS.TestCases.TC_NetworkingPageTest.enableVAXTab(TC_NetworkingPageTest.java:10)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.VMS.TestCases.TC_NetworkingPageTest#verifyIntegratedVAX</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_NetworkingPage.verifyConfiguredVAX()&quot; because &quot;this.networking&quot; is null
+	at com.VMS.TestCases.TC_NetworkingPageTest.verifyIntegratedVAX(TC_NetworkingPageTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.VMS.TestCases.TC_ProcedurePageTest#OpenProcedurePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_ProcedurePage.openProdecurepage()&quot; because &quot;this.procedure&quot; is null
+	at com.VMS.TestCases.TC_ProcedurePageTest.OpenProcedurePage(TC_ProcedurePageTest.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.VMS.TestCases.TC_ProcedurePageTest#addProcedureToAcknowledge</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_ProcedurePage.clickOnNEWbtn()&quot; because &quot;this.procedure&quot; is null
+	at com.VMS.TestCases.TC_ProcedurePageTest.addProcedureToAcknowledge(TC_ProcedurePageTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.VMS.TestCases.TC_ProcedurePageTest#addProcedureToAttachFileForReference</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_ProcedurePage.clickOnNEWbtn()&quot; because &quot;this.procedure&quot; is null
+	at com.VMS.TestCases.TC_ProcedurePageTest.addProcedureToAttachFileForReference(TC_ProcedurePageTest.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.VMS.TestCases.TC_ProcedurePageTest#addProcedureToOpenNextActionAfterAck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_ProcedurePage.clickOnNEWbtn()&quot; because &quot;this.procedure&quot; is null
+	at com.VMS.TestCases.TC_ProcedurePageTest.addProcedureToOpenNextActionAfterAck(TC_ProcedurePageTest.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.VMS.TestCases.TC_ProcedurePageTest#addProcedureUserMustCommentToAcknowledge</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.VMS.PageObject.vms_ProcedurePage.clickOnNEWbtn()&quot; because &quot;this.procedure&quot; is null
+	at com.VMS.TestCases.TC_ProcedurePageTest.addProcedureUserMustCommentToAcknowledge(TC_ProcedurePageTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.VMS.TestCases.TC_WebPagesTest#addAllWebpage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
+	at org.apache.poi.poifs.filesystem.FileMagic.prepareToCheckMagic(FileMagic.java:222)
+	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:174)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:130)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at com.VMS.TestCases.TC_WebPagesTest.addAllWebpage(TC_WebPagesTest.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.VMS.TestCases.TC_WebPagesTest#OpenWebPages</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -31,12 +31,7 @@ public class TC_loginPageTest2 extends BaseClass
 		else
 		{
 			log.info("DoLogin  -  Failed.");
-			try {
-				capctureScreenshot(driver, "DoLogin");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			capctureScreenshot(driver, "DoLogin");
 			Assert.assertTrue(false);
 		}
 
@@ -103,12 +98,7 @@ public class TC_loginPageTest2 extends BaseClass
 		else
 		{
 			log.info("verifyLogOut  -  Failed.");
-			try {
-				capctureScreenshot(driver, "verifyLogOut");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			capctureScreenshot(driver, "verifyLogOut");
 			Assert.assertTrue(false);
 		}
 		

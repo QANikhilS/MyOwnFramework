@@ -127,21 +127,16 @@ public class vms_EventAlarmsSearchPage {
    public void openEventsAlarmSearchPage()
    {
    	wait.until(ExpectedConditions.elementToBeClickable(eventAlarmSearchBtn));
-   	try {
-			BaseClass.jsClick(eventAlarmSearchBtn);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    BaseClass.jsClick(eventAlarmSearchBtn);
    } 
     	
     	
- public void navigateToEventsAlarmsSearchPage() throws Exception
+ public void navigateToEventsAlarmsSearchPage() 
     {
       vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
       hm.openSearchPage();
       openEventsAlarmSearchPage();
-   	  Thread.sleep(5000);
+   	  BaseClass.wait(5000);
     }    	
   
  
@@ -151,7 +146,7 @@ public class vms_EventAlarmsSearchPage {
     }
 
         
-    public void selectParameterInConfigureAccessControl(String paramerterName) throws Exception
+    public void selectParameterInConfigureAccessControl(String paramerterName) 
     {	
     	parameterDropdown.click();
     	for (int i = 0 ; i<listofParameters.size() ; i++)
@@ -164,11 +159,11 @@ public class vms_EventAlarmsSearchPage {
     	}
     }
         
-    public void selectSubEventInConfigureAccessControl(String eventValue) throws Exception
+    public void selectSubEventInConfigureAccessControl(String eventValue) 
     {
     	new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(parameterValueDropdowninAccessControlConfiguration));
         parameterValueDropdowninAccessControlConfiguration.click();
-     	Thread.sleep(300);
+        BaseClass.wait(300);
            for (int i = 0 ; i<listOfVAXevents.size() ; i++)
            {
            	String currentEvent = listOfVAXevents.get(i).getText();
@@ -179,14 +174,14 @@ public class vms_EventAlarmsSearchPage {
            			listOfVAXevents.get(i).click();
            	 	}
            	 	catch(Exception e)
-           	 	{   js.executeScript("arguments[0].click();", listOfVAXevents.get(i));   
+           	 	{   BaseClass.jsClick(listOfVAXevents.get(i));   
            		}
            	}
            }
            saveButton.click();
      }       
         
-    public void createVAXeventSearchQuery(String qname, String evntName, String vaxParameterName, String selectSubEvent ) throws Exception
+    public void createVAXeventSearchQuery(String qname, String evntName, String vaxParameterName, String selectSubEvent )
       {
        	clickOnNewQueryBtn();
        	enterQueryName(qname);
@@ -198,7 +193,7 @@ public class vms_EventAlarmsSearchPage {
        	selectdaysForEventQuery("30");
        	saveQueryBtn.click();
        	new WebDriverWait(ldriver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(newQueryBtn)).isEnabled();
-       	Thread.sleep(2000);
+       	BaseClass.wait(2000);
       }
            
     public void enterQueryName(String QueryName)
@@ -206,10 +201,10 @@ public class vms_EventAlarmsSearchPage {
      	queryNameTxtbox.sendKeys(QueryName); 
     }
   
-    public void selectEventtype(String eventName) throws Exception
+    public void selectEventtype(String eventName) 
    {
 	   selectAnEventDropdown.click();
-	   Thread.sleep(1500);
+	   BaseClass.wait(1500);
 	   wait.until(ExpectedConditions.visibilityOfAllElements(eventsListOnEventAlarmSearch));
 	   for(int i=0 ; i<eventsListOnEventAlarmSearch.size(); i++)
 	   {
@@ -223,12 +218,7 @@ public class vms_EventAlarmsSearchPage {
     public void clickOnNewQueryBtn()
     {
     	wait.until(ExpectedConditions.elementToBeClickable(newQueryBtn));
-    	try {
-			BaseClass.jsClick(newQueryBtn);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	BaseClass.jsClick(newQueryBtn);
     }
  	
     public void selectSearchForEventBtn()
@@ -245,12 +235,7 @@ public class vms_EventAlarmsSearchPage {
     public void selectAlarmfromDropdown(String alarmName)
     {
     	selectAnAlarmDropdown.click();
-    	try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}    	
+    	BaseClass.wait(1000);	
     	for (int i = 1 ; i< alarmsListOnEventAlarmSearch.size() ; i++ )
     	{
     		String CurrentAlarm = alarmsListOnEventAlarmSearch.get(i).getText();
@@ -275,13 +260,7 @@ public class vms_EventAlarmsSearchPage {
 	public void selectdaysForAlarmQuery(String days)
 	{
 		selectDaysDropDownForAlarms.click();
-		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BaseClass.wait(1000);
 		
        for(int i=0; i<listofDaystoSelecttimeframeForEventQuert.size() ; i++)
        {
@@ -296,12 +275,7 @@ public class vms_EventAlarmsSearchPage {
 	public void selectdaysForEventQuery(String days)
 	{
 		selectDaysDropDownForEvents.click();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BaseClass.wait(1000);
 		
 	       for(int i=0; i<listofDaystoSelecttimeframeForEventQuert.size() ; i++)
 	       {
@@ -313,12 +287,12 @@ public class vms_EventAlarmsSearchPage {
 	       }
 	}
 
-    public void clickOnSaveQueryBtn() throws Exception
+    public void clickOnSaveQueryBtn() 
     {
     	BaseClass.jsClick(saveQueryBtn);
     }  
 
-    public void addNewAlarmQuery(String alarmQueryName, String alarmNameToselect) throws Exception
+    public void addNewAlarmQuery(String alarmQueryName, String alarmNameToselect) 
     {
 		clickOnNewQueryBtn();
 		BaseClass.log.info("New Query form has been opened");
@@ -340,15 +314,15 @@ public class vms_EventAlarmsSearchPage {
 		
 		clickOnSaveQueryBtn();
 		BaseClass.log.info("clicked on Save Query button.");
-		Thread.sleep(2000);
+		BaseClass.wait(2000);
 		
 		ldriver.get(BaseClass.VMSURL+"/#/search/analytics_services");
-		Thread.sleep(1500);
+		BaseClass.wait(1500);
 		ldriver.navigate().back();
-		Thread.sleep(2000);
+		BaseClass.wait(2000);
      }
  
-    public void addNewEventQuery(String eventQueryName, String EventName) throws Exception
+    public void addNewEventQuery(String eventQueryName, String EventName) 
     {
 		
 		clickOnNewQueryBtn();
@@ -361,9 +335,9 @@ public class vms_EventAlarmsSearchPage {
 		BaseClass.log.info("Event type is has been selected");
 
         selectResourcesDropdown.click();
-        Thread.sleep(500);
+        BaseClass.wait(500);
         selectAllResourcesCheckbox.click();
-        Thread.sleep(500);
+        BaseClass.wait(500);
 		
         selectdaysForEventQuery("30");
 		BaseClass.log.info("Days as last 30 days  is selected.");
@@ -372,13 +346,6 @@ public class vms_EventAlarmsSearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
 		BaseClass.log.info("clicked on Save Query button.");
     }
-    
-    
-    
-    
-    
-    
-    
-    
+        
     
 }

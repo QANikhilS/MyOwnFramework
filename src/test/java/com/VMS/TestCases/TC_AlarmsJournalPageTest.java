@@ -13,134 +13,158 @@ public class TC_AlarmsJournalPageTest extends BaseClass
 
 
 	 @Test(priority = 2)
-	  public void verifyDoorLockedAlarm() throws Exception
+	  public void verifyDoorLockedAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch(" Locked");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Locked");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	
 	
 	  @Test(priority = 3)
-	  public void verifyDoorUnlockedAlarm() throws Exception
+	  public void verifyDoorUnlockedAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Unlocked");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Unlocked");  
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	
 	  @Test(priority = 4)
-	  public void verifyAccessGrantedCardAlarm() throws Exception
+	  public void verifyAccessGrantedCardAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Access Granted");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Granted - Card");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
+	  }
+	  
+	  @Test(priority = 5)
+	  public void verifyAccessGrantedCardAlarmMasterAccess()
+	  {
+		  AlarmTab.EnterAlarmsDetailsToSearch("Master");
+		  BaseClass.wait(1000);
+		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
+		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
+		  BaseClass.wait(1000);
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Granted - Master Privilege");
+		  BaseClass.wait(1000);
 	  }
 	
-	  @Test(priority = 5)
-	  public void verifyAccessDeniedCardAlarm() throws Exception
+	  @Test(priority = 6)
+	  public void verifyAccessDeniedCardAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Invalid Card");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Denied - Invalid Card");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	  
-	 @Test(priority = 6)
-	  public void verifyDoorForcedOpenAlarm() throws Exception
+	  @Test(priority = 7)
+	  public void verifyAccessDeniedSecurityLevelAlarm() 
+	  {
+		  AlarmTab.EnterAlarmsDetailsToSearch("Security");
+		  BaseClass.wait(1000);
+		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
+		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
+		  BaseClass.wait(1000);
+		  AlarmTab.verifyEventTypeInAdditionalInformation("Access Denied - Invalid Security Level");
+		  BaseClass.wait(1000);
+	  }
+	  	  
+	 @Test(priority = 8)
+	  public void verifyDoorForcedOpenAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Forced Open");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Forced Open");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	  
-	 @Test(priority = 7)
-	  public void verifyDoorHeldOpenAlarm() throws Exception
+	 @Test(priority = 9)
+	  public void verifyDoorHeldOpenAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Held");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Held Open");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	  
-	  @Test(priority = 8)
-	  public void verifyDoorOpenAlarm() throws Exception
+	  @Test(priority = 10)
+	  public void verifyDoorOpenAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Door Open");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Open");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }
 	
-	  @Test(priority = 9)
-	  public void verifyDoorClosedAlarm() throws Exception
+	  @Test(priority = 11)
+	  public void verifyDoorClosedAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Closed");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Closed");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }	  
 	  
 	 @Test(priority = 10)
-	  public void verifyDoorOverrideAutoResumeAlarm() throws Exception
+	  public void verifyDoorOverrideAutoResumeAlarm()
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Auto");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Auto Resume");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }	
 
 	 @Test(priority = 11)
-	  public void verifyDoorOverrideEnableAlarm() throws Exception
+	  public void verifyDoorOverrideEnableAlarm()
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Enable");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Enabled");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }	
 	  
 	  @Test(priority = 12)
-	  public void verifyDoorOverrideDisableAlarm() throws Exception
+	  public void verifyDoorOverrideDisableAlarm() 
 	  {
 		  AlarmTab.EnterAlarmsDetailsToSearch("Disabled");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.sortAlarmsInDescendingOrder_BasedOnAlarmID();
 		  AlarmTab.selectFirstAlarmFromFilteredAlarmsList();
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 		  AlarmTab.verifyEventTypeInAdditionalInformation("Door Override Disabled");
-		  Thread.sleep(1000);
+		  BaseClass.wait(1000);
 	  }	
 }

@@ -6,19 +6,13 @@
     <listener class-name="com.VMS.Utilities.ExtentListnerClass" />
    </listeners>
   
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="OldVMSVersionSetup(BeforeUpgrade)">
     <classes>
-      
-   <!--   <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      
       <class name="com.VMS.TestCases.TC_WebPagesTest"/>
-      <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>  -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>  
       <class name="com.VMS.TestCases.TC_MapTest"/>
-  <!--    <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>  
-      <class name="com.VMS.TestCases.TC_AlarmsPageTest"/>    
-       <class name="com.VMS.TestCases.TC_VAXwebpageTest"/>  
-      <class name="com.VMS.TestCases.TC_AlarmsJournalPageTest"/>  --> 
-
-
-    </classes>
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>
+        
+  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
