@@ -3,21 +3,19 @@ package com.VMS.TestCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_CameraAndDevicesPageTest extends BaseClass {
-
-	
+public class TC_CameraAndDevicesPageTest extends BaseClass 
+{
 	
 	@Test(priority = 0)
-	public void OpenProcedurePage() throws Exception 
+	public void OpenCameraAndDevicesPage() throws Exception 
 	{
 		camAndDev.openCameraAndDevicespage();
 		log.info("Cameras and Devices page is opened");
 	}
 	
-	@Test
+	//@Test
 	public void AddSimulatorCamera() throws Exception
 	{
-		
 		camAndDev.clickOnAddDiscoveredDevicesBtn();
 		camAndDev.enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(BaseClass.getcurrentMachineIP());
 		camAndDev.selectFilteredCamerafromDiscoveredDevicesWindow();

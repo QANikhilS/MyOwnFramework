@@ -24,6 +24,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
@@ -213,7 +214,7 @@ public class BaseClass
 	
 	
 	
-	//@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		if (driver != null)

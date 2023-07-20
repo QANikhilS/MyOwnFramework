@@ -1,6 +1,7 @@
 package com.VMS.PageObject;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.NoSuchElementException;
@@ -76,6 +77,24 @@ public class vms_CamerasAndDevicesPage {
 	@FindBy(css = "span[ng-show='configuration.unassociatedDeviceList.length']")
 	public WebElement countOfDiscoveredDevices;	
 	
+	
+	
+	
+	public List<String> expectedCameraIPsToAddInVMS()
+	{
+		List<String> expectedCameraIPs = new ArrayList<String>(); 
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam1IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam2IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam3IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam4IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam5IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam6IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam7IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam8IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam9IP());
+		expectedCameraIPs.add(BaseClass.readConfigData.getCam10IP());
+		return expectedCameraIPs;
+	}
 	
     
 	

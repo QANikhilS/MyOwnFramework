@@ -22,3 +22,106 @@
 [INFO ] 2023-31-20 18:31:17:033 {main} zOwnProject - Webpage page is opened.
 [INFO ] 2023-31-20 18:31:17:033 {main} zOwnProject - Webpage page is opened
 [INFO ] 2023-31-20 18:31:17:230 {main} zOwnProject -  Something went wrong. Webpages page is not opened
+[DEBUG] 2023-40-20 18:40:00:609 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-40-20 18:40:01:740 {main} zOwnProject -  URL Opened
+[INFO ] 2023-40-20 18:40:01:931 {main} zOwnProject -  Entered username 
+[INFO ] 2023-40-20 18:40:02:072 {main} zOwnProject -  Entered password 
+[INFO ] 2023-40-20 18:40:02:204 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-40-20 18:40:06:891 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-40-20 18:40:08:002 {main} zOwnProject - Webpage page is opened.
+[INFO ] 2023-40-20 18:40:08:002 {main} zOwnProject - Webpage page is opened
+[INFO ] 2023-40-20 18:40:08:216 {main} zOwnProject -  Something went wrong. Webpages page is not opened
+[INFO ] 2023-40-20 18:40:09:273 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:10:198 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:10:424 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:11:490 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:11:491 {main} zOwnProject - Webpage 1. Alibaba is added.
+[INFO ] 2023-40-20 18:40:13:571 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:14:448 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:14:627 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:15:659 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:15:659 {main} zOwnProject - Webpage 2. NDTV is added.
+[INFO ] 2023-40-20 18:40:17:741 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:18:600 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:18:773 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:19:805 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:19:805 {main} zOwnProject - Webpage 3. Vicon is added.
+[INFO ] 2023-40-20 18:40:21:877 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:22:726 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:22:920 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:23:954 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:23:955 {main} zOwnProject - Webpage 4. ZeeNews is added.
+[INFO ] 2023-40-20 18:40:26:056 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:27:006 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:27:186 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:28:222 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:28:223 {main} zOwnProject - Webpage 5. Selenium Dev is added.
+[INFO ] 2023-40-20 18:40:30:307 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:31:148 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:31:351 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:32:383 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:32:384 {main} zOwnProject - Webpage 6. TestNG is added.
+[INFO ] 2023-40-20 18:40:34:457 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-40-20 18:40:35:324 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-40-20 18:40:35:525 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-40-20 18:40:36:557 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-40-20 18:40:36:558 {main} zOwnProject - Webpage 7. Cemtrex Labs is added.
+[DEBUG] 2023-40-20 18:40:40:305 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-40-20 18:40:41:377 {main} zOwnProject -  URL Opened
+[INFO ] 2023-40-20 18:40:41:591 {main} zOwnProject -  Entered username 
+[INFO ] 2023-40-20 18:40:41:717 {main} zOwnProject -  Entered password 
+[INFO ] 2023-40-20 18:40:41:856 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-40-20 18:40:46:624 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-40-20 18:40:48:154 {main} zOwnProject - Procedure page is opened
+[INFO ] 2023-40-20 18:40:48:346 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-40-20 18:40:48:792 {main} zOwnProject - Procedure name 1. Procedure-User must acknowledge is entered
+[INFO ] 2023-40-20 18:40:48:956 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-40-20 18:40:49:108 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-40-20 18:40:49:939 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-40-20 18:40:50:413 {main} zOwnProject - Procedure name 2. Procedure-Enter comment acknowledge is entered
+[INFO ] 2023-40-20 18:40:50:535 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-40-20 18:40:50:665 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-40-20 18:40:50:788 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-40-20 18:40:51:622 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-40-20 18:40:52:048 {main} zOwnProject - Procedure name 3. Procedure-Next Action is entered
+[INFO ] 2023-40-20 18:40:52:168 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-40-20 18:40:52:302 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-40-20 18:40:52:432 {main} zOwnProject - selected Next Action after Ack checkbox
+[INFO ] 2023-40-20 18:40:52:556 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-40-20 18:40:52:657 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-40-20 18:40:53:423 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-40-20 18:40:53:950 {main} zOwnProject - Procedure name 4. Procedure-Add reference is entered
+[INFO ] 2023-40-20 18:40:54:048 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-40-20 18:40:54:149 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-40-20 18:40:55:431 {main} zOwnProject - Clicked on Save button
+[DEBUG] 2023-40-20 18:40:57:183 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-41-20 18:41:00:369 {main} zOwnProject -  URL Opened
+[INFO ] 2023-41-20 18:41:00:565 {main} zOwnProject -  Entered username 
+[INFO ] 2023-41-20 18:41:00:719 {main} zOwnProject -  Entered password 
+[INFO ] 2023-41-20 18:41:00:856 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-41-20 18:41:05:717 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-41-20 18:41:06:319 {main} zOwnProject - Maps page is opened
+[INFO ] 2023-41-20 18:41:06:934 {main} zOwnProject - Clicked on New Map button
+[INFO ] 2023-41-20 18:41:07:402 {main} zOwnProject - Maps name Map_VAX1 is entered.
+[INFO ] 2023-41-20 18:41:07:753 {main} zOwnProject - Clicked on DONE button to create Map
+[DEBUG] 2023-41-20 18:41:11:367 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-41-20 18:41:12:825 {main} zOwnProject -  URL Opened
+[INFO ] 2023-41-20 18:41:13:093 {main} zOwnProject -  Entered username 
+[INFO ] 2023-41-20 18:41:13:222 {main} zOwnProject -  Entered password 
+[INFO ] 2023-41-20 18:41:13:379 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-41-20 18:41:18:239 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-41-20 18:41:19:396 {main} zOwnProject - Networking page is opened.
+[INFO ] 2023-41-20 18:41:19:540 {main} zOwnProject - Enable VAX taggle button is enabled.
+[INFO ] 2023-41-20 18:41:19:540 {main} zOwnProject - VAX Integration toggle btn enabled
+[INFO ] 2023-41-20 18:41:19:791 {main} zOwnProject - VAX ip is entered
+[INFO ] 2023-41-20 18:41:19:791 {main} zOwnProject - VAX IP is entered
+[INFO ] 2023-41-20 18:41:19:901 {main} zOwnProject - Clicked on SAVE button
+[DEBUG] 2023-07-20 20:07:20:581 {main} zOwnProject - Chrome Browser is opened
+[DEBUG] 2023-23-20 20:23:03:016 {main} zOwnProject - Chrome Browser is opened
+[DEBUG] 2023-23-20 20:23:55:181 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-23-20 20:23:56:314 {main} zOwnProject -  URL Opened
+[INFO ] 2023-23-20 20:23:56:489 {main} zOwnProject -  Entered username 
+[INFO ] 2023-23-20 20:23:56:620 {main} zOwnProject -  Entered password 
+[INFO ] 2023-23-20 20:23:56:762 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-24-20 20:24:01:386 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-24-20 20:24:03:058 {main} zOwnProject - Cameras and Devices page is opened
