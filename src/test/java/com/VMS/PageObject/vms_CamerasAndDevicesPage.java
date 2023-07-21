@@ -44,6 +44,18 @@ public class vms_CamerasAndDevicesPage {
 	@FindBy(xpath = "//span[text()='Add Device Manually']") 
 	public WebElement addDeviceManuallyBtn;
 	
+	@FindBy(xpath = "//input[@name='address']") 
+	public WebElement ipAddressTxtBox;
+	
+	@FindBy(xpath = "//input[@id='inputUserName']") 
+	public WebElement userNameOfCamera;
+	
+	@FindBy(xpath = "//input[@id='inputPasswords']") 
+	public WebElement passwordOfCamera;	
+	
+	
+	
+	
 	@FindBy(xpath = "//span[text()='Remove Devices']") 
 	public WebElement removeDevicesBtn;
 	
