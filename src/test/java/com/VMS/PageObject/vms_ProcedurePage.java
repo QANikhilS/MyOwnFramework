@@ -1,9 +1,12 @@
 package com.VMS.PageObject;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,6 +24,15 @@ public class vms_ProcedurePage {
 	     ldriver = rdriver;
 	     PageFactory.initElements(rdriver, this);
 	     wait = new WebDriverWait(ldriver, Duration.ofSeconds(15));
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openProcedurePage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openProcedurePage();      }
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Procedure page is opened");
 	}
 	
 	@FindBy(xpath = "//button[text()='New']")
@@ -61,6 +73,10 @@ public class vms_ProcedurePage {
 		
 	@FindBy(xpath = "//button[contains(@ng-click,'createNewActionGroup')]/span")
 	public WebElement addAction;
+	
+    @FindAll(@FindBy(xpath = "//div[@class='view-item-in-list ng-binding ng-scope']"))
+    public List<WebElement> availableProcedures;
+	
 				
 	
 	
@@ -137,5 +153,17 @@ public class vms_ProcedurePage {
 		attachFileLink.sendKeys(FilePath);		
 	}
 	
+	public boolean verifyProcedureIsAdded(String procName)
+	{
+		List<String> availableProceduresStringList = new ArrayList<String>();
+		for(WebElement e : availableProcedures)
+		{
+			availableProceduresStringList.add(e.getText());
+		}
+		if (availableProceduresStringList.contains(procName))
+		{  return true;  }
+		else
+		{  return false;  }
+	}
 	
 }

@@ -81,8 +81,7 @@ public class ExtentListnerClass implements ITestListener {
 		{
 			test.fail("Captcured screenshot of failed test case is below : " + test.addScreenCaptureFromPath(ScreenShotPath));
 		}
-		
-		// test.addScreenCaptureFromPath(null);
+	    test.addScreenCaptureFromPath(null);
 	}
 	
 	
@@ -114,5 +113,5 @@ public class ExtentListnerClass implements ITestListener {
 		
 	}
 	
-
+	
 }

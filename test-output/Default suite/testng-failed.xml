@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_CameraAndDevicesPageTest">
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
         <methods>
-          <include name="testlist"/>
-          <include name="tearDown"/>
+          <include name="addProcedureToAcknowledge"/>
+          <include name="OpenProcedurePage"/>
+          <include name="addProcedureToAttachFileForReference"/>
+          <include name="addProcedureUserMustCommentToAcknowledge"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_CameraAndDevicesPageTest -->
+      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

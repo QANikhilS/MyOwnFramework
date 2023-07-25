@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="OldVMSVersionSetup(BeforeUpgrade)(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_MapTest">
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="OpenProcedurePage"/>
+          <include name="addProcedureToAttachFileForReference"/>
           <include name="setup"/>
-          <include name="addNewMapInVMS"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_MapTest -->
+      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
     </classes>
   </test> <!-- OldVMSVersionSetup(BeforeUpgrade)(failed) -->
 </suite> <!-- Failed suite [Suite] -->

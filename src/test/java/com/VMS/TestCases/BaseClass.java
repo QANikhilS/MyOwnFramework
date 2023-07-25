@@ -24,8 +24,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
 import com.VMS.PageObject.vms_AlarmsPage;
@@ -35,13 +34,10 @@ import com.VMS.PageObject.vms_EventAlarmsSearchPage;
 import com.VMS.PageObject.vms_GroupHierarchyPage;
 import com.VMS.PageObject.vms_IntegrationPartnerPage;
 import com.VMS.PageObject.vms_Login;
-import com.VMS.PageObject.vms_MapPage;
 import com.VMS.PageObject.vms_NetworkingPage;
-import com.VMS.PageObject.vms_ProcedurePage;
 import com.VMS.PageObject.vms_RelayOutputPage;
 import com.VMS.PageObject.vms_VAXResourcesPage;
 import com.VMS.PageObject.vms_VAXWebpagePage;
-import com.VMS.PageObject.vms_WebPagesPage;
 import com.VMS.Utilities.readConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -59,15 +55,12 @@ public class BaseClass
 	
 	public vms_CamerasAndDevicesPage camAndDev;
 	public vms_IntegrationPartnerPage Integrationpartner;
-	public vms_WebPagesPage webpage ;
-	public vms_ProcedurePage procedure ;
 	public vms_AlarmsPage alarm ;
 	public vms_NetworkingPage networking ;
 	public vms_VAXWebpagePage vaxwebserver ; 
 	public vms_EventAlarmsSearchPage EventQuerySearch; 
 	public vms_DigitalInputsPage DigitalInput ;
 	public vms_RelayOutputPage RelayOutput ;
-	public vms_MapPage Maps ;
 	public vms_GroupHierarchyPage GroupH ;
 	public vms_AlarmsJournalPage AlarmTab ;
 	public vms_VAXResourcesPage VAXresources ;
@@ -75,7 +68,7 @@ public class BaseClass
 	
 	
 	
-	@BeforeClass
+	@BeforeSuite
 	public void setup() throws Exception
 	{
 		switch (BrowserName.toLowerCase())
@@ -118,28 +111,24 @@ public class BaseClass
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		// Implicit wait of 30 seconds on all web Element
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(VMSURL);
 			
-		  vms_Login login = new vms_Login(driver); 
-		  login.DoLogin();
+		vms_Login login = new vms_Login(driver); 
+		login.DoLogin();
 		 
-		  camAndDev = new vms_CamerasAndDevicesPage(driver); 
-		  webpage = new vms_WebPagesPage(driver);  
-		  procedure = new vms_ProcedurePage(driver);
-		  alarm = new vms_AlarmsPage(driver);
-		  networking = new vms_NetworkingPage(driver);
-		  vaxwebserver = new vms_VAXWebpagePage(driver);
-		  Integrationpartner = new vms_IntegrationPartnerPage(driver);
-		  EventQuerySearch = new vms_EventAlarmsSearchPage(driver);
-		  DigitalInput= new vms_DigitalInputsPage(driver);
-		  RelayOutput = new vms_RelayOutputPage(driver);
-		  Maps = new vms_MapPage(driver);
-		  GroupH = new vms_GroupHierarchyPage(driver);
-		  AlarmTab = new vms_AlarmsJournalPage(driver);
-		  VAXresources = new vms_VAXResourcesPage(driver);
-		  fs = new FileInputStream("C:\\Users\\nikhils\\Music\\OwnFramework\\TestData\\TestData.xlsx");		
-		  
+		camAndDev = new vms_CamerasAndDevicesPage(driver); 
+ 
+		alarm = new vms_AlarmsPage(driver);
+		networking = new vms_NetworkingPage(driver);
+		vaxwebserver = new vms_VAXWebpagePage(driver);
+		Integrationpartner = new vms_IntegrationPartnerPage(driver);
+		EventQuerySearch = new vms_EventAlarmsSearchPage(driver);
+		DigitalInput= new vms_DigitalInputsPage(driver);
+		RelayOutput = new vms_RelayOutputPage(driver);
+		GroupH = new vms_GroupHierarchyPage(driver);
+		AlarmTab = new vms_AlarmsJournalPage(driver);
+		fs = new FileInputStream(System.getProperty("user.dir") +"\\TestData\\TestData.xlsx");		
 	}
 		
 	public void handlePlayerWidnow() throws Exception
@@ -205,16 +194,11 @@ public class BaseClass
 		   executor.executeScript("document.getElementByID("+textBoxToEnterTextUsingJS+").value = ‘"+textToEnter+"’;");      }
 	
 	public static void wait(int sleepTime)
-	{
-		try { Thread.sleep(sleepTime); } catch (InterruptedException e) { e.printStackTrace();  }
-	}
+	  {  try { Thread.sleep(sleepTime); } catch (InterruptedException e) { e.printStackTrace();  }   }
 	
 	
 	
-	
-	
-	
-	@AfterClass
+	//@AfterSuite
 	public void tearDown()
 	{
 		if (driver != null)

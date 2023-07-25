@@ -1,21 +1,20 @@
 package com.VMS.PageObject;
 
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_Home_MonitoringPage {
 	
 	 static WebDriver ldriver;
-	 static JavascriptExecutor executor;
 
 	public vms_Home_MonitoringPage(WebDriver rdriver) {
 		// TODO Auto-generated constructor stub
 		ldriver = rdriver;
-		executor = (JavascriptExecutor) ldriver;
 		PageFactory.initElements(rdriver, this);
 	}
 
@@ -43,7 +42,7 @@ public class vms_Home_MonitoringPage {
 		   } 
 		catch (Exception e) 
 		   {
-			executor.executeScript("arguments[0].click();", ConfigurationTab);
+			BaseClass.jsClick(ConfigurationTab);
 		   }
 		return new vms_ConfigurationPage(ldriver);
      }
@@ -57,7 +56,7 @@ public class vms_Home_MonitoringPage {
 		   } 
 		catch (Exception e) 
 		   {
-			executor.executeScript("arguments[0].click();", SearchTab);
+			BaseClass.jsClick(SearchTab);
 		   }
 	  System.out.println("Search Page Opened");
      }
@@ -71,7 +70,7 @@ public class vms_Home_MonitoringPage {
 		   } 
 		catch (Exception e) 
 		   {
-			executor.executeScript("arguments[0].click();", AlarmsTab);
+			BaseClass.jsClick(AlarmsTab);
 		   }
 	  System.out.println("Alarm Page opened"); 
      }
@@ -86,7 +85,7 @@ public class vms_Home_MonitoringPage {
 		   } 
 		catch (Exception e) 
 		   {
-			executor.executeScript("arguments[0].click();", VaxTab);
+			BaseClass.jsClick(VaxTab);
 		   }
 	  System.out.println("VAX webpage is opened in new window."); 
      }
