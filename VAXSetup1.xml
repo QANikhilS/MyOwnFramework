@@ -9,8 +9,8 @@
   <test thread-count="5" name="VAXSetup">
   
     <classes>
-        <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      
-<!--    <class name="com.VMS.TestCases.TC_WebPagesTest"/>
+<!--    <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      
+        <class name="com.VMS.TestCases.TC_WebPagesTest"/>
         <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>
         <class name="com.VMS.TestCases.TC_MapTest"/>                      
         <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>   --> 

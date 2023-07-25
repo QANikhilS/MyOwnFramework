@@ -22,6 +22,15 @@ public class vms_MapPage
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
+	    if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openMapPage();       }
+		else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openMapPage();      }
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Procedure page is opened");
 	}
 	
 	

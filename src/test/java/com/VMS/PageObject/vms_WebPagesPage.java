@@ -1,5 +1,6 @@
 package com.VMS.PageObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,10 +48,10 @@ public class vms_WebPagesPage {
 	@FindBy(xpath = "//button[text()='Delete']")
 	public WebElement deleteWebPageBtn;
 	
-	@FindBy(xpath = "//div[@class=\"ui-grid-cell-contents ng-binding ng-scope\"]")
+	@FindBy(xpath = "(//div[@class='ui-grid-cell-contents ng-binding ng-scope'])[1]")
 	public WebElement firstWebPage;
 	
-	@FindBy(css = "div[class*='ui-grid-selection-row-header-buttons']")
+	@FindBy(xpath = "//div[@class='ui-grid-cell-contents ng-binding ng-scope']")
 	public List<WebElement> listOfAvailableWebPages;
 	
 	@FindBy(xpath = "//button[contains(text(),'Yes')]")
@@ -161,6 +162,16 @@ public class vms_WebPagesPage {
 		selectWebPage();
 		deleteWebPageBtn.click();
 		yesBtn.click();		
+	}
+	
+	public List<String> listOfAvailableWebPagesInString()
+	{
+		List<String> availableWebPagesStringList = new ArrayList<String>();
+		for(WebElement e : listOfAvailableWebPages)
+		{
+			availableWebPagesStringList.add(e.getText());
+		}
+		return availableWebPagesStringList;
 	}
 	
 	

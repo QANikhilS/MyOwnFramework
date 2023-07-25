@@ -267,7 +267,7 @@ public class vms_ConfigurationPage {
 		}
 	}
 
-	public vms_ProcedurePage openProcedurePage()
+	public void openProcedurePage()
 	{
 		try  {  ProceduresPage.click(); }
 		catch (Exception e)
@@ -276,7 +276,6 @@ public class vms_ConfigurationPage {
 			 HomePage.click();
 			 ProceduresPage.click();
 		}
-	  return new vms_ProcedurePage(ldriver);
 	}
 	
 	public vms_ViewPage openViewsPage()

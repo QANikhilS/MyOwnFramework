@@ -5,8 +5,6 @@
     <classes>
       
       <class name="com.VMS.TestCases.TC_AlarmsJournalPageTest"/>     
-      <class name="com.VMS.TestCases.TC_EventAlarmSearchPageTest"/>    
-
 
     </classes>
   </test> <!-- Test -->

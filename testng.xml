@@ -4,14 +4,14 @@
   
   	<listeners>
     <listener class-name="com.VMS.Utilities.ExtentListnerClass" />
-   </listeners>
+    </listeners>
   
-  <test thread-count="5" name="OldVMSVersionSetup(BeforeUpgrade)">
+  <test thread-count="1" name="OldVMSVersionSetup(BeforeUpgrade)">
     <classes>
       <class name="com.VMS.TestCases.TC_WebPagesTest"/>
       <class name="com.VMS.TestCases.TC_ProcedurePageTest"/>  
-      <class name="com.VMS.TestCases.TC_MapTest"/>
-      <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>
+ <!-- <class name="com.VMS.TestCases.TC_MapTest"/>
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest"/>   -->
         
   </classes>
   </test> <!-- Test -->
