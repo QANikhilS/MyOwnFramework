@@ -23,6 +23,15 @@ public class vms_NetworkingPage {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
+		if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openNetworkingPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openNetworkingPage();      }
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Networking page is opened");
 	}
 	
 	// Identify webElements
@@ -45,9 +54,13 @@ public class vms_NetworkingPage {
 	
 	public void openNetworingPage()
 	{
-		 vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
-		   vms_ConfigurationPage cp = hm.openConfigurationPage();
-		   cp.openNetworkingPage();
+		if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openNetworkingPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openNetworkingPage();      }
            BaseClass.wait(500);
            BaseClass.log.info("Networking page is opened.");
 	}

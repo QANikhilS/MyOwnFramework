@@ -2,7 +2,6 @@ package com.VMS.PageObject;
 
 import java.time.Duration;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,14 +18,16 @@ public class vms_AlarmsJournalPage {
 	
 	WebDriver ldriver;
 	WebDriverWait wait;
-	JavascriptExecutor js;  
 			
 	public vms_AlarmsJournalPage(WebDriver rdriver)
 	{
 	     ldriver = rdriver;
-	     PageFactory.initElements(rdriver, this);
-	     js = ((JavascriptExecutor) ldriver); 
+	     PageFactory.initElements(rdriver, this); 
 	     wait = new WebDriverWait(rdriver, Duration.ofSeconds(30));
+	     vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+	     hm.openAlarmPage();
+	     BaseClass.wait(1000);
+	 	 BaseClass.log.info("Procedure page is opened");
 	}
 	
 	
@@ -55,14 +56,11 @@ public class vms_AlarmsJournalPage {
    public void openAlarmsJournalPage()
    {
 	   	wait.until(ExpectedConditions.elementToBeClickable(AlarmsTab));
-	   	try {
-				BaseClass.jsClick(AlarmsTab);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				Actions act = new Actions(ldriver);
-				act.moveToElement(AlarmsTab).click().build().perform();
-			}
+	   	try {   BaseClass.jsClick(AlarmsTab);   } 
+	   	catch (Exception e) 
+	   	{    e.printStackTrace();
+			 Actions act = new Actions(ldriver);
+			 act.moveToElement(AlarmsTab).click().build().perform();    }
 	   	BaseClass.log.info("Alarms Journal page is opened.");
    }
    

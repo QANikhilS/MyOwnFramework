@@ -2,22 +2,31 @@ package com.VMS.PageObject;
 
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_DigitalInputsPage {
 	
 	WebDriver ldriver;
-	//JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	public vms_DigitalInputsPage(WebDriver rdriver)
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
+		if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openDigitalInputPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openDigitalInputPage();      }
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Procedure page is opened");
 	}
 	
 	@FindAll(@FindBy(xpath = "//div[@class='ui-grid-cell-contents ng-binding ng-scope']/parent::div")) 
@@ -64,50 +73,48 @@ public class vms_DigitalInputsPage {
 	public void visibleAllVAXInputs() throws Exception
 	{
 		searchBtn.sendKeys("VAX_Input");
-		Thread.sleep(2000);
+		BaseClass.wait(2000);
 	
 		for (int i = 0 ; i<listOfpresentDigitalInputs.size() ; i++)
 		{
 			listOfpresentDigitalInputs.get(i).click();
-			Thread.sleep(500);
+			BaseClass.wait(500);
 			if(checkStateOfToggleBtn.getAttribute("aria-checked").equalsIgnoreCase("false"))
 			{
-				Thread.sleep(500);      
-				JavascriptExecutor js = ((JavascriptExecutor)ldriver);
-				js.executeScript("arguments[0].click();", visibleToggleBtn);
-				Thread.sleep(500);
+				BaseClass.wait(500);      
+				BaseClass.jsClick(visibleToggleBtn);
+				BaseClass.wait(500);
 			}
 			else
 			{
 				System.out.println(listOfpresentDigitalInputs.get(i).getText() +" This Digital input is already visible.");
 			}
-			Thread.sleep(500);
+			BaseClass.wait(500);
 			SaveBtnOfDigitalInputPage.click();
-			Thread.sleep(3000);
+			BaseClass.wait(3000);
 		}
 	}	
 		
 	public void visibleAllDigitalInputs() throws Exception
 	{  
-		Thread.sleep(2000);
+		BaseClass.wait(2000);
 		for (int i = 0 ; i<listOfpresentDigitalInputs.size() ; i++)
 		{
-			JavascriptExecutor js = ((JavascriptExecutor)ldriver);
-			js.executeScript("arguments[0].click();", listOfpresentDigitalInputs.get(i));
-	    	Thread.sleep(500);
+			BaseClass.jsClick(listOfpresentDigitalInputs.get(i));
+	    	BaseClass.wait(500);
 			if(checkStateOfToggleBtn.getAttribute("aria-checked").equalsIgnoreCase("false"))
 			{
-				Thread.sleep(500);      
-				js.executeScript("arguments[0].click();", visibleToggleBtn);
-				Thread.sleep(500);
+				BaseClass.wait(500);      
+				BaseClass.jsClick(visibleToggleBtn);
+				BaseClass.wait(500);
 			}
 			else
 			{
 				System.out.println(listOfpresentDigitalInputs.get(i).getText() +" This Digital input is already visible.");
 			}
-			Thread.sleep(500);
+			BaseClass.wait(500);
 			SaveBtnOfDigitalInputPage.click();
-			Thread.sleep(3000);
+			BaseClass.wait(3000);
 		}
 	}
 		

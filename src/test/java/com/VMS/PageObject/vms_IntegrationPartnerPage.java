@@ -28,10 +28,17 @@ public class vms_IntegrationPartnerPage {
 
 	public vms_IntegrationPartnerPage(WebDriver rdriver) 
 	{
-		// TODO Auto-generated constructor stub
-
-		ldriver = rdriver;
+	    ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
+		if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openIntegrationPartnerPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openIntegrationPartnerPage();      }
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Integration Partner page is opened");
 	}
 
 	@FindBy(xpath = "//div[@class='ip-btn-container']/button[1]")
