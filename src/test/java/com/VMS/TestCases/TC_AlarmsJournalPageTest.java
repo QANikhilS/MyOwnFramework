@@ -1,16 +1,34 @@
 package com.VMS.TestCases;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.VMS.PageObject.vms_AlarmsJournalPage;
+
 public class TC_AlarmsJournalPageTest extends BaseClass
-
 {
-	  @Test(priority = 1)
-	  public void openAlarmTab()
-	  {
-		  AlarmTab.openAlarmsJournalPage();
-	  }
-
+	public vms_AlarmsJournalPage AlarmTab;
+	
+	  @BeforeClass
+		public void openAlarmTab() throws Exception 
+		{
+		    AlarmTab = new vms_AlarmsJournalPage(driver);
+		}
+	    	
+	    
+	    @Test(priority = 0)
+	    public void verifyAlarmJournalPageisOpened()
+	    {
+	    	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/procedures"))
+	    	{    Assert.assertTrue(true, "Procedure is successfuly opened.");       log.info("Procedure is successfuly opened.");  	}
+	    	else 
+	    	{   capctureScreenshot(driver, "verifyProcedurePageisOpened");
+				log.info(" Something went wrong. Procedure page is not opened");
+	    		Assert.assertTrue(false, "Procedure is not opened");
+	    	}
+		}
+	  
 
 	 @Test(priority = 2)
 	  public void verifyDoorLockedAlarm() 
