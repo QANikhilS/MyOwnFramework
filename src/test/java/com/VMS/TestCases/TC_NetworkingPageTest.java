@@ -8,29 +8,6 @@ import com.VMS.PageObject.vms_NetworkingPage;
 
 public class TC_NetworkingPageTest extends BaseClass 
 {
-<<<<<<< HEAD
-=======
-    public vms_NetworkingPage networking ;
-	
-    @BeforeClass
-	public void OpenNetworkingPage() throws Exception 
-	{
-    	networking = new vms_NetworkingPage(driver);
-	}
-    	
-    
-    @Test(priority = 0)
-    public void verifyNetworkingPageisOpened()
-    {
-    	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/procedures"))
-    	{    Assert.assertTrue(true, "Networking page is successfuly opened.");       log.info("Networking page is successfuly opened.");  	}
-    	else 
-    	{   capctureScreenshot(driver, "verifyNetworkingPageisOpened");
-			log.info(" Something went wrong. Networking page is not opened");
-    		Assert.assertTrue(false, "Networking page is not opened");
-    	}
-	}
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 	
 	public static vms_NetworkingPage networking;
 	

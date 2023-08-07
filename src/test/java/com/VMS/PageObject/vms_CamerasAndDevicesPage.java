@@ -22,28 +22,16 @@ public class vms_CamerasAndDevicesPage {
 	public vms_CamerasAndDevicesPage(WebDriver rdriver)
 	{
 		ldriver = rdriver;
-<<<<<<< HEAD
 		PageFactory.initElements(rdriver, this);	
 	     if (ldriver.getCurrentUrl().contains("configuration"))
-=======
-		PageFactory.initElements(rdriver, this);
-		wait = new WebDriverWait(ldriver, Duration.ofSeconds(15));
-		if (ldriver.getCurrentUrl().contains("configuration"))
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
 		    cp.openCamerasAndDevicesPage();       }
 		 else 
 		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		     vms_ConfigurationPage cp = hm.openConfigurationPage();
-<<<<<<< HEAD
 		     cp.openCamerasAndDevicesPage();      }    
 	     BaseClass.wait(1000);
 		 BaseClass.log.info("Camera and Devices page is opened");
-=======
-		     cp.openCamerasAndDevicesPage();      }
-	     BaseClass.wait(1000);
-		 BaseClass.log.info("Cameras & Devices page is opened");
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 	}
 	
 	// Identify webElements
@@ -165,7 +153,7 @@ public class vms_CamerasAndDevicesPage {
 	
 	public void clickOnAddToNVRandCloseBtn()
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(addToNVRandCloseBtn));
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(addToNVRandCloseBtn));
 		BaseClass.jsClick(addToNVRandCloseBtn);
 	}	
 	
@@ -176,7 +164,7 @@ public class vms_CamerasAndDevicesPage {
 
 	public void enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(String IPofCamera)
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(searchCameraTxtboxOnDiscoveredDevicesWindow)).clear();
+		new WebDriverWait(ldriver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(searchCameraTxtboxOnDiscoveredDevicesWindow)).clear();
 		searchCameraTxtboxOnDiscoveredDevicesWindow.sendKeys(IPofCamera);
 	}
 	
@@ -188,12 +176,13 @@ public class vms_CamerasAndDevicesPage {
 
 	public void selectFilteredCamerafromDiscoveredDevicesWindow() 
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(filteredCameraOnDiscoveredDevicesPage));
+		new WebDriverWait(ldriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(filteredCameraOnDiscoveredDevicesPage));
 		filteredCameraOnDiscoveredDevicesPage.click();  BaseClass.wait(1500);  clickOnAddToNVRandCloseBtn(); 
 	}
 
 	public boolean isSimulatorCameraPresentinVMS() throws Exception 
 	{
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfAllElements(listOfAddedCamerasInVMS));
 		BaseClass.wait(1000);		
 		searchCameraTxtbox.click();  BaseClass.wait(500);
@@ -207,6 +196,7 @@ public class vms_CamerasAndDevicesPage {
 	public void addSimulatorCamera(String IPofCamera) 
 	{
 		clickOnAddDiscoveredDevicesBtn();
+		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(searchCameraTxtboxOnDiscoveredDevicesWindow));
 		enterSimulatorIpInSearchTextBoxOfDiscoveredDevicesPage(IPofCamera);
 		wait.until(ExpectedConditions.visibilityOf(filteredCameraOnDiscoveredDevicesPage));

@@ -23,7 +23,6 @@ public class vms_NetworkingPage {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 		wait = new WebDriverWait(ldriver, Duration.ofSeconds(20));
-<<<<<<< HEAD
 	     if (ldriver.getCurrentUrl().contains("configuration"))
 		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
 		    cp.openNetworkingPage();    }
@@ -31,15 +30,6 @@ public class vms_NetworkingPage {
 		 {  vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		    vms_ConfigurationPage cp = hm.openConfigurationPage();
 		    cp.openNetworkingPage();      }    
-=======
-		if (ldriver.getCurrentUrl().contains("configuration"))
-		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
-		    cp.openNetworkingPage();       }
-		 else 
-		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
-		     vms_ConfigurationPage cp = hm.openConfigurationPage();
-		     cp.openNetworkingPage();      }
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 	     BaseClass.wait(1000);
 		 BaseClass.log.info("Networking page is opened");
 	}
@@ -64,23 +54,11 @@ public class vms_NetworkingPage {
 	
 	public void openNetworingPage()
 	{
-<<<<<<< HEAD
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		vms_ConfigurationPage cp = hm.openConfigurationPage();
 		cp.openNetworkingPage();
         BaseClass.wait(500);
         BaseClass.log.info("Networking page is opened.");
-=======
-		if (ldriver.getCurrentUrl().contains("configuration"))
-		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
-		    cp.openNetworkingPage();       }
-		 else 
-		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
-		     vms_ConfigurationPage cp = hm.openConfigurationPage();
-		     cp.openNetworkingPage();      }
-           BaseClass.wait(500);
-           BaseClass.log.info("Networking page is opened.");
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 	}
 	
 	public String verifyVAXtabIsEnabled()

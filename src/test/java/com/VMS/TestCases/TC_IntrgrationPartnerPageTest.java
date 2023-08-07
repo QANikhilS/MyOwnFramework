@@ -5,7 +5,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.VMS.PageObject.vms_IntegrationPartnerPage;
-<<<<<<< HEAD
 
 public class TC_IntrgrationPartnerPageTest extends BaseClass
 {
@@ -28,37 +27,6 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass
 			       Assert.assertTrue(false, "Integration partner page is not opened");
 		       }
 	    }
-=======
-import com.VMS.PageObject.vms_ProcedurePage;
-
-public class TC_IntrgrationPartnerPageTest extends BaseClass
-{
-	public vms_IntegrationPartnerPage Integrationpartner ;
-	
-    @BeforeClass
-	public void OpenIntegrationPartnerPage() throws Exception 
-	{
-    	Integrationpartner = new vms_IntegrationPartnerPage(driver);
-	}
-	
-	@Test(priority = 0)
-	public void verifyIntegrationPartnerPageIsOpened()
-	{
-		if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/procedures"))
-    	{    Assert.assertTrue(true, "Integration Partner is successfuly opened.");       log.info("Integration Partner is successfuly opened.");  	}
-    	else 
-    	{   capctureScreenshot(driver, "verifyIntegrationPartnerPageIsOpened");
-			log.info(" Something went wrong. Integration Partner page is not opened");
-    		Assert.assertTrue(false, "Integration Partner is not opened");
-    	}
-	}
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
-	
-	
-	
-	
-	
-	
 	
 	@Test(priority = 1, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
 	public void AddIntrgrationPartner2_54()

@@ -8,9 +8,7 @@ import com.VMS.PageObject.vms_CamerasAndDevicesPage;
 
 public class TC_CameraAndDevicesPageTest extends BaseClass 
 {
-	public vms_CamerasAndDevicesPage camAndDev ;
 	
-<<<<<<< HEAD
     public vms_CamerasAndDevicesPage camAndDev ;
  	
    @BeforeClass
@@ -31,26 +29,6 @@ public class TC_CameraAndDevicesPageTest extends BaseClass
 	       }
    }
 
-=======
-    @BeforeClass
-	public void OpenCameraAndDevicesPage() throws Exception 
-	{
-    	camAndDev = new vms_CamerasAndDevicesPage(driver);
-	}
-        
-    @Test(priority = 0)
-    public void verifyCameraAndDevicesPageisOpened()
-    {
-    	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/procedures"))
-    	{    Assert.assertTrue(true, "Camera and Devices is successfuly opened.");       log.info("Camera and Devices is successfuly opened.");  	}
-    	else 
-    	{   capctureScreenshot(driver, "verifyCameraAndDevicesPageisOpened");
-			log.info(" Something went wrong. Camera and Devices page is not opened");
-    		Assert.assertTrue(false, "Camera and Devices is not opened");
-    	}
-	}
-	
->>>>>>> 2a100a0fd94d72e8f3a4f35948a220a30992cf2c
 	//@Test
 	public void AddSimulatorCamera() throws Exception
 	{

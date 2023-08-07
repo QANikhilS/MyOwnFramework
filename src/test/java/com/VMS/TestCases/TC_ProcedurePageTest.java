@@ -17,6 +17,7 @@ public class TC_ProcedurePageTest extends BaseClass
     	procedure = new vms_ProcedurePage(driver);
 	}
     	
+    
     @Test(priority = 0)
     public void verifyProcedurePageisOpened()
     {
@@ -27,7 +28,8 @@ public class TC_ProcedurePageTest extends BaseClass
 			log.info(" Something went wrong. Procedure page is not opened");
     		Assert.assertTrue(false, "Procedure is not opened");
     	}
-	}	
+	}
+		
 	
 	//@Test(priority = 1, groups = "Setup")
 	public void addProcedureToAcknowledge() throws Exception 
