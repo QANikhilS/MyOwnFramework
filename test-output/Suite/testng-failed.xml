@@ -4,15 +4,18 @@
   <listeners>
     <listener class-name="com.VMS.Utilities.ExtentListnerClass"/>
   </listeners>
-  <test thread-count="5" name="OldVMSVersionSetup(BeforeUpgrade)(failed)">
+  <test thread-count="5" name="VAXSetup(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
+      <class name="com.VMS.TestCases.TC_WebPagesTest">
         <methods>
-          <include name="OpenProcedurePage"/>
-          <include name="addProcedureToAttachFileForReference"/>
+          <include name="addAllWebpage"/>
+          <include name="verifyWebPagesPageisOpened"/>
+          <include name="OpenWebPagesPage"/>
+          <include name="deleteWebPages"/>
+          <include name="AddSingleWebPages"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
+      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
     </classes>
-  </test> <!-- OldVMSVersionSetup(BeforeUpgrade)(failed) -->
+  </test> <!-- VAXSetup(failed) -->
 </suite> <!-- Failed suite [Suite] -->

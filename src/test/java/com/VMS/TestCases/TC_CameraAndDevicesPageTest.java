@@ -1,18 +1,34 @@
 package com.VMS.TestCases;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.VMS.PageObject.vms_CamerasAndDevicesPage;
 
 public class TC_CameraAndDevicesPageTest extends BaseClass 
 {
 	
-	@Test(priority = 0)
+    public vms_CamerasAndDevicesPage camAndDev ;
+ 	
+   @BeforeClass
 	public void OpenCameraAndDevicesPage() throws Exception 
 	{
-		camAndDev.openCameraAndDevicespage();
-		log.info("Cameras and Devices page is opened");
-	}
-	
+	   camAndDev = new vms_CamerasAndDevicesPage(driver);
+   }
+   
+   @Test(priority = 0)
+   public void verifyCamerasAndDevicesPageisOpened()
+   {  
+   	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/web_sites"))
+	       {    Assert.assertTrue(true, "Camera and Devices page is successfuly opened.");   log.info("Camera and Devices page is successfuly opened.");     	}
+	   else 
+	       {   capctureScreenshot(driver, "verifyCamerasAndDevicesPageisOpened");
+		       log.info(" Something went wrong. Camera and Devices page is not opened");
+		       Assert.assertTrue(false, "Camera and Devices is not opened");
+	       }
+   }
+
 	//@Test
 	public void AddSimulatorCamera() throws Exception
 	{

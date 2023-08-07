@@ -3,7 +3,6 @@ package com.VMS.PageObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,13 +14,20 @@ import com.VMS.TestCases.BaseClass;
 public class vms_WebPagesPage {
 
 	WebDriver ldriver;
-	public JavascriptExecutor js ;
 
 	public vms_WebPagesPage(WebDriver rdriver) 
 	{
      	ldriver = rdriver;
-     	js = ((JavascriptExecutor) ldriver);
 		PageFactory.initElements(rdriver, this);
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openWebPagePage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openWebPagePage();      }    
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Webpages page is opened");
 	}
 	
 	@FindBy(xpath = "//button[text()='New']")
@@ -76,7 +82,7 @@ public class vms_WebPagesPage {
 	
 	public void clickOnNewWebpageBtn()
 	{
-		js.executeScript("arguments[0].click();", addNewWebPagebtn);
+		BaseClass.jsClick(addNewWebPagebtn);
         BaseClass.log.info("Clicked on New webpage button.");	
 	}
 	
@@ -130,7 +136,7 @@ public class vms_WebPagesPage {
 	
 	public void clickOnSaveBtn()
 	{
-		js.executeScript("arguments[0].click();", saveBtn);
+		BaseClass.jsClick(saveBtn);
 		BaseClass.log.info("Clicked on SAVE button.");	
 	}	
 	

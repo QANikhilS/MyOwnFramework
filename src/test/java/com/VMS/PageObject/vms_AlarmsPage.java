@@ -25,6 +25,15 @@ public class vms_AlarmsPage extends BaseClass
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openAlarmsPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openAlarmsPage();      }    
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Alarms page is opened");
 	}
 	
 	// Identify webElements
@@ -187,12 +196,8 @@ public class vms_AlarmsPage extends BaseClass
 	@FindAll(@FindBy(xpath = "//multiselect[@header='Select Resources']//li[@class='ng-scope']"))
 	public List<WebElement> listOfAvailableResources;
 	
-	
 
-	
-	
-	
-	public void openAlarmsPage()      
+   public void openAlarmsPage()      
 	{
 		  vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		  vms_ConfigurationPage cp = hm.openConfigurationPage(); 

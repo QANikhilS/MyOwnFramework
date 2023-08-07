@@ -22,7 +22,16 @@ public class vms_CamerasAndDevicesPage {
 	public vms_CamerasAndDevicesPage(WebDriver rdriver)
 	{
 		ldriver = rdriver;
-		PageFactory.initElements(rdriver, this);		
+		PageFactory.initElements(rdriver, this);	
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openCamerasAndDevicesPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openCamerasAndDevicesPage();      }    
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Camera and Devices page is opened");
 	}
 	
 	// Identify webElements

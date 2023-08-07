@@ -68,3 +68,141 @@
 [INFO ] 2023-46-25 19:46:22:372 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
 [INFO ] 2023-46-25 19:46:23:632 {main} zOwnProject - Clicked on Save button
 [INFO ] 2023-46-25 19:46:23:723 {main} zOwnProject - Procedure '4. Procedure-Add reference' is not added.
+[DEBUG] 2023-56-07 14:56:58:561 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-56-07 14:56:59:644 {main} zOwnProject -  URL Opened
+[INFO ] 2023-56-07 14:56:59:885 {main} zOwnProject -  Entered username 
+[INFO ] 2023-57-07 14:57:00:039 {main} zOwnProject -  Entered password 
+[INFO ] 2023-57-07 14:57:00:195 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-57-07 14:57:04:961 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[DEBUG] 2023-17-07 15:17:01:512 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-17-07 15:17:02:713 {main} zOwnProject -  URL Opened
+[INFO ] 2023-17-07 15:17:02:896 {main} zOwnProject -  Entered username 
+[INFO ] 2023-17-07 15:17:03:021 {main} zOwnProject -  Entered password 
+[INFO ] 2023-17-07 15:17:03:170 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-17-07 15:17:07:757 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-17-07 15:17:08:206 {main} zOwnProject -  Something went wrong. Webpages page is not opened
+[INFO ] 2023-19-07 15:19:12:000 {main} zOwnProject - Procedure page is opened
+[INFO ] 2023-19-07 15:19:12:011 {main} zOwnProject - Procedure is successfuly opened.
+[INFO ] 2023-19-07 15:19:12:205 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-19-07 15:19:12:633 {main} zOwnProject - Procedure name 1. Procedure-User must acknowledge is entered
+[INFO ] 2023-19-07 15:19:12:767 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-19-07 15:19:12:910 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-19-07 15:19:12:959 {main} zOwnProject - Procedure '1. Procedure-User must acknowledge' is added successfully.
+[INFO ] 2023-19-07 15:19:13:740 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-19-07 15:19:14:300 {main} zOwnProject - Procedure name 2. Procedure-Enter comment acknowledge is entered
+[INFO ] 2023-19-07 15:19:14:440 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-19-07 15:19:14:555 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-19-07 15:19:14:655 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-19-07 15:19:14:706 {main} zOwnProject - Procedure '2. Procedure-Enter comment acknowledge' is added successfully.
+[INFO ] 2023-19-07 15:19:15:506 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-19-07 15:19:15:921 {main} zOwnProject - Procedure name 4. Procedure-Add reference is entered
+[INFO ] 2023-19-07 15:19:16:020 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-19-07 15:19:16:121 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-19-07 15:19:17:380 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-19-07 15:19:17:432 {main} zOwnProject - Procedure '4. Procedure-Add reference' is added successfully.
+[DEBUG] 2023-24-07 15:24:26:704 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-24-07 15:24:27:819 {main} zOwnProject -  URL Opened
+[INFO ] 2023-24-07 15:24:27:995 {main} zOwnProject -  Entered username 
+[INFO ] 2023-24-07 15:24:28:125 {main} zOwnProject -  Entered password 
+[INFO ] 2023-24-07 15:24:28:275 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-24-07 15:24:32:861 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-24-07 15:24:34:583 {main} zOwnProject - Webpages page is opened
+[INFO ] 2023-24-07 15:24:34:612 {main} zOwnProject - Webpage is successfuly opened.
+[INFO ] 2023-24-07 15:24:34:724 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-24-07 15:24:34:724 {main} zOwnProject - clicked on NEW button.
+[INFO ] 2023-24-07 15:24:34:788 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-24-07 15:24:35:678 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-24-07 15:24:35:837 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-24-07 15:24:35:893 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-24-07 15:24:38:441 {main} zOwnProject -  Single Webpage is added successfully.
+[INFO ] 2023-25-07 15:25:11:279 {main} zOwnProject - All webpages are deleted.
+[INFO ] 2023-25-07 15:25:12:102 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:12:961 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:13:125 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:14:171 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:14:171 {main} zOwnProject - Webpage 1. Alibaba is added.
+[INFO ] 2023-25-07 15:25:16:257 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:17:070 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:17:227 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:18:275 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:18:275 {main} zOwnProject - Webpage 2. NDTV is added.
+[INFO ] 2023-25-07 15:25:20:340 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:21:196 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:21:355 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:22:380 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:22:380 {main} zOwnProject - Webpage 3. Vicon is added.
+[INFO ] 2023-25-07 15:25:24:452 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:25:273 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:25:430 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:26:483 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:26:483 {main} zOwnProject - Webpage 4. ZeeNews is added.
+[INFO ] 2023-25-07 15:25:28:561 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:29:373 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:29:557 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:30:610 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:30:611 {main} zOwnProject - Webpage 5. Selenium Dev is added.
+[INFO ] 2023-25-07 15:25:32:692 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:33:495 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:33:664 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:34:705 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:34:705 {main} zOwnProject - Webpage 6. TestNG is added.
+[INFO ] 2023-25-07 15:25:36:777 {main} zOwnProject - Clicked on New webpage button.
+[INFO ] 2023-25-07 15:25:37:595 {main} zOwnProject - Webpage name is entered.
+[INFO ] 2023-25-07 15:25:37:752 {main} zOwnProject - Webpage URL is entered.
+[INFO ] 2023-25-07 15:25:38:799 {main} zOwnProject - Clicked on SAVE button.
+[INFO ] 2023-25-07 15:25:38:800 {main} zOwnProject - Webpage 7. Cemtrex Labs is added.
+[INFO ] 2023-26-07 15:26:12:335 {main} zOwnProject - Procedure page is opened
+[INFO ] 2023-26-07 15:26:12:345 {main} zOwnProject - Procedure is successfuly opened.
+[INFO ] 2023-26-07 15:26:12:542 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-26-07 15:26:12:943 {main} zOwnProject - Procedure name 1. Procedure-User must acknowledge is entered
+[INFO ] 2023-26-07 15:26:13:077 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-26-07 15:26:13:220 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-26-07 15:26:13:271 {main} zOwnProject - Procedure '1. Procedure-User must acknowledge' is added successfully.
+[INFO ] 2023-26-07 15:26:14:077 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-26-07 15:26:14:534 {main} zOwnProject - Procedure name 2. Procedure-Enter comment acknowledge is entered
+[INFO ] 2023-26-07 15:26:14:638 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-26-07 15:26:14:742 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-26-07 15:26:14:854 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-26-07 15:26:14:889 {main} zOwnProject - Procedure '2. Procedure-Enter comment acknowledge' is added successfully.
+[INFO ] 2023-26-07 15:26:15:663 {main} zOwnProject - Clicked on Add New button.
+[INFO ] 2023-26-07 15:26:16:149 {main} zOwnProject - Procedure name 4. Procedure-Add reference is entered
+[INFO ] 2023-26-07 15:26:16:263 {main} zOwnProject - selected User must Acknowledge checkbox
+[INFO ] 2023-26-07 15:26:16:367 {main} zOwnProject - selected User Must Provide a comment to Ack checkbox
+[INFO ] 2023-26-07 15:26:17:645 {main} zOwnProject - Clicked on Save button
+[INFO ] 2023-26-07 15:26:17:693 {main} zOwnProject - Procedure '4. Procedure-Add reference' is added successfully.
+[DEBUG] 2023-38-07 15:38:05:460 {main} zOwnProject - Chrome Browser is opened
+[INFO ] 2023-38-07 15:38:06:882 {main} zOwnProject -  URL Opened
+[INFO ] 2023-38-07 15:38:07:080 {main} zOwnProject -  Entered username 
+[INFO ] 2023-38-07 15:38:07:207 {main} zOwnProject -  Entered password 
+[INFO ] 2023-38-07 15:38:07:357 {main} zOwnProject -  Clicked on Sign IN button 
+[INFO ] 2023-38-07 15:38:11:914 {main} zOwnProject -  User has logged in to VMS and Monitoring page is opened.
+[INFO ] 2023-38-07 15:38:13:717 {main} zOwnProject - Procedure page is opened
+[INFO ] 2023-38-07 15:38:13:746 {main} zOwnProject - Procedure is successfuly opened.
+[INFO ] 2023-38-07 15:38:45:261 {main} zOwnProject - Alarms page is opened
+[DEBUG] 2023-38-07 15:38:46:334 {main} zOwnProject - Clicked on Add New Alarm button
+[DEBUG] 2023-38-07 15:38:47:920 {main} zOwnProject - Alarm name is entered
+[DEBUG] 2023-38-07 15:38:48:170 {main} zOwnProject - Single Event radio button is selected.
+[DEBUG] 2023-38-07 15:38:49:969 {main} zOwnProject - Selected Digital Input Event.
+[DEBUG] 2023-39-07 15:39:20:481 {main} zOwnProject - Clicked on Add New Alarm button
+[DEBUG] 2023-39-07 15:39:21:294 {main} zOwnProject - Alarm name is entered
+[DEBUG] 2023-39-07 15:39:21:378 {main} zOwnProject - Single Event radio button is selected.
+[DEBUG] 2023-39-07 15:39:22:523 {main} zOwnProject - Selected Relay Event.
+[DEBUG] 2023-39-07 15:39:54:114 {main} zOwnProject - selected all resources.
+[DEBUG] 2023-40-07 15:40:05:651 {main} zOwnProject - selected expected related resources.
+[DEBUG] 2023-40-07 15:40:07:432 {main} zOwnProject - selected procedure.
+[DEBUG] 2023-40-07 15:40:09:894 {main} zOwnProject - selected all users.
+[DEBUG] 2023-40-07 15:40:10:530 {main} zOwnProject - selected alarms expiry as NEVER.
+[DEBUG] 2023-40-07 15:40:41:824 {main} zOwnProject - Clicked on Add New Alarm button
+[DEBUG] 2023-41-07 15:41:41:489 {main} zOwnProject - Clicked on Add New Alarm button
+[DEBUG] 2023-41-07 15:41:42:621 {main} zOwnProject - Alarm name is entered
+[DEBUG] 2023-41-07 15:41:43:343 {main} zOwnProject - Selected Event type as Integration Partner
+[DEBUG] 2023-41-07 15:41:44:346 {main} zOwnProject - Clicked on Add New Alarm button
+[DEBUG] 2023-41-07 15:41:45:267 {main} zOwnProject - Alarm name is entered
+[DEBUG] 2023-41-07 15:41:45:886 {main} zOwnProject - Selected Event type as Integration Partner
+[DEBUG] 2023-41-07 15:41:47:746 {main} zOwnProject - Selected Partner type as Access Control.
+[DEBUG] 2023-41-07 15:41:48:408 {main} zOwnProject - Selected Partner as VAX.
+[DEBUG] 2023-41-07 15:41:49:065 {main} zOwnProject - VAX Event configuration window is opened.
+[DEBUG] 2023-41-07 15:41:50:259 {main} zOwnProject - Selected Partner type as Access Control.
+[DEBUG] 2023-41-07 15:41:52:133 {main} zOwnProject - Selected event type as Granted - Card
+[DEBUG] 2023-41-07 15:41:52:767 {main} zOwnProject - VAX event configuration is saved.
+[DEBUG] 2023-41-07 15:41:53:388 {main} zOwnProject - Select all resources/Doors.

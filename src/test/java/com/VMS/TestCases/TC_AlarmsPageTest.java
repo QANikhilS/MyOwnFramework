@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.VMS.PageObject.vms_AlarmsPage;
@@ -17,38 +18,37 @@ import com.VMS.Utilities.ReadExcelFile;
 public class TC_AlarmsPageTest extends BaseClass {
 	
 	static List<String> stringList = new ArrayList<String>(); 
-
-	@Test(priority = 0)
-	public void OpenAlarmsPage() throws Exception
+    public vms_AlarmsPage alarm ;
+ 	
+   @BeforeClass
+	public void OpenAlarmsPage() throws Exception 
 	{
-		alarm.openAlarmsPage();
-    }
+	   alarm = new vms_AlarmsPage(driver);
+   }
 	
 	
 	//@Test(groups = {"Setup", "SetupVAS"})
 	public void addVASalarm() throws Exception
 	{
-		vms_AlarmsPage ap = new vms_AlarmsPage(driver);
-		ap.openAlarmsPage();
-		ap.addVASAlarm("aaaaaaaa1. Intrusion", "Intrusion");	
+		alarm.addVASAlarm("aaaaaaaa1. Intrusion", "Intrusion");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa2. Loitering", "Loitering");	
+		alarm.addVASAlarm("aaaaaaaa2. Loitering", "Loitering");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa3. Person Moving", "Person Moving");	
+		alarm.addVASAlarm("aaaaaaaa3. Person Moving", "Person Moving");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa4. Crowding", "Crowding");	
+		alarm.addVASAlarm("aaaaaaaa4. Crowding", "Crowding");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa5. People Gruoping", "Grouping");	
+		alarm.addVASAlarm("aaaaaaaa5. People Gruoping", "Grouping");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa6. Person Line Cross", "Person Line Cross");	
+		alarm.addVASAlarm("aaaaaaaa6. Person Line Cross", "Person Line Cross");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa7. Vehicle Stopped", "Vehicle Stopped");	
+		alarm.addVASAlarm("aaaaaaaa7. Vehicle Stopped", "Vehicle Stopped");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa8. Vehicle Moving", "Vehicle Moving");	
+		alarm.addVASAlarm("aaaaaaaa8. Vehicle Moving", "Vehicle Moving");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa9. Vehicle Line cross", "Vehicle Line Cross");	
+		alarm.addVASAlarm("aaaaaaaa9. Vehicle Line cross", "Vehicle Line Cross");	
 		BaseClass.wait(300);
-		ap.addVASAlarm("aaaaaaaa10. Asset Protection", "Asset Removed");	
+		alarm.addVASAlarm("aaaaaaaa10. Asset Protection", "Asset Removed");	
 		BaseClass.wait(300);
 	}
 	

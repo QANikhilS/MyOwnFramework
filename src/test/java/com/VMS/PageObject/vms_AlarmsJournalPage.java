@@ -25,7 +25,6 @@ public class vms_AlarmsJournalPage {
 	{
 	     ldriver = rdriver;
 	     PageFactory.initElements(rdriver, this);
-	     js = ((JavascriptExecutor) ldriver); 
 	     wait = new WebDriverWait(rdriver, Duration.ofSeconds(30));
 	}
 	

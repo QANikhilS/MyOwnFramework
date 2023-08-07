@@ -16,9 +16,9 @@
 		<classes>
 	<!--		<class name="com.VMS.TestCases.BaseClass" />   -->
 	<!--		<class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest" />   -->
-	<!--		<class name="com.VMS.TestCases.TC_WebPagesTest" />   -->
-	<!-- 	<class name="com.VMS.TestCases.TC_ProcedurePageTest" />  -->
-			<class name="com.VMS.TestCases.TC_AlarmsPageTest" />
+			<class name="com.VMS.TestCases.TC_WebPagesTest" />   
+		    <class name="com.VMS.TestCases.TC_ProcedurePageTest" />  
+	<!--		<class name="com.VMS.TestCases.TC_AlarmsPageTest" />  -->
 		</classes>
 	</test> <!-- Test -->
 

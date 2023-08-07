@@ -26,8 +26,16 @@ public class vms_GroupHierarchyPage {
 	{
 	     ldriver = rdriver;
 	     PageFactory.initElements(rdriver, this);
-	     js = ((JavascriptExecutor) ldriver); 
 	     wait = new WebDriverWait(rdriver, Duration.ofSeconds(30));
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openGroupHierarchyPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openGroupHierarchyPage();      }    
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Group Hierarchy page is opened");
 	}
 	
 	

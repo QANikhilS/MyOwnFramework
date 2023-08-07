@@ -6,8 +6,6 @@ package com.VMS.PageObject;
 import java.time.Duration;
 import java.util.List;
 
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -75,18 +73,7 @@ public class vms_ViewPage {
 
 	 @FindAll (@FindBy(xpath = "//div[@class='vms-resource-group-view']//dd"))
 	 public List<WebElement> listOfAvailableResources;
-	
-	
-	
-	             
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

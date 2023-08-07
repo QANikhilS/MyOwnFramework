@@ -30,7 +30,7 @@ public class vms_ProcedurePage {
 		 else 
 		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
 		     vms_ConfigurationPage cp = hm.openConfigurationPage();
-		     cp.openProcedurePage();      }
+		     cp.openProcedurePage();      }    
 	     BaseClass.wait(1000);
 		 BaseClass.log.info("Procedure page is opened");
 	}

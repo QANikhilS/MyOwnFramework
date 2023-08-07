@@ -30,7 +30,7 @@ public class vms_MapPage
 		     vms_ConfigurationPage cp = hm.openConfigurationPage();
 		     cp.openMapPage();      }
 	     BaseClass.wait(1000);
-		 BaseClass.log.info("Procedure page is opened");
+		 BaseClass.log.info("Maps page is opened");
 	}
 	
 	

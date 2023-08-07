@@ -1,9 +1,35 @@
 package com.VMS.TestCases;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TC_NetworkingPageTest extends BaseClass {
+import com.VMS.PageObject.vms_NetworkingPage;
+
+public class TC_NetworkingPageTest extends BaseClass 
+{
 	
+	public static vms_NetworkingPage networking;
+	
+    @BeforeClass
+	public void OpenNetworkingPage() throws Exception 
+	{
+    	networking = new vms_NetworkingPage(driver);
+    }
+    
+    //@Test(priority = 0)
+    public void verifyNetworkingPageisOpened()
+    {  
+    	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/system/system_settings"))
+	       {    Assert.assertTrue(true, "Networking page is successfuly opened.");   log.info("Networking page is successfuly opened.");     	}
+	   else 
+	       {   capctureScreenshot(driver, "verifyNetworkingPageisOpened");
+		       log.info(" Something went wrong. Networking page is not opened");
+		       Assert.assertTrue(false, "Networking page is not opened");
+	       }
+    }
+	
+    
 	@Test(priority = 0,  groups = {"Setup", "SetupVAX"})
 	public void enableVAXTab() throws Exception
 	{

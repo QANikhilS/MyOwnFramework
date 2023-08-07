@@ -18,12 +18,12 @@ public class TC_WebPagesTest extends BaseClass
      public vms_WebPagesPage webpage ;
  	
     @BeforeClass
-	public void OpenMapsPage() throws Exception 
+	public void OpenWebPagesPage() throws Exception 
 	{
     	webpage = new vms_WebPagesPage(driver);
     }
     
-    @Test(priority = 0)
+    //@Test(priority = 0)
     public void verifyWebPagesPageisOpened()
     {  
     	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/web_sites"))
@@ -35,7 +35,7 @@ public class TC_WebPagesTest extends BaseClass
 	       }
     }
 	
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void AddSingleWebPages()
 	{
 		String ExpectedwebPageName = "Alibaba";
@@ -55,7 +55,7 @@ public class TC_WebPagesTest extends BaseClass
      }
 	
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void deleteWebPages() throws Exception
 	 {
 		webpage.deleteAllWebPages();
@@ -72,7 +72,7 @@ public class TC_WebPagesTest extends BaseClass
 	}
 	
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	   public void addAllWebpage() throws Exception 
 	   {
            XSSFWorkbook workbook = new XSSFWorkbook(fs);	

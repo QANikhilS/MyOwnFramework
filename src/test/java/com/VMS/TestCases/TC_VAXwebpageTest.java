@@ -17,16 +17,15 @@ import com.VMS.PageObject.vms_VAXWebpagePage;
 public class TC_VAXwebpageTest extends BaseClass
 {
 	public String parent_VMS_window;
-	public String Child_VAX_window;
-	 
-	
+	public String Child_VAX_window;	 
+
 
 	@Test(priority = 0)
 	public void LoginTotheVAXwebpage() throws Exception
 	{
 		vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(driver);
 		
-		networking.enableVAXTab("192.168.1.51");
+		TC_NetworkingPageTest.networking.enableVAXTab("192.168.1.51");
 		Thread.sleep(1500);
 				
 		hm.openVAXPageWindow();
@@ -118,8 +117,8 @@ public class TC_VAXwebpageTest extends BaseClass
 		Thread.sleep(1500);
 		driver.switchTo().window(parent_VMS_window);
 		Thread.sleep(1500);
-		RelayOutput.openRelayOutputPage();
-		RelayOutput.triggerRelayOutput("VAX_Output 3_VAX Demo");
+		TC_RelayOutputTest.RelayOutput.openRelayOutputPage();
+		TC_RelayOutputTest.RelayOutput.triggerRelayOutput("VAX_Output 3_VAX Demo");
 	}
 	
 	//@Test(priority = 4)

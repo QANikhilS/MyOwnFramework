@@ -9,15 +9,25 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.VMS.TestCases.BaseClass;
+
 public class vms_RelayOutputPage 
 {
 	WebDriver ldriver;
-	//JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	public vms_RelayOutputPage(WebDriver rdriver)
 	{
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
+	     if (ldriver.getCurrentUrl().contains("configuration"))
+		 {  vms_ConfigurationPage cp = new vms_ConfigurationPage(ldriver);
+		    cp.openRelayOutputPage();       }
+		 else 
+		 {   vms_Home_MonitoringPage hm = new vms_Home_MonitoringPage(ldriver);
+		     vms_ConfigurationPage cp = hm.openConfigurationPage();
+		     cp.openRelayOutputPage();      }    
+	     BaseClass.wait(1000);
+		 BaseClass.log.info("Relay Output page is opened");
 	}
 	
 	@FindAll(@FindBy(xpath = "//div[@class='ui-grid-cell-contents ng-binding ng-scope']/parent::div")) 

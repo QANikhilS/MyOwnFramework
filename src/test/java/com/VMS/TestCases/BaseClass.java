@@ -27,15 +27,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeSuite;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
-import com.VMS.PageObject.vms_AlarmsPage;
-import com.VMS.PageObject.vms_CamerasAndDevicesPage;
-import com.VMS.PageObject.vms_DigitalInputsPage;
 import com.VMS.PageObject.vms_EventAlarmsSearchPage;
 import com.VMS.PageObject.vms_GroupHierarchyPage;
-import com.VMS.PageObject.vms_IntegrationPartnerPage;
 import com.VMS.PageObject.vms_Login;
-import com.VMS.PageObject.vms_NetworkingPage;
-import com.VMS.PageObject.vms_RelayOutputPage;
 import com.VMS.PageObject.vms_VAXResourcesPage;
 import com.VMS.PageObject.vms_VAXWebpagePage;
 import com.VMS.Utilities.readConfig;
@@ -53,14 +47,11 @@ public class BaseClass
 	public static String currentIP;
 	public static FileInputStream fs;		
 	
-	public vms_CamerasAndDevicesPage camAndDev;
-	public vms_IntegrationPartnerPage Integrationpartner;
-	public vms_AlarmsPage alarm ;
-	public vms_NetworkingPage networking ;
+	
 	public vms_VAXWebpagePage vaxwebserver ; 
 	public vms_EventAlarmsSearchPage EventQuerySearch; 
-	public vms_DigitalInputsPage DigitalInput ;
-	public vms_RelayOutputPage RelayOutput ;
+
+
 	public vms_GroupHierarchyPage GroupH ;
 	public vms_AlarmsJournalPage AlarmTab ;
 	public vms_VAXResourcesPage VAXresources ;
@@ -117,15 +108,9 @@ public class BaseClass
 		vms_Login login = new vms_Login(driver); 
 		login.DoLogin();
 		 
-		camAndDev = new vms_CamerasAndDevicesPage(driver); 
- 
-		alarm = new vms_AlarmsPage(driver);
-		networking = new vms_NetworkingPage(driver);
+
 		vaxwebserver = new vms_VAXWebpagePage(driver);
-		Integrationpartner = new vms_IntegrationPartnerPage(driver);
 		EventQuerySearch = new vms_EventAlarmsSearchPage(driver);
-		DigitalInput= new vms_DigitalInputsPage(driver);
-		RelayOutput = new vms_RelayOutputPage(driver);
 		GroupH = new vms_GroupHierarchyPage(driver);
 		AlarmTab = new vms_AlarmsJournalPage(driver);
 		fs = new FileInputStream(System.getProperty("user.dir") +"\\TestData\\TestData.xlsx");		

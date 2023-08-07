@@ -11,11 +11,13 @@
       </run>
     </groups>
     <classes>
-      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
         <methods>
-          <include name="addVAXDigitalInputAlarm"/>
+          <include name="addProcedureToAcknowledge"/>
+          <include name="addProcedureToAttachFileForReference"/>
+          <include name="addProcedureUserMustCommentToAcknowledge"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
+      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
     </classes>
   </test> <!-- TestingSetup(failed) -->
 </suite> <!-- Failed suite [Setup] -->

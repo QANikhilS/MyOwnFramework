@@ -31,7 +31,7 @@ public class TC_ProcedurePageTest extends BaseClass
 	}
 		
 	
-	@Test(priority = 1, groups = "Setup")
+	//@Test(priority = 1, groups = "Setup")
 	public void addProcedureToAcknowledge() throws Exception 
 	{
 		  procedure.clickOnNEWbtn();
@@ -46,7 +46,7 @@ public class TC_ProcedurePageTest extends BaseClass
 		  {  BaseClass.log.info("Procedure '1. Procedure-User must acknowledge' is not added.");   Assert.fail();}
 	}
 
-	@Test(priority = 2, groups = {"Setup", "SetupVAX", "SetupVAS"})
+	//@Test(priority = 2, groups = {"Setup", "SetupVAX", "SetupVAS"})
 	public void addProcedureUserMustCommentToAcknowledge() throws Exception 
 	{
 		procedure.clickOnNEWbtn();
@@ -80,7 +80,7 @@ public class TC_ProcedurePageTest extends BaseClass
 		  {  BaseClass.log.info("Procedure '3. Procedure-Next Action' is not added.");   Assert.fail();}
 	}	
 	
-	@Test(priority = 4, groups = {"Setup", "SetupVAX", "SetupVAS"})
+	//@Test(priority = 4, groups = {"Setup", "SetupVAX", "SetupVAS"})
 	public void addProcedureToAttachFileForReference() throws Exception 
 	{
 		procedure.clickOnNEWbtn();

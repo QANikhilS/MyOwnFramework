@@ -1,15 +1,32 @@
 package com.VMS.TestCases;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TC_IntrgrationPartnerPageTest extends BaseClass{
+import com.VMS.PageObject.vms_IntegrationPartnerPage;
+
+public class TC_IntrgrationPartnerPageTest extends BaseClass
+{
+	public vms_IntegrationPartnerPage Integrationpartner;
 	
-	@Test(priority = 0)
-	public void openIntegrationPartnerpage()
-	{
-		Integrationpartner.openIntegrationPartnerPage();
-	}
+	 @BeforeClass
+		public void OpenIntegrationPartnerPage() throws Exception 
+		{
+		 Integrationpartner = new vms_IntegrationPartnerPage(driver);
+	    }
+	    
+	 @Test(priority = 0)
+	    public void verifyIntegrationPartnerPageisOpened()
+	    {  
+	    	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/devices/integration_partners"))
+		       {    Assert.assertTrue(true, "Integration partner page is successfuly opened.");   log.info("Integration partner page is successfuly opened.");     	}
+		   else 
+		       {   capctureScreenshot(driver, "verifyWebPagesPageisOpened");
+			       log.info(" Something went wrong. Integration partner page is not opened");
+			       Assert.assertTrue(false, "Integration partner page is not opened");
+		       }
+	    }
 	
 	@Test(priority = 1, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
 	public void AddIntrgrationPartner2_54()
