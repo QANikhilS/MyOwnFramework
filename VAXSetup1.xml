@@ -6,7 +6,7 @@
     <listener class-name="com.VMS.Utilities.ExtentListnerClass" />
    </listeners>
 
-  <test thread-count="1" name="VAXSetup">
+  <test name="VAXSetup1">
   
     <classes>
         <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest"/>      

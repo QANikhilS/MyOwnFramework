@@ -31,14 +31,14 @@ public class TC_RelayOutputTest extends BaseClass
 	
 	
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void enableAllVAXRelayOutputs() throws Exception
 	{
 		RelayOutput.visibleAllRelayOutputs();
 	}
 	
 
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void triggerRelayOutputEvent() throws Exception
 	{
 		RelayOutput.triggerRelayOutput("VAX_Output 3_VAX Demo");

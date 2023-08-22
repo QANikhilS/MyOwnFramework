@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.VMS.Utilities.ExtentListnerClass"/>
-  </listeners>
-  <test thread-count="5" name="VAXSetup(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_WebPagesTest">
+      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
         <methods>
-          <include name="addAllWebpage"/>
-          <include name="verifyWebPagesPageisOpened"/>
-          <include name="OpenWebPagesPage"/>
-          <include name="deleteWebPages"/>
-          <include name="AddSingleWebPages"/>
+          <include name="addVAXDigitalInputAlarm"/>
+          <include name="OpenAlarmsPage"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
+      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
     </classes>
-  </test> <!-- VAXSetup(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

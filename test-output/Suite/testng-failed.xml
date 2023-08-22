@@ -6,16 +6,53 @@
   </listeners>
   <test thread-count="5" name="VAXSetup(failed)">
     <classes>
-      <class name="com.VMS.TestCases.TC_WebPagesTest">
+      <class name="com.VMS.TestCases.TC_MapTest">
         <methods>
-          <include name="addAllWebpage"/>
-          <include name="verifyWebPagesPageisOpened"/>
-          <include name="OpenWebPagesPage"/>
-          <include name="deleteWebPages"/>
-          <include name="AddSingleWebPages"/>
+          <include name="addNewMap"/>
+          <include name="OpenMapsPage"/>
+          <include name="verifyMapPageisOpened"/>
+          <include name="setup"/>
+          <include name="addNewMapInVMS"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_MapTest -->
+      <class name="com.VMS.TestCases.TC_ProcedurePageTest">
+        <methods>
+          <include name="verifyProcedurePageisOpened"/>
+          <include name="OpenProcedurePage"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.VMS.TestCases.TC_WebPagesTest -->
+      </class> <!-- com.VMS.TestCases.TC_ProcedurePageTest -->
+      <class name="com.VMS.TestCases.TC_IntrgrationPartnerPageTest">
+        <methods>
+          <include name="AddIntrgrationPartner1_51"/>
+          <include name="verifyIntegrationPartnerPageisOpened"/>
+          <include name="OpenIntegrationPartnerPage"/>
+          <include name="RefreshUserInformationfeature"/>
+          <include name="AddIntrgrationPartner2_54"/>
+          <include name="DeleteIntrgrationPartner"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_IntrgrationPartnerPageTest -->
+      <class name="com.VMS.TestCases.TC_AlarmsPageTest">
+        <methods>
+          <include name="addVAXDigitalInputAlarm"/>
+          <include name="addVAXalarmOfDoorFromVAXWebpage"/>
+          <include name="addVAXalarmOfAccessCardForMessage"/>
+          <include name="addVAXRelayOutputAlarm"/>
+          <include name="addVAXalarmOfAccessCard"/>
+          <include name="addVAXalarmOfDoorFromPanel"/>
+          <include name="OpenAlarmsPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_AlarmsPageTest -->
+      <class name="com.VMS.TestCases.TC_NetworkingPageTest">
+        <methods>
+          <include name="verifyIntegratedVAX"/>
+          <include name="enableVAXTab"/>
+          <include name="OpenNetworkingPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.VMS.TestCases.TC_NetworkingPageTest -->
     </classes>
   </test> <!-- VAXSetup(failed) -->
 </suite> <!-- Failed suite [Suite] -->

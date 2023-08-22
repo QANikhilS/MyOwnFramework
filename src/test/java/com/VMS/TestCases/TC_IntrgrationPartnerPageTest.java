@@ -28,7 +28,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass
 		       }
 	    }
 	
-	@Test(priority = 1, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
+	@Test(priority = 1, groups = {"Setup", "SetupVAX"})
 	public void AddIntrgrationPartner2_54()
 	{
 		String ExpectedIPtoAdd = "192.168.1.54";
@@ -60,7 +60,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass
 		Assert.assertEquals(ExpectedIPtoAdd, ActualIP, "Integration Partner is added Successfully.");
 	}
 	
-	@Test(priority = 2 , dependsOnMethods = {"openIntegrationPartnerpage"})
+	@Test(priority = 2 )
 	public void RefreshUserInformationfeature() throws Exception
 	{
 		BaseClass.wait(2000);	
@@ -113,7 +113,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass
 		}
 	}
 	
-	@Test(priority = 4, groups = {"Setup", "SetupVAX"}, dependsOnMethods = {"openIntegrationPartnerpage"})
+	@Test(priority = 4, groups = {"Setup", "SetupVAX"})
 	public void AddIntrgrationPartner1_51()
 	{
 		String ExpectedIPtoAdd = "192.168.1.51";
@@ -145,7 +145,7 @@ public class TC_IntrgrationPartnerPageTest extends BaseClass
 		Assert.assertEquals(ExpectedIPtoAdd, ActualIP, "Integration Partner is added Successfully.");
 	}
 	
-	//@Test(priority = 2, groups = {"Setup", "SetupVAX"}, dependsOnMethods = "openIntegrationPartnerpage")
+	//@Test(priority = 2, groups = {"Setup", "SetupVAX"})
 	public void AddIntrgrationPartner2_10_68()
 	{
 		Integrationpartner.clickOnAddPartner();

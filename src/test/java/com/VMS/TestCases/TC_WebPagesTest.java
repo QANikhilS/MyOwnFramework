@@ -23,9 +23,10 @@ public class TC_WebPagesTest extends BaseClass
     	webpage = new vms_WebPagesPage(driver);
     }
     
-    //@Test(priority = 0)
+    @Test(priority = 0)
     public void verifyWebPagesPageisOpened()
-    {  
+    {  System.out.println(readConfigData.getBaseURL()+"/#/configuration/network_entities/web_sites");
+    	
     	if (driver.getCurrentUrl().equalsIgnoreCase(readConfigData.getBaseURL()+"/#/configuration/network_entities/web_sites"))
 	       {    Assert.assertTrue(true, "Webpage is successfuly opened.");   log.info("Webpage is successfuly opened.");     	}
 	   else 
@@ -44,13 +45,13 @@ public class TC_WebPagesTest extends BaseClass
         log.info("clicked on NEW button.");
         webpage.addWebPage(ExpectedwebPageName, ExpectedwebURL); 
         BaseClass.wait(1000);
-        if(webpage.firstWebPage.getText().equalsIgnoreCase(ExpectedwebPageName))
+        if( webpage.listOfAvailableWebPages.contains(ExpectedwebPageName))
         {   Assert.assertTrue(true);    
             log.info(" Single Webpage is added successfully.");}
         else 
         { 	capctureScreenshot(driver, "AddSingleWebPages");
-			log.info(" Something went wrong. Webpages page is not opened");
-    		Assert.assertTrue(false, "Webpage is not opened");
+			log.info(" Something went wrong. Webpage "+ExpectedwebPageName+" is not added");
+    		Assert.assertTrue(false, "Webpage is not added");
 		}  
      }
 	
@@ -67,12 +68,13 @@ public class TC_WebPagesTest extends BaseClass
 		 } 
 		else 
 		 {  log.info(" Something went wrong. All webpages are not deleted.");
+	        capctureScreenshot(driver, "deleteWebPages");
 			Assert.assertTrue(false);
 		 }
 	}
 	
 	
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	   public void addAllWebpage() throws Exception 
 	   {
            XSSFWorkbook workbook = new XSSFWorkbook(fs);	
@@ -110,9 +112,11 @@ public class TC_WebPagesTest extends BaseClass
                    }
                 }
            if (webpage.listOfAvailableWebPagesInString().containsAll(listOfWebpagename))
-           {   Assert.assertTrue(true);     }
+           {   Assert.assertTrue(true);   
+               log.info(" All webpages are added.");   }
            else
            {  log.info(" Something went wrong. All webpages are not added.");
+              capctureScreenshot(driver, "addAllWebpage");
 			  Assert.fail();                } 	   
        }
 	

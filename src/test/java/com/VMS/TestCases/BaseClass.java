@@ -28,7 +28,6 @@ import org.testng.annotations.BeforeSuite;
 
 import com.VMS.PageObject.vms_AlarmsJournalPage;
 import com.VMS.PageObject.vms_EventAlarmsSearchPage;
-import com.VMS.PageObject.vms_GroupHierarchyPage;
 import com.VMS.PageObject.vms_Login;
 import com.VMS.PageObject.vms_VAXResourcesPage;
 import com.VMS.PageObject.vms_VAXWebpagePage;
@@ -50,9 +49,6 @@ public class BaseClass
 	
 	public vms_VAXWebpagePage vaxwebserver ; 
 	public vms_EventAlarmsSearchPage EventQuerySearch; 
-
-
-	public vms_GroupHierarchyPage GroupH ;
 	public vms_AlarmsJournalPage AlarmTab ;
 	public vms_VAXResourcesPage VAXresources ;
 	public JavascriptExecutor executor;
@@ -107,11 +103,9 @@ public class BaseClass
 			
 		vms_Login login = new vms_Login(driver); 
 		login.DoLogin();
-		 
 
 		vaxwebserver = new vms_VAXWebpagePage(driver);
 		EventQuerySearch = new vms_EventAlarmsSearchPage(driver);
-		GroupH = new vms_GroupHierarchyPage(driver);
 		AlarmTab = new vms_AlarmsJournalPage(driver);
 		fs = new FileInputStream(System.getProperty("user.dir") +"\\TestData\\TestData.xlsx");		
 	}
@@ -160,9 +154,9 @@ public class BaseClass
 	
 	public static String getcurrentMachineIP() throws Exception 
 	  {
-		try(final DatagramSocket socket = new DatagramSocket())
-		{     socket.connect(InetAddress.getByName("8.8.4.4"), 80);
-			  currentIP = socket.getLocalAddress().getHostAddress();       }
+		try(final DatagramSocket socket = new DatagramSocket()){
+			  socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
+			  currentIP = socket.getLocalAddress().getHostAddress();      }
 		return currentIP;
 	  }
 	
